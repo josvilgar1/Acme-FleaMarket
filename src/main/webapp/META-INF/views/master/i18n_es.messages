@@ -29,6 +29,10 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
+master.menu.anonymous.villegasbulletin.list=Listar VillegasBulletin
+master.menu.anonymous.villegasbulletin.form=Crear VillegasBulletin
+master.menu.anonymous.gamezbulletin.form=Crear GamezBulletin
+master.menu.anonymous.gamezbulletin.list=Listar GamezBulletins
 master.menu.anonymous.favourite-link = Enlace favorito
 
 # master.menu.administrator ###################################################
