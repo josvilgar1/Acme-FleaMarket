@@ -1,0 +1,13 @@
+anonymous.villegasBulletin.list.label.date=Fecha
+anonymous.villegasBulletin.list.label.author=Autor
+anonymous.villegasBulletin.list.label.title=Titulo
+anonymous.villegasBulletin.list.label.latitude=Latitud
+anonymous.villegasBulletin.list.label.longitude=Longitud
+
+anonymous.villegasBulletin.form.label.author=Autor
+anonymous.villegasBulletin.form.label.title=Título
+anonymous.villegasBulletin.form.label.latitude=Latitud
+anonymous.villegasBulletin.form.label.longitude=Longitud
+
+anonymous.villegasBulletin.form.button.create=Crear Villegasbulletin
+anonymous.villegasBulletin.form.button.return=Volver
