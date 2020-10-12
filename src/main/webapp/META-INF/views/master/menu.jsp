@@ -19,6 +19,11 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.gamezbulletin.list" action="/anonymous/gamezbulletin/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.gamezbulletin.form" action="/anonymous/gamezbulletin/create"/>
+			<acme:menu-suboption code="master.menu.anonymous.villegasbulletin.list" action="/anonymous/villegasbulletin/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.villegasbulletin.form" action="/anonymous/villegasbulletin/create"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.carlos.favourite-link" action="https://www.informatica.us.es/"/>
 			<acme:menu-suboption code="master.menu.anonymous.jose.favourite-link" action="https://github.com/josvilgar1/Acme-FleaMarket"/>
