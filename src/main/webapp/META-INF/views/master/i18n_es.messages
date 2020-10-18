@@ -37,6 +37,9 @@ master.menu.anonymous.toolsheet.list = Hoja de herramientas
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.new.list = Noticias
+master.menu.administrator.spam = Palabras spam
+master.menu.administrator.newCategory = Categorías de noticias 
+master.menu.administrator.itemCategory = Categorías de elementos
 master.menu.administrator.shutdown = Parar el sistema
 
 # master.menu.authenticated ###################################################

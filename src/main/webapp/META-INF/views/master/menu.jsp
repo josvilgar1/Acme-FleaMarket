@@ -28,13 +28,17 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.new.list" action="/administrator/new/list"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.spam" action="/administrator/spam/list"/>
+			<acme:menu-suboption code="master.menu.administrator.newCategory" action="/administrator/new-category/list"/>
+			<acme:menu-suboption code="master.menu.administrator.itemCategory" action="/administrator/item-category/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.new.activate" action="/authenticated/new/list-active"/>
 			<acme:menu-suboption code="master.menu.authenticated.toolsheet.list" action="/authenticated/toolsheet/list"/>
-      		<acme:menu-separator/>
+	      	<acme:menu-separator/>
       		<acme:menu-suboption code="master.menu.authenticated.suggestion.list" action="/authenticated/suggestion/list"/>
 		</acme:menu-option>
 

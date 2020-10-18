@@ -37,6 +37,9 @@ master.menu.anonymous.toolsheet.list = Tool sheets
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.new.list = News
+master.menu.administrator.spam = Spam words
+master.menu.administrator.newCategory = News categories
+master.menu.administrator.itemCategory = Item categories
 master.menu.administrator.shutdown = Shut down
 
 # master.menu.authenticated ###################################################
