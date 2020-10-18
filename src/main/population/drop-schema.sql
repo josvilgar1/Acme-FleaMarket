@@ -27,7 +27,13 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `new`;
+
     drop table if exists `provider`;
+
+    drop table if exists `suggestion`;
+
+    drop table if exists `toolsheet`;
 
     drop table if exists `user_account`;
 

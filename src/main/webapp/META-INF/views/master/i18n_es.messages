@@ -29,19 +29,22 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.villegasbulletin.list=Listar VillegasBulletin
-master.menu.anonymous.villegasbulletin.form=Crear VillegasBulletin
-master.menu.anonymous.gamezbulletin.form=Crear GamezBulletin
-master.menu.anonymous.gamezbulletin.list=Listar GamezBulletins
-master.menu.anonymous.favourite-link = Enlace favorito
-master.menu.anonymous.carlos.favourite-link = Enlace favorito Carlos
-master.menu.anonymous.jose.favourite-link = Enlace favorito Jose
+master.menu.anonymous.new.activate = Noticias activas
+master.menu.anonymous.toolsheet.list = Hoja de herramientas
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
+master.menu.administrator.new.list = Noticias
 master.menu.administrator.shutdown = Parar el sistema
+
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.new.activate = Noticias activas
+master.menu.authenticated.toolsheet.list = Hoja de herramientas
+master.menu.authenticated.suggestion.list = Sugerencias
 
 # master.menu.provider ########################################################
 
