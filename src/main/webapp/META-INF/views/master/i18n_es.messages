@@ -41,6 +41,9 @@ master.menu.anonymous.jose.favourite-link = Enlace favorito Jose
 
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
+master.menu.administrator.spam = Palabras spam
+master.menu.administrator.newCategory = Categorías de noticias 
+master.menu.administrator.itemCategory = Categorías de elementos
 master.menu.administrator.shutdown = Parar el sistema
 
 # master.menu.provider ########################################################

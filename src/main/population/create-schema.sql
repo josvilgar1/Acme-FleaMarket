@@ -29,12 +29,34 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `item_category` (
+       `id` integer not null,
+        `version` integer not null,
+        `items` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `new_category` (
+       `id` integer not null,
+        `version` integer not null,
+        `categories` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `provider` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `spam` (
+       `id` integer not null,
+        `version` integer not null,
+        `threshold` double precision,
+        `words` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 

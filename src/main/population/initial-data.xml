@@ -73,4 +73,17 @@
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
 	
+	<bean name="spam" class="acme.entities.configuration.Spam">
+		<property name="threshold" value="2.50" />
+		<property name="words" value="sex, hard core, viagra, cialis, nigeria, you’ve won, million dollar, sexo, has ganado, millón de dólares" />
+	</bean>
+	
+	<bean name="newCategory" class="acme.entities.configuration.NewCategory">
+		<property name="categories" value="Breaking news, Important news, Warning, Information, Noticias de última hora, Noticias importantes, Advertencia, Información" />
+	</bean>
+	
+	<bean name="itemCategory" class="acme.entities.configuration.ItemCategory">
+		<property name="items" value="Toilette, Kitchen, Living room, Sleeping room, Garden, Baño, Cocina, Sala, Dormitorio, Jardín" />
+	</bean>
+	
 </beans>

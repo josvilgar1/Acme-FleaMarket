@@ -27,7 +27,13 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `item_category`;
+
+    drop table if exists `new_category`;
+
     drop table if exists `provider`;
+
+    drop table if exists `spam`;
 
     drop table if exists `user_account`;
 

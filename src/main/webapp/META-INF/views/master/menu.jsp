@@ -24,6 +24,12 @@
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.spam" action="/administrator/spam/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.newCategory" action="/administrator/new-category/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.itemCategory" action="/administrator/item-category/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
 
