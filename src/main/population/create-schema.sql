@@ -6,6 +6,19 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `advertisement` (
+       `id` integer not null,
+        `version` integer not null,
+        `final_date` datetime(6),
+        `inicial_date` datetime(6),
+        `moment` datetime(6),
+        `picture` varchar(255),
+        `text` varchar(255),
+        `title` varchar(255),
+        `volume_discounts` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `anonymous` (
        `id` integer not null,
         `version` integer not null,
@@ -26,6 +39,28 @@
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `figment` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `inventor` varchar(255),
+        `moment` datetime(6),
+        `price_interval` double precision,
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `material` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `home_page` varchar(255),
+        `provider_name` varchar(255),
+        `stars` integer not null,
+        `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 

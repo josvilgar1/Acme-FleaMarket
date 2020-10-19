@@ -17,4 +17,73 @@
 
 	<import resource="conversion-service.xml" />
 	
+	<!-- Materials -->
+	<bean id="material01" class="acme.entities.materials.Material">
+		<property name="title" value="Material1"/>
+		<property name="description" value="This is material 1"/>
+		<property name="providerName" value="Provider01"/>
+		<property name="homePage" value="http://www.homePage01.com"/>
+		<property name="stars" value="0"/>
+	</bean>
+	<bean id="material02" class="acme.entities.materials.Material">
+		<property name="title" value="Material2"/>
+		<property name="description" value="This is material 2"/>
+		<property name="providerName" value="Provider02"/>
+		<property name="homePage" value="http://www.homePage02.com"/>
+		<property name="stars" value="2"/>
+	</bean>
+	<bean id="material03" class="acme.entities.materials.Material">
+		<property name="title" value="Material3"/>
+		<property name="description" value="This is material 3"/>
+		<property name="providerName" value="Provider03"/>
+		<property name="homePage" value="http://www.homePage03.com"/>
+		<property name="stars" value="5"/>
+	</bean>
+	
+	<!-- Figments -->
+	<bean id="figment01" class="acme.entities.figments.Figment"> <!-- title moment inventor description priceInterval -->
+		<property name="title" value="Title1"/>
+		<property name="moment" value="2021/10/01 00:00"/>
+		<property name="inventor" value="Inventor 1"/>
+		<property name="description" value="Description of figment 1"/>
+		<property name="priceInterval" value="2."/>
+	</bean>
+	
+	<bean id="figment02" class="acme.entities.figments.Figment"> <!-- title moment inventor description priceInterval -->
+		<property name="title" value="Title2"/>
+		<property name="moment" value="2021/11/01 00:00"/>
+		<property name="inventor" value="Inventor 2"/>
+		<property name="description" value="Description of figment 2"/>
+		<property name="priceInterval" value="5."/>
+	</bean>
+		
+	<bean id="figment03" class="acme.entities.figments.Figment"> <!-- title moment inventor description priceInterval -->
+		<property name="title" value="Title3"/>
+		<property name="moment" value="2021/12/01 00:00"/>
+		<property name="inventor" value="Inventor 3"/>
+		<property name="description" value="Description of figment 3"/>
+		<property name="priceInterval" value="10."/>
+	</bean>
+		
+	<!-- Advertisements -->
+	<bean id="advertisement01" class="acme.entities.advertisements.Advertisement">
+		<property name="title" value="Title 01"/>
+		<property name="picture" value="http://www.homePage01.com"/>
+		<property name="moment" value="2021/10/01 00:00"/>
+		<property name="inicialDate" value="2021/10/10 00:00"/>
+		<property name="finalDate" value="2021/10/20 00:00"/>
+		<property name="text" value="Text from advertisement 01"/>
+		<property name="volumeDiscounts" value="2."/>
+	</bean>
+	
+	<bean id="advertisement02" class="acme.entities.advertisements.Advertisement">
+		<property name="title" value="Title 02"/>
+		<property name="picture" value="http://www.homePage02.com"/>
+		<property name="moment" value="2021/11/01 00:00"/>
+		<property name="inicialDate" value="2021/11/10 00:00"/>
+		<property name="finalDate" value="2021/12/20 00:00"/>
+		<property name="text" value="Text from advertisement 02"/>
+		<property name="volumeDiscounts" value="0."/>
+	</bean>
+	
 </beans>

@@ -19,6 +19,7 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.material.list" action="/anonymous/material/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">

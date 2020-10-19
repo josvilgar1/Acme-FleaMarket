@@ -37,6 +37,8 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.carlos.favourite-link = Favourite link Carlos
 master.menu.anonymous.jose.favourite-link = Favourite link Jose
 
+master.menu.anonymous.material.list = List Material
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
