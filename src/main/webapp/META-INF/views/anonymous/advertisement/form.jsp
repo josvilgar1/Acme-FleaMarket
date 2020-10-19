@@ -9,7 +9,7 @@
 	<acme:form-textbox code="anonymous.advertisement.show.label.inicialDate" path="inicialDate"/>
 	<acme:form-textbox code="anonymous.advertisement.show.label.finalDate" path="finalDate"/>
 	<acme:form-textarea code="anonymous.advertisement.show.label.text" path="text"/>
-	<acme:form-double code="anonymous.advertisement.show.label.volumeDiscounts" path="volumeDiscounts"/>
+	<acme:form-textarea code="anonymous.advertisement.show.label.volumeDiscounts" path="volumeDiscounts"/>
 	<acme:form-textbox code="anonymous.advertisement.show.label.picture" path="picture"/>
 	
 	<acme:form-return code="anonymous.advertisement.show.button.return"/>

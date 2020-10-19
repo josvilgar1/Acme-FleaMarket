@@ -47,6 +47,13 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.material.list = Listar Material
+master.menu.authenticated.advertisement.list = Listar Anuncios
+master.menu.authenticated.figment.list = Listar Productos
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor

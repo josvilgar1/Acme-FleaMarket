@@ -68,22 +68,22 @@
 	<!-- Advertisements -->
 	<bean id="advertisement01" class="acme.entities.advertisements.Advertisement">
 		<property name="title" value="Title 01"/>
-		<property name="picture" value="http://www.homePage01.com"/>
+		<property name="picture" value="http://www.imagePage01.com"/>
 		<property name="moment" value="2021/10/01 00:00"/>
 		<property name="inicialDate" value="2021/10/10 00:00"/>
 		<property name="finalDate" value="2021/10/20 00:00"/>
 		<property name="text" value="Text from advertisement 01"/>
-		<property name="volumeDiscounts" value="2."/>
+		<property name="volumeDiscounts" value="small"/>
 	</bean>
 	
 	<bean id="advertisement02" class="acme.entities.advertisements.Advertisement">
 		<property name="title" value="Title 02"/>
-		<property name="picture" value="http://www.homePage02.com"/>
+		<property name="picture" value="http://www.imagePage02.com"/>
 		<property name="moment" value="2021/11/01 00:00"/>
 		<property name="inicialDate" value="2021/11/10 00:00"/>
 		<property name="finalDate" value="2021/12/20 00:00"/>
 		<property name="text" value="Text from advertisement 02"/>
-		<property name="volumeDiscounts" value="0."/>
+		<property name="volumeDiscounts" value="average"/>
 	</bean>
 	
 </beans>
