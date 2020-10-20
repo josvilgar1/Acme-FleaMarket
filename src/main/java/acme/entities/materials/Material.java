@@ -32,6 +32,6 @@ public class Material extends DomainEntity {
 	private String				homePage;
 
 	@Range(min = 0, max = 5)
-	private int					stars;
+	private Integer				stars;
 
 }
