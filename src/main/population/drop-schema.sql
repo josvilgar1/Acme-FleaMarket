@@ -21,18 +21,20 @@
 
     drop table if exists `administrator`;
 
+    drop table if exists `advertisement`;
+
     drop table if exists `anonymous`;
 
     drop table if exists `authenticated`;
 
     drop table if exists `consumer`;
 
-    drop table if exists `gamezbulletin`;
+    drop table if exists `figment`;
+
+    drop table if exists `material`;
 
     drop table if exists `provider`;
 
     drop table if exists `user_account`;
-
-    drop table if exists `villegasbulletin`;
 
     drop table if exists `hibernate_sequence`;

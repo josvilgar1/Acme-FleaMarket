@@ -37,11 +37,22 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.carlos.favourite-link = Favourite link Carlos
 master.menu.anonymous.jose.favourite-link = Favourite link Jose
 
+master.menu.anonymous.material.list = List Material
+master.menu.anonymous.advertisement.list = List Advertisements
+
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
+
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.material.list = List Material
+master.menu.authenticated.advertisement.list = List Advertisements
+master.menu.authenticated.figment.list = List Figments
 
 # master.menu.provider ########################################################
 

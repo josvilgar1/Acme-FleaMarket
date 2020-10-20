@@ -19,14 +19,8 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.gamezbulletin.list" action="/anonymous/gamezbulletin/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.gamezbulletin.form" action="/anonymous/gamezbulletin/create"/>
-			<acme:menu-suboption code="master.menu.anonymous.villegasbulletin.list" action="/anonymous/villegasbulletin/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.villegasbulletin.form" action="/anonymous/villegasbulletin/create"/>
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.carlos.favourite-link" action="https://www.informatica.us.es/"/>
-			<acme:menu-suboption code="master.menu.anonymous.jose.favourite-link" action="https://github.com/josvilgar1/Acme-FleaMarket"/>
+			<acme:menu-suboption code="master.menu.anonymous.material.list" action="/anonymous/material/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.advertisement.list" action="/anonymous/advertisement/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -34,6 +28,13 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.material.list" action="/authenticated/material/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.advertisement.list" action="/authenticated/advertisement/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.figment.list" action="/authenticated/figment/list"/>
+		</acme:menu-option>
+
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>

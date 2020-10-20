@@ -17,56 +17,73 @@
 
 	<import resource="conversion-service.xml" />
 	
-	<!-- GamezBulletins -->
-
-	<bean id="gamezbulletin01" class="acme.entities.gamezbulletins.Gamezbulletin">
-		<property name="author" value="Carlos" />
-		<property name="age" value="21" />
-		<property name="text" value="Text 01" />
-		<property name="moment" value="2019/07/02 12:00" />
-		<property name="creditCard" value="1111222233334444" />
+	<!-- Materials -->
+	<bean id="material01" class="acme.entities.materials.Material">
+		<property name="title" value="Material1"/>
+		<property name="description" value="This is material 1"/>
+		<property name="providerName" value="Provider01"/>
+		<property name="homePage" value="http://www.homePage01.com"/>
+		<property name="stars" value="0"/>
 	</bean>
-
-	<bean id="gamezbulletin02" class="acme.entities.gamezbulletins.Gamezbulletin">
-		<property name="author" value="Carlos Gamez" />
-		<property name="age" value="30" />
-		<property name="text" value="Text 02" />
-		<property name="moment" value="2018/02/12 12:00" />
-		<property name="creditCard" value="1111222233334444" />
+	<bean id="material02" class="acme.entities.materials.Material">
+		<property name="title" value="Material2"/>
+		<property name="description" value="This is material 2"/>
+		<property name="providerName" value="Provider02"/>
+		<property name="homePage" value="http://www.homePage02.com"/>
+		<property name="stars" value="2"/>
 	</bean>
-
-	<bean id="gamezbulletin03" class="acme.entities.gamezbulletins.Gamezbulletin">
-		<property name="author" value="Carlos Gamez Ramirez" />
-		<property name="age" value="16" />
-		<property name="text" value="Text 03" />
-		<property name="moment" value="2017/01/06 12:00" />
-		<property name="creditCard" value="1111222233334444" />
-    </bean>
-	
-  	<!-- VillegasBulletins -->
-
-	<bean id="villegasbullet01" class="acme.entities.villegasbulletin.Villegasbulletin">
-		<property name="author" value="Albert Einstein" />
-		<property name="date" value="2019/10/20 14:30" />
-		<property name="title" value="Bees" />
-		<property name="latitude" value="-56.064545" />
-		<property name="longitude" value="124.45611" />
+	<bean id="material03" class="acme.entities.materials.Material">
+		<property name="title" value="Material3"/>
+		<property name="description" value="This is material 3"/>
+		<property name="providerName" value="Provider03"/>
+		<property name="homePage" value="http://www.homePage03.com"/>
+		<property name="stars" value="5"/>
 	</bean>
 	
-	<bean id="villegasbullet02" class="acme.entities.villegasbulletin.Villegasbulletin">
-		<property name="author" value="Marie Curie" />
-		<property name="date" value="2019/10/20 14:32" />
-		<property name="title" value="Nada en la vida" />
-		<property name="latitude" value="-86.064545" />
-		<property name="longitude" value="104.45611" />
+	<!-- Figments -->
+	<bean id="figment01" class="acme.entities.figments.Figment"> <!-- title moment inventor description priceInterval -->
+		<property name="title" value="Title1"/>
+		<property name="moment" value="2021/10/01 00:00"/>
+		<property name="inventor" value="Inventor 1"/>
+		<property name="description" value="Description of figment 1"/>
+		<property name="priceInterval" value="2."/>
 	</bean>
 	
-	<bean id="villegasbullet03" class="acme.entities.villegasbulletin.Villegasbulletin">
-		<property name="author" value="Georg Lichtenberg" />
-		<property name="date" value="2019/10/20 14:33" />
-		<property name="title" value="Es extraño" />
-		<property name="latitude" value="76.064545" />
-		<property name="longitude" value="-154.45611" />
+	<bean id="figment02" class="acme.entities.figments.Figment"> <!-- title moment inventor description priceInterval -->
+		<property name="title" value="Title2"/>
+		<property name="moment" value="2021/11/01 00:00"/>
+		<property name="inventor" value="Inventor 2"/>
+		<property name="description" value="Description of figment 2"/>
+		<property name="priceInterval" value="5."/>
 	</bean>
-
+		
+	<bean id="figment03" class="acme.entities.figments.Figment"> <!-- title moment inventor description priceInterval -->
+		<property name="title" value="Title3"/>
+		<property name="moment" value="2021/12/01 00:00"/>
+		<property name="inventor" value="Inventor 3"/>
+		<property name="description" value="Description of figment 3"/>
+		<property name="priceInterval" value="10."/>
+	</bean>
+		
+	<!-- Advertisements -->
+	<bean id="advertisement01" class="acme.entities.advertisements.Advertisement">
+		<property name="title" value="Title 01"/>
+		<property name="picture" value="http://www.imagePage01.com"/>
+		<property name="moment" value="2021/10/01 00:00"/>
+		<property name="inicialDate" value="2021/10/10 00:00"/>
+		<property name="finalDate" value="2021/10/20 00:00"/>
+		<property name="text" value="Text from advertisement 01"/>
+		<property name="volumeDiscounts" value="small"/>
+	</bean>
+	
+	<bean id="advertisement02" class="acme.entities.advertisements.Advertisement">
+		<property name="title" value="Title 02"/>
+		<property name="picture" value="http://www.imagePage02.com"/>
+		<property name="moment" value="2021/11/01 00:00"/>
+		<property name="inicialDate" value="2021/11/10 00:00"/>
+		<property name="finalDate" value="2021/12/20 00:00"/>
+		<property name="text" value="Text from advertisement 02"/>
+		<property name="volumeDiscounts" value="average"/>
+	</bean>
+	
 </beans>
