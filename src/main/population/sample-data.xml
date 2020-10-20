@@ -17,6 +17,113 @@
 
 	<import resource="conversion-service.xml" />
 	
+	
+	<!-- News -->	
+	
+	<bean id="new01" class="acme.entities.news.New">
+		<property name="category" value="category01" />
+		<property name="headerPicture" value="http://www.us.es/design/USsite/images/logo.jpg"/>
+		<property name="title" value="title01"/>
+		<property name="creationMoment" value="2020/10/1 10:00"/>
+		<property name="deadlineMoment" value="2021/10/1 10:00"/>
+		<property name="body" value="body01"/>
+		<property name="links" value=""/>
+	</bean>
+	
+	<bean id="new02" class="acme.entities.news.New">
+		<property name="category" value="category02" />
+		<property name="headerPicture" value="http://www.us.es/design/USsite/images/logo.jpg"/>
+		<property name="title" value="title02"/>
+		<property name="creationMoment" value="2020/10/1 10:00"/>
+		<property name="deadlineMoment" value="2021/10/1 10:00"/>
+		<property name="body" value="body02"/>
+		<property name="links" value="https://www.informatica.us.es, https://www.etsi.us.es"/>
+	</bean>
+	
+	<bean id="new03" class="acme.entities.news.New">
+		<property name="category" value="category03" />
+		<property name="headerPicture" value="http://www.us.es/design/USsite/images/logo.jpg"/>
+		<property name="title" value="title03"/>
+		<property name="creationMoment" value="2020/10/1 10:00"/>
+		<property name="deadlineMoment" value="2020/10/17 10:00"/>
+		<property name="body" value="body03"/>
+		<property name="links" value=""/>
+	</bean>
+	
+	<bean id="new04" class="acme.entities.news.New">
+		<property name="category" value="category04" />
+		<property name="headerPicture" value="http://www.us.es/design/USsite/images/logo.jpg"/>
+		<property name="title" value="title04"/>
+		<property name="creationMoment" value="2020/10/1 10:00"/>
+		<property name="deadlineMoment" value="2020/10/17 10:00"/>
+		<property name="body" value="body04"/>
+		<property name="links" value=""/>
+	</bean>
+	
+	<!-- Toolsheets -->	
+	
+	<bean id="toolsheet01" class="acme.entities.toolsheets.Toolsheet">
+		<property name="title" value="title01" />
+		<property name="description" value="description01"/>
+		<property name="providerName" value="providerName01"/>
+		<property name="homePage" value="homePage01"/>
+		<property name="stars"><null/></property>
+	</bean>
+	
+	<bean id="toolsheet02" class="acme.entities.toolsheets.Toolsheet">
+		<property name="title" value="title02" />
+		<property name="description" value="description02"/>
+		<property name="providerName" value="providerName02"/>
+		<property name="homePage" value="homePage02"/>
+		<property name="stars" value="2" />
+	</bean>
+	
+	<bean id="toolsheet03" class="acme.entities.toolsheets.Toolsheet">
+		<property name="title" value="title03" />
+		<property name="description" value="description03"/>
+		<property name="providerName" value="providerName03"/>
+		<property name="homePage" value="homePage03"/>
+		<property name="stars"><null/></property>
+	</bean>
+	
+	<bean id="toolsheet04" class="acme.entities.toolsheets.Toolsheet">
+		<property name="title" value="title04" />
+		<property name="description" value="description04"/>
+		<property name="providerName" value="providerName04"/>
+		<property name="homePage" value="homePage04"/>
+		<property name="stars" value="4" />
+	</bean>
+	
+	<!-- Suggestions -->	
+	
+	<bean id="suggestion01" class="acme.entities.suggestions.Suggestion">
+		<property name="title" value="title01" />
+		<property name="creationMoment" value="2020/10/1 10:00"/>
+		<property name="text" value="text01"/>
+		<property name="email" value="cgr@gmail.com"/>
+	</bean>
+
+	<bean id="suggestion02" class="acme.entities.suggestions.Suggestion">
+		<property name="title" value="title02" />
+		<property name="creationMoment" value="2020/10/1 10:00"/>
+		<property name="text" value="text02"/>
+		<property name="email" value="jvg@gmail.com"/>
+	</bean>
+	
+	<bean id="suggestion03" class="acme.entities.suggestions.Suggestion">
+		<property name="title" value="title03" />
+		<property name="creationMoment" value="2020/10/1 10:00"/>
+		<property name="text" value="text03"/>
+		<property name="email" value="cgr@alum.us.com"/>
+	</bean>
+
+	<bean id="suggestion04" class="acme.entities.suggestions.Suggestion">
+		<property name="title" value="title04" />
+		<property name="creationMoment" value="2020/10/1 10:00"/>
+		<property name="text" value="text04"/>
+		<property name="email" value="jvg@alum.us.com"/>
+	</bean>
+	
 	<!-- Materials -->
 	<bean id="material01" class="acme.entities.materials.Material">
 		<property name="title" value="Material1"/>

@@ -64,6 +64,40 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `new` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `category` varchar(255),
+        `creation_moment` datetime(6),
+        `deadline_moment` datetime(6),
+        `header_picture` varchar(255),
+        `links` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+    
+    create table `suggestion` (
+       `id` integer not null,
+        `version` integer not null,
+        `creation_moment` datetime(6),
+        `email` varchar(255),
+        `text` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+    
+    create table `toolsheet` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `home_page` varchar(255),
+        `provider_name` varchar(255),
+        `stars` integer,
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+    
     create table `provider` (
        `id` integer not null,
         `version` integer not null,

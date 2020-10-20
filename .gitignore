@@ -30,3 +30,5 @@ mvnw
 
 mvnw\.cmd
 /starter-project.log
+
+/src/main/population/entity-map.properties
