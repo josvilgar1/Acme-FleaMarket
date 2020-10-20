@@ -6,6 +6,19 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `advertisement` (
+       `id` integer not null,
+        `version` integer not null,
+        `final_date` datetime(6),
+        `inicial_date` datetime(6),
+        `moment` datetime(6),
+        `picture` varchar(255),
+        `text` varchar(255),
+        `title` varchar(255),
+        `volume_discounts` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `anonymous` (
        `id` integer not null,
         `version` integer not null,
@@ -29,14 +42,52 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `gamezbulletin` (
+    create table `figment` (
        `id` integer not null,
         `version` integer not null,
-        `age` integer,
-        `author` varchar(255),
-        `credit_card` varchar(255),
+        `description` varchar(255),
+        `inventor` varchar(255),
         `moment` datetime(6),
-        `text` varchar(255),
+        `price_interval` double precision,
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `item_category` (
+       `id` integer not null,
+        `version` integer not null,
+        `items` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `material` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `home_page` varchar(255),
+        `provider_name` varchar(255),
+        `stars` integer,
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `new` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `category` varchar(255),
+        `creation_moment` datetime(6),
+        `deadline_moment` datetime(6),
+        `header_picture` varchar(255),
+        `links` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `new_category` (
+       `id` integer not null,
+        `version` integer not null,
+        `categories` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -49,6 +100,35 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `spam` (
+       `id` integer not null,
+        `version` integer not null,
+        `threshold` double precision,
+        `words` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `suggestion` (
+       `id` integer not null,
+        `version` integer not null,
+        `creation_moment` datetime(6),
+        `email` varchar(255),
+        `text` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `toolsheet` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `home_page` varchar(255),
+        `provider_name` varchar(255),
+        `stars` integer,
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `user_account` (
        `id` integer not null,
         `version` integer not null,
@@ -58,17 +138,6 @@
         `identity_surname` varchar(255),
         `password` varchar(255),
         `username` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `villegasbulletin` (
-       `id` integer not null,
-        `version` integer not null,
-        `author` varchar(255),
-        `date` datetime(6),
-        `latitude` double precision,
-        `longitude` double precision,
-        `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 

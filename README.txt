@@ -12,3 +12,8 @@ This is the Acme-FleaMarket project, which is intended to be a core learning ass
 who have enroled the Design and Testing subject of the Software Engineering curriculum of the 
 University of Sevilla.  This project provides a template our students can use to get their projects 
 up and running very quickly.
+
+
+**Entities**
+-Advertisement: for this entity, we acknowledged to treat the display period with two Date datatypes inicialDate meaning the
+	beginning of the period and finalDate meaning the end of the period.

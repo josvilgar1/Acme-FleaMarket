@@ -19,20 +19,32 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.gamezbulletin.list" action="/anonymous/gamezbulletin/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.gamezbulletin.form" action="/anonymous/gamezbulletin/create"/>
-			<acme:menu-suboption code="master.menu.anonymous.villegasbulletin.list" action="/anonymous/villegasbulletin/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.villegasbulletin.form" action="/anonymous/villegasbulletin/create"/>
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.carlos.favourite-link" action="https://www.informatica.us.es/"/>
-			<acme:menu-suboption code="master.menu.anonymous.jose.favourite-link" action="https://github.com/josvilgar1/Acme-FleaMarket"/>
+			<acme:menu-suboption code="master.menu.anonymous.material.list" action="/anonymous/material/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.advertisement.list" action="/anonymous/advertisement/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.new.activate" action="/anonymous/new/list-active"/>
+			<acme:menu-suboption code="master.menu.anonymous.toolsheet.list" action="/anonymous/toolsheet/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.new.list" action="/administrator/new/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.spam" action="/administrator/spam/list"/>
+			<acme:menu-suboption code="master.menu.administrator.newCategory" action="/administrator/new-category/list"/>
+			<acme:menu-suboption code="master.menu.administrator.itemCategory" action="/administrator/item-category/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.material.list" action="/authenticated/material/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.advertisement.list" action="/authenticated/advertisement/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.new.activate" action="/authenticated/new/list-active"/>
+			<acme:menu-suboption code="master.menu.authenticated.toolsheet.list" action="/authenticated/toolsheet/list"/>
+		    <acme:menu-separator/>
+      		<acme:menu-suboption code="master.menu.authenticated.suggestion.list" action="/authenticated/suggestion/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.figment.list" action="/authenticated/figment/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">

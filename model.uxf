@@ -296,40 +296,4 @@ m2=*
 has v</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>154</x>
-      <y>385</y>
-      <w>231</w>
-      <h>91</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Gamezbulletin
---
-+ author: String{NotBlank}
-+ age: Integer{NotNull, Positive}
-+ text: String{NotBlank}
-+ moment: Date{temporal(TIMESTAMP, Past}
-+ creditCard: String{NotBlank, CreditCardNumber}</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>406</x>
-      <y>385</y>
-      <w>273</w>
-      <h>91</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Villegasbulletin
---
-+ author: String{NotBlank}
-+ date: Date{temporal(TIMESTAMP, Past}
-+ title: String{NotBlank}
-+ latitude: Double{NotNull, Range(min = -90, max = 90)}
-+ longitude: Double{NotNull, Range(min = -180, max = 180)}</panel_attributes>
-    <additional_attributes/>
-  </element>
 </diagram>

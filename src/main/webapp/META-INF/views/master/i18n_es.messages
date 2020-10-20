@@ -29,19 +29,30 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.villegasbulletin.list=Listar VillegasBulletin
-master.menu.anonymous.villegasbulletin.form=Crear VillegasBulletin
-master.menu.anonymous.gamezbulletin.form=Crear GamezBulletin
-master.menu.anonymous.gamezbulletin.list=Listar GamezBulletins
-master.menu.anonymous.favourite-link = Enlace favorito
-master.menu.anonymous.carlos.favourite-link = Enlace favorito Carlos
-master.menu.anonymous.jose.favourite-link = Enlace favorito Jose
+master.menu.anonymous.new.activate = Noticias activas
+master.menu.anonymous.toolsheet.list = Hoja de herramientas
+master.menu.anonymous.material.list = Listar Material
+master.menu.anonymous.advertisement.list = Listar Anuncios
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
+master.menu.administrator.new.list = Noticias
+master.menu.administrator.spam = Palabras spam
+master.menu.administrator.newCategory = Categorías de noticias 
+master.menu.administrator.itemCategory = Categorías de elementos
 master.menu.administrator.shutdown = Parar el sistema
+
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.material.list = Listar Material
+master.menu.authenticated.advertisement.list = Listar Anuncios
+master.menu.authenticated.figment.list = Listar Productos
+master.menu.authenticated.new.activate = Noticias activas
+master.menu.authenticated.toolsheet.list = Hoja de herramientas
+master.menu.authenticated.suggestion.list = Sugerencias
 
 # master.menu.provider ########################################################
 
