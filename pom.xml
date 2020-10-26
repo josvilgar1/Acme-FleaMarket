@@ -19,7 +19,7 @@
 
 	<groupId>acme</groupId>
 	<artifactId>acme-fleamarket</artifactId>
-	<version>1.0</version>
+	<version>2.1.0</version>
 	<packaging>war</packaging>
 
 	<name>Acme-Jobs</name>
