@@ -66,7 +66,7 @@
 		<property name="title" value="title01" />
 		<property name="description" value="description01"/>
 		<property name="providerName" value="providerName01"/>
-		<property name="homePage" value="homePage01"/>
+		<property name="homePage" value="http://www.homePage01.com"/>
 		<property name="stars"><null/></property>
 	</bean>
 	
@@ -74,7 +74,7 @@
 		<property name="title" value="title02" />
 		<property name="description" value="description02"/>
 		<property name="providerName" value="providerName02"/>
-		<property name="homePage" value="homePage02"/>
+		<property name="homePage" value="http://www.homePage02.com"/>
 		<property name="stars" value="2" />
 	</bean>
 	
@@ -82,7 +82,7 @@
 		<property name="title" value="title03" />
 		<property name="description" value="description03"/>
 		<property name="providerName" value="providerName03"/>
-		<property name="homePage" value="homePage03"/>
+		<property name="homePage" value="http://www.homePage03.com"/>
 		<property name="stars"><null/></property>
 	</bean>
 	
@@ -90,7 +90,7 @@
 		<property name="title" value="title04" />
 		<property name="description" value="description04"/>
 		<property name="providerName" value="providerName04"/>
-		<property name="homePage" value="homePage04"/>
+		<property name="homePage" value="http://www.homePage04.com"/>
 		<property name="stars" value="4" />
 	</bean>
 	
@@ -150,7 +150,7 @@
 	<!-- Figments -->
 	<bean id="figment01" class="acme.entities.figments.Figment"> <!-- title moment inventor description priceInterval -->
 		<property name="title" value="Title1"/>
-		<property name="moment" value="2021/10/01 00:00"/>
+		<property name="moment" value="2020/10/01 00:00"/>
 		<property name="inventor" value="Inventor 1"/>
 		<property name="description" value="Description of figment 1"/>
 		<property name="priceInterval" value="2."/>
@@ -158,7 +158,7 @@
 	
 	<bean id="figment02" class="acme.entities.figments.Figment"> <!-- title moment inventor description priceInterval -->
 		<property name="title" value="Title2"/>
-		<property name="moment" value="2021/11/01 00:00"/>
+		<property name="moment" value="2020/10/01 00:00"/>
 		<property name="inventor" value="Inventor 2"/>
 		<property name="description" value="Description of figment 2"/>
 		<property name="priceInterval" value="5."/>
@@ -166,7 +166,7 @@
 		
 	<bean id="figment03" class="acme.entities.figments.Figment"> <!-- title moment inventor description priceInterval -->
 		<property name="title" value="Title3"/>
-		<property name="moment" value="2021/12/01 00:00"/>
+		<property name="moment" value="2020/10/01 00:00"/>
 		<property name="inventor" value="Inventor 3"/>
 		<property name="description" value="Description of figment 3"/>
 		<property name="priceInterval" value="10."/>
@@ -176,7 +176,7 @@
 	<bean id="advertisement01" class="acme.entities.advertisements.Advertisement">
 		<property name="title" value="Title 01"/>
 		<property name="picture" value="http://www.imagePage01.com"/>
-		<property name="moment" value="2021/10/01 00:00"/>
+		<property name="moment" value="2020/10/01 00:00"/>
 		<property name="inicialDate" value="2021/10/10 00:00"/>
 		<property name="finalDate" value="2021/10/20 00:00"/>
 		<property name="text" value="Text from advertisement 01"/>
@@ -186,7 +186,7 @@
 	<bean id="advertisement02" class="acme.entities.advertisements.Advertisement">
 		<property name="title" value="Title 02"/>
 		<property name="picture" value="http://www.imagePage02.com"/>
-		<property name="moment" value="2021/11/01 00:00"/>
+		<property name="moment" value="2020/10/01 00:00"/>
 		<property name="inicialDate" value="2021/11/10 00:00"/>
 		<property name="finalDate" value="2021/12/20 00:00"/>
 		<property name="text" value="Text from advertisement 02"/>
