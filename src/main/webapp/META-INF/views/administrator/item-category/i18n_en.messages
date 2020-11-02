@@ -8,4 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.itemCategory.list.label.items = Item categories
+administrator.itemCategory.list.label.items=Item categories
+
+administrator.itemCategory.form.label.items=Item categories
+
+administrator.itemCategory.form.button.update=Update
+administrator.itemCategory.form.button.return=Return

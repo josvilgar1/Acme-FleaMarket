@@ -15,4 +15,7 @@ public interface AdministratorItemCategoryRepository extends AbstractRepository 
 	@Query("select ic from ItemCategory ic")
 	Collection<ItemCategory> findMany();
 
+	@Query("select ic from ItemCategory ic where ic.id = ?1")
+	ItemCategory findOneItemCategoryById(int id);
+
 }

@@ -10,3 +10,9 @@
 
 administrator.spam.list.label.threshold=Threshold
 administrator.spam.list.label.word=Spam words
+
+administrator.spam.form.label.threshold=Threshold
+administrator.spam.form.label.word=Spam words
+
+administrator.spam.form.button.update=Update
+administrator.spam.form.button.return=Return

@@ -1,6 +1,5 @@
-
 <%--
-- list.jsp
+- form.jsp
 -
 - Copyright (c) 2019 Rafael Corchuelo.
 -
@@ -16,8 +15,13 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-
-<acme:list>
-	<acme:list-column code="administrator.itemCategory.list.label.items" path="items" width="100%" sortable="false"/>
-</acme:list>
-
+<acme:form>
+	<acme:form-textarea code="administrator.newCategory.form.label.categories" path="categories"/>
+	
+	<acme:form-submit test="${command == 'show'}" code="administrator.newCategory.form.button.update" 
+		action="/administrator/new-category/update"/>
+	<acme:form-submit test="${command == 'update'}" code="administrator.newCategory.form.button.update" 
+		action="/administrator/new-category/update"/>
+  	
+  	<acme:form-return code="administrator.newCategory.form.button.return"/>
+</acme:form>
