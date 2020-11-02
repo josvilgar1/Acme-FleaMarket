@@ -16,18 +16,17 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:list>
-	<acme:list-column code="administrator.new.list.label.category" path="category" width="25%" />
-	<acme:list-column code="administrator.new.list.label.title" path="title" width="25%"/>
-	<acme:list-column code="administrator.new.list.label.creationMoment" path="creationMoment" width="25%"/>		
-	<acme:list-column code="administrator.new.list.label.deadlineMoment" path="deadlineMoment" width="25%"/>		
+<acme:list >
+	<acme:list-column code="administrator.toolsheet.list.label.title" path="title" width="25%" sortable="false"/>
+	<acme:list-column code="administrator.toolsheet.list.label.providerName" path="providerName" width="25%"/>		
+	<acme:list-column code="administrator.toolsheet.list.label.description" path="description" width="40%" sortable="false"/>
+	<acme:list-column code="administrator.toolsheet.list.label.stars" path="stars" width="10%"/>
 </acme:list>
 
 <acme:form>
 	<acme:form-submit 
 		method="get" 
-		code="administrator.new.form.button.create" 
-		action="/administrator/new/create"/>
+		code="administrator.toolsheet.form.button.create" 
+		action="/administrator/toolsheet/create"/>
 </acme:form>
-
 

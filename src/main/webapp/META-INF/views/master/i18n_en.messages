@@ -29,8 +29,8 @@ master.menu.sign-out = Sign out
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
-master.menu.anonymous.new.activate=Active news
-master.menu.anonymous.toolsheet.list = Tool sheets
+master.menu.anonymous.new.activate = List Active News
+master.menu.anonymous.toolsheet.list = List Tools
 master.menu.anonymous.material.list = List Material
 master.menu.anonymous.advertisement.list = List Advertisements
 
@@ -38,10 +38,12 @@ master.menu.anonymous.advertisement.list = List Advertisements
 
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
-master.menu.administrator.new.list = News
-master.menu.administrator.spam = Spam words
-master.menu.administrator.newCategory = News categories
-master.menu.administrator.itemCategory = Item categories
+master.menu.administrator.new.list = List News
+master.menu.administrator.toolsheet.list = List Tools
+master.menu.administrator.suggestion.list = List Suggestions
+master.menu.administrator.spam = List Spam Words
+master.menu.administrator.newCategory = List News Categories
+master.menu.administrator.itemCategory = List Item Categories
 master.menu.administrator.shutdown = Shut down
 
 # master.menu.authenticated ###################################################
@@ -50,9 +52,9 @@ master.menu.authenticated = Authenticated
 master.menu.authenticated.material.list = List Material
 master.menu.authenticated.advertisement.list = List Advertisements
 master.menu.authenticated.figment.list = List Figments
-master.menu.authenticated.new.activate=Active news
-master.menu.authenticated.toolsheet.list = Tool sheets
-master.menu.authenticated.suggestion.list = Suggestions
+master.menu.authenticated.new.activate = List Active News
+master.menu.authenticated.toolsheet.list = List Tools
+master.menu.authenticated.suggestion.list = List Suggestions
 
 # master.menu.provider ########################################################
 
