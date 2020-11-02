@@ -22,4 +22,8 @@
 		<put-attribute name="body" type="template" value="../administrator/new-category/list.jsp" />
 	</definition>
 
+	<definition name="administrator/new-category/form" extends="master">		
+		<put-attribute name="body" type="template" value="../administrator/new-category/form.jsp" />
+	</definition>
+	
 </tiles-definitions>

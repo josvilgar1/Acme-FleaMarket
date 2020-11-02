@@ -8,4 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.itemCategory.list.label.items = Nuevos elementos
+administrator.itemCategory.list.label.items=Nuevos elementos
+
+administrator.itemCategory.form.label.items=Nuevos elementos
+
+administrator.itemCategory.form.button.update=Actualizar
+administrator.itemCategory.form.button.return=Volver
