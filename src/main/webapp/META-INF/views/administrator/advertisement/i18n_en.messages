@@ -1,0 +1,18 @@
+#Labels
+administrator.form.advertisement.label.title = Title
+administrator.form.advertisement.label.picture = Picture
+administrator.form.advertisement.label.inicialDate = Inicial Date
+administrator.form.advertisement.label.finalDate = Final Date
+administrator.form.advertisement.label.text = Text
+administrator.form.advertisement.label.volumeDiscounts = Discounts
+
+administrator.list.advertisement.label.title = Title
+administrator.list.advertisement.label.inicialDate = Inicial Date
+administrator.list.advertisement.label.finalDate = Final Date
+
+
+#Buttons
+administrator.form.advertisement.label.button.update = Update
+administrator.form.advertisement.label.button.create = Create
+administrator.form.advertisement.label.button.delete = Delete
+administrator.form.advertisement.label.button.return = Return

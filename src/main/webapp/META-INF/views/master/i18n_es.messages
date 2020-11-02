@@ -42,6 +42,9 @@ master.menu.administrator.new.list = Noticias
 master.menu.administrator.spam = Palabras spam
 master.menu.administrator.newCategory = Categorías de noticias 
 master.menu.administrator.itemCategory = Categorías de elementos
+master.menu.administrator.materialsheets = Tablas de Material
+master.menu.administrator.figments = Productos
+master.menu.administrator.advertisements =  Anuncios
 master.menu.administrator.shutdown = Parar el sistema
 
 # master.menu.authenticated ###################################################
