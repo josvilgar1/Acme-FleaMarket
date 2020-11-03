@@ -1,0 +1,16 @@
+#Labels
+administrator.form.figment.label.inventor = Inventor
+administrator.form.figment.label.title = Title
+administrator.form.figment.label.description = Description
+administrator.form.figment.label.priceInterval = Price Interval
+
+administrator.list.figment.label.title = Title
+administrator.list.figment.label.inventor = Inventor
+administrator.list.figment.label.priceInterval= Price Interval
+
+
+#Buttons
+administrator.form.figment.label.button.update = Update
+administrator.form.figment.label.button.create = Create
+administrator.form.figment.label.button.delete = Delete
+administrator.form.figment.label.button.return = Return

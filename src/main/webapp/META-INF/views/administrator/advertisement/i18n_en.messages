@@ -1,0 +1,25 @@
+#Labels
+administrator.form.advertisement.label.title = Title
+administrator.form.advertisement.label.picture = Picture
+administrator.form.advertisement.label.inicialDate = Inicial Date
+administrator.form.advertisement.label.finalDate = Final Date
+administrator.form.advertisement.label.text = Text
+administrator.form.advertisement.label.volumeDiscounts = Discounts
+
+administrator.list.advertisement.label.title = Title
+administrator.list.advertisement.label.inicialDate = Inicial Date
+administrator.list.advertisement.label.finalDate = Final Date
+
+
+#Buttons
+administrator.form.advertisement.label.button.update = Update
+administrator.form.advertisement.label.button.create = Create
+administrator.form.advertisement.label.button.delete = Delete
+administrator.form.advertisement.label.button.return = Return
+
+
+#Errors
+administrator.form.advertisement.error.finalDateNull = Must not be blank
+administrator.form.advertisement.error.inicialDateNull = Must not be blank
+administrator.form.advertisement.error.outOfPeriod = You can't delete or update the advertisement out or the display period
+administrator.form.advertisement.error.inicialBeforeFinal = Inicial date must be before the final date

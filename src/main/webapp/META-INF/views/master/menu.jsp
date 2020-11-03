@@ -33,6 +33,10 @@
 			<acme:menu-suboption code="master.menu.administrator.suggestion.list" action="/administrator/suggestion/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.spam" action="/administrator/spam/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.materialsheets" action="/administrator/material/list"/>
+			<acme:menu-suboption code="master.menu.administrator.figments" action="/administrator/figment/list"/>
+			<acme:menu-suboption code="master.menu.administrator.advertisements" action="/administrator/advertisement/list"/>
 			<acme:menu-suboption code="master.menu.administrator.newCategory" action="/administrator/new-category/list"/>
 			<acme:menu-suboption code="master.menu.administrator.itemCategory" action="/administrator/item-category/list"/>
 			<acme:menu-separator/>
