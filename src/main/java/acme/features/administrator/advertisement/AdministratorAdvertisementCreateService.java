@@ -1,6 +1,8 @@
 
 package acme.features.administrator.advertisement;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -58,6 +60,22 @@ public class AdministratorAdvertisementCreateService implements AbstractCreateSe
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Boolean inicialBeforeFinal;
+
+		//Check Display Period is not null
+		if (!errors.hasErrors("finalDate") && !errors.hasErrors("inicialDate")) {
+			errors.state(request, entity.getInicialDate() != null, "inicialDate", "administrator.form.advertisement.error.inicialDateNull");
+			errors.state(request, entity.getFinalDate() != null, "finalDate", "administrator.form.advertisement.error.finalDateNull");
+		}
+
+		if (!errors.hasErrors("finalDate") && !errors.hasErrors("inicialDate")) {
+			Date finalDate = entity.getFinalDate();
+			Date inicialDate = entity.getInicialDate();
+			inicialBeforeFinal = inicialDate.before(finalDate);
+
+			errors.state(request, inicialBeforeFinal, "inicialDate", "administrator.form.advertisement.error.inicialBeforeFinal");
+		}
 	}
 
 	@Override

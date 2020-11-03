@@ -1,7 +1,9 @@
 
 package acme.features.administrator.advertisement;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -65,8 +67,14 @@ public class AdministratorAdvertisementDeleteService implements AbstractDeleteSe
 		assert entity != null;
 		assert errors != null;
 
-		Date moment = new Date(System.currentTimeMillis());
-		assert entity.getInicialDate().before(moment) && entity.getFinalDate().after(moment);
+		Calendar calendar;
+		Boolean isInDisplayPeriod;
+
+		calendar = new GregorianCalendar();
+		Date calendarDate = calendar.getTime();
+		isInDisplayPeriod = entity.getInicialDate().before(calendarDate) && entity.getFinalDate().after(calendarDate);
+
+		errors.state(request, isInDisplayPeriod, "inicialDate", "administrator.form.advertisement.error.outOfPeriod");
 	}
 
 	@Override
