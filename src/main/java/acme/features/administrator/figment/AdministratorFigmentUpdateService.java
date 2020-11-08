@@ -41,7 +41,7 @@ public class AdministratorFigmentUpdateService implements AbstractUpdateService<
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "inventor", "description", "priceInterval");
+		request.unbind(entity, model, "title", "inventor", "moment", "description", "rangeMin", "rangeMax");
 	}
 
 	@Override
@@ -63,6 +63,22 @@ public class AdministratorFigmentUpdateService implements AbstractUpdateService<
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		if (!errors.hasErrors("rangeMax") && !errors.hasErrors("rangeMin")) {
+			//Check if currency is in EUR-----------------------------------------------------
+			Boolean maxIsEur = entity.getRangeMax().getCurrency().equals("EUR")
+				|| entity.getRangeMax().getCurrency().equals("€");
+			Boolean minIsEur = entity.getRangeMin().getCurrency().equals("EUR")
+				|| entity.getRangeMin().getCurrency().equals("€");
+			errors.state(request, maxIsEur, "rangeMax", "administrator.form.figment.errors.rangeMax.currency");
+			errors.state(request, minIsEur, "rangeMin", "administrator.form.figment.errors.rangeMin.currency");
+
+			if (maxIsEur && minIsEur)
+				//Check rangeMax > rangeMin-------------------------------------------------------
+				errors.state(request, entity.getRangeMax().getAmount() >= entity.getRangeMin().getAmount(), "rangeMin",
+					"administrator.form.figment.errors.maxbiggerthanmin");
+
+		}
 	}
 
 	@Override

@@ -30,7 +30,8 @@ public class AdministratorAdvertisementShowService implements AbstractShowServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "picture", "inicialDate", "finalDate", "text", "volumeDiscounts");
+		request.unbind(entity, model, "title", "picture", "moment", "inicialDate", "finalDate", "text",
+			"volumeDiscounts");
 	}
 
 	@Override

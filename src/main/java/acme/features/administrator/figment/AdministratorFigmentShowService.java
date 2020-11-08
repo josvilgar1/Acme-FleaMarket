@@ -30,7 +30,7 @@ public class AdministratorFigmentShowService implements AbstractShowService<Admi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "inventor", "description", "priceInterval");
+		request.unbind(entity, model, "title", "inventor", "moment", "description", "rangeMin", "rangeMax");
 	}
 
 	@Override

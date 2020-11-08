@@ -42,7 +42,8 @@ public class AdministratorAdvertisementUpdateService implements AbstractUpdateSe
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "title", "picture", "inicialDate", "finalDate", "text", "volumeDiscounts");
+		request.unbind(entity, model, "title", "picture", "moment", "inicialDate", "finalDate", "text",
+			"volumeDiscounts");
 	}
 
 	@Override
@@ -61,7 +62,6 @@ public class AdministratorAdvertisementUpdateService implements AbstractUpdateSe
 
 	@Override
 	public void validate(Request<Advertisement> request, Advertisement entity, Errors errors) {
-		//TODO: Falta validar que estemos en el plazo de display
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -72,16 +72,23 @@ public class AdministratorAdvertisementUpdateService implements AbstractUpdateSe
 		if (!errors.hasErrors("finalDate") && !errors.hasErrors("inicialDate")) {
 			calendar = new GregorianCalendar();
 			Date calendarDate = calendar.getTime();
-			isInDisplayPeriod = entity.getInicialDate().before(calendarDate) && entity.getFinalDate().after(calendarDate);
+			isInDisplayPeriod = entity.getInicialDate().before(calendarDate)
+				&& entity.getFinalDate().after(calendarDate);
 
-			errors.state(request, isInDisplayPeriod, "inicialDate", "administrator.form.advertisement.error.outOfPeriod");
+			errors.state(request, isInDisplayPeriod, "outOfPeriod",
+				"administrator.form.advertisement.error.outOfPeriod");
 		}
 	}
 
 	@Override
 	public void update(Request<Advertisement> request, Advertisement entity) {
-		repository.save(entity);
+		assert request != null;
+		assert entity != null;
 
+		Date moment;
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setMoment(moment);
+		repository.save(entity);
 	}
 
 }

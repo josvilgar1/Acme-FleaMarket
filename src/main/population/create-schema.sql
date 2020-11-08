@@ -48,7 +48,10 @@
         `description` varchar(255),
         `inventor` varchar(255),
         `moment` datetime(6),
-        `price_interval` double precision,
+        `range_max_amount` double precision,
+        `range_max_currency` varchar(255),
+        `range_min_amount` double precision,
+        `range_min_currency` varchar(255),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;

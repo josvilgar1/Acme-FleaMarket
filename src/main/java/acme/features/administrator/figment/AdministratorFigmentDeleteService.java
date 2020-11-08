@@ -39,7 +39,7 @@ public class AdministratorFigmentDeleteService implements AbstractDeleteService<
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "inventor", "description", "priceInterval");
+		request.unbind(entity, model, "title", "inventor", "moment", "description", "rangeMin", "rangeMax");
 	}
 
 	@Override
@@ -65,7 +65,9 @@ public class AdministratorFigmentDeleteService implements AbstractDeleteService<
 
 	@Override
 	public void delete(Request<Figment> request, Figment entity) {
-		repository.delete(entity);
+		assert request != null;
+		assert entity != null;
 
+		repository.delete(entity);
 	}
 }

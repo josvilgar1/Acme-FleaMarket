@@ -5,6 +5,7 @@
 
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.advertisement.show.label.title" path="title"/>
+	<acme:form-textbox code="authenticated.advertisement.show.label.picture" path="picture"/>
 	<acme:form-textbox code="authenticated.advertisement.show.label.moment" path="moment"/>
 	<acme:form-textbox code="authenticated.advertisement.show.label.inicialDate" path="inicialDate"/>
 	<acme:form-textbox code="authenticated.advertisement.show.label.finalDate" path="finalDate"/>

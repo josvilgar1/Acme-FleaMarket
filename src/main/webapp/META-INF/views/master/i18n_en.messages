@@ -44,9 +44,9 @@ master.menu.administrator.suggestion.list = List Suggestions
 master.menu.administrator.spam = List Spam Words
 master.menu.administrator.newCategory = List News Categories
 master.menu.administrator.itemCategory = List Item Categories
-master.menu.administrator.materialsheets = Material Sheets
-master.menu.administrator.figments = Figments
-master.menu.administrator.advertisements =  Advertisements
+master.menu.administrator.materialsheets = List Materials
+master.menu.administrator.figments = List Figments
+master.menu.administrator.advertisements =  List Advertisements
 master.menu.administrator.shutdown = Shut down
 
 # master.menu.authenticated ###################################################
