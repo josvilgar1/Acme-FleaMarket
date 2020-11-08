@@ -43,7 +43,8 @@ public class AdministratorAdvertisementDeleteService implements AbstractDeleteSe
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "picture", "inicialDate", "finalDate", "text", "volumeDiscounts");
+		request.unbind(entity, model, "title", "picture", "moment", "inicialDate", "finalDate", "text",
+			"volumeDiscounts");
 	}
 
 	@Override
@@ -70,11 +71,15 @@ public class AdministratorAdvertisementDeleteService implements AbstractDeleteSe
 		Calendar calendar;
 		Boolean isInDisplayPeriod;
 
-		calendar = new GregorianCalendar();
-		Date calendarDate = calendar.getTime();
-		isInDisplayPeriod = entity.getInicialDate().before(calendarDate) && entity.getFinalDate().after(calendarDate);
+		if (!errors.hasErrors("finalDate") && !errors.hasErrors("inicialDate")) {
+			calendar = new GregorianCalendar();
+			Date calendarDate = calendar.getTime();
+			isInDisplayPeriod = entity.getInicialDate().before(calendarDate)
+				&& entity.getFinalDate().after(calendarDate);
 
-		errors.state(request, isInDisplayPeriod, "inicialDate", "administrator.form.advertisement.error.outOfPeriod");
+			errors.state(request, isInDisplayPeriod, "outOfPeriod",
+				"administrator.form.advertisement.error.outOfPeriod");
+		}
 	}
 
 	@Override

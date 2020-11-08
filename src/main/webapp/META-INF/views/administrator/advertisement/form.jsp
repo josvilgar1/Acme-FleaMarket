@@ -3,9 +3,14 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+<acme:form-errors path="outOfPeriod"/>
+<br/>
 <acme:form readonly="false">
 	<acme:form-textbox code="administrator.form.advertisement.label.title" path="title"/>
 	<acme:form-textbox code="administrator.form.advertisement.label.picture" path="picture"/>
+	<jstl:if test="${command != 'create'}">
+		<acme:form-textbox code="administrator.form.advertisement.label.moment" path="moment" readonly="true"/>
+	</jstl:if>
 	<acme:form-textbox code="administrator.form.advertisement.label.inicialDate" path="inicialDate"/>
 	<acme:form-textbox code="administrator.form.advertisement.label.finalDate" path="finalDate"/>
 	<acme:form-textarea code="administrator.form.advertisement.label.text" path="text"/>
@@ -18,4 +23,4 @@
 	<acme:form-submit test ="${command=='delete' }" code="administrator.form.advertisement.label.button.delete" action="/administrator/advertisement/delete"/>
   	
   	<acme:form-return code="administrator.form.advertisement.label.button.return"/>
-</acme:form>>
+</acme:form>

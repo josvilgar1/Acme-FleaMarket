@@ -14,6 +14,11 @@ University of Sevilla.  This project provides a template our students can use to
 up and running very quickly.
 
 
+## v1.0.0
 **Entities**
 -Advertisement: for this entity, we acknowledged to treat the display period with two Date datatypes inicialDate meaning the
 	beginning of the period and finalDate meaning the end of the period.
+
+## v3.0.0
+**Entities**
+-Figment: The price range property has been modified by two attributes of type Money.

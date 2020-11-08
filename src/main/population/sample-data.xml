@@ -153,7 +153,8 @@
 		<property name="moment" value="2020/10/01 00:00"/>
 		<property name="inventor" value="Inventor 1"/>
 		<property name="description" value="Description of figment 1"/>
-		<property name="priceInterval" value="2."/>
+		<property name="rangeMin" value="100€"/>
+		<property name="rangeMax" value="5000€"/>
 	</bean>
 	
 	<bean id="figment02" class="acme.entities.figments.Figment"> <!-- title moment inventor description priceInterval -->
@@ -161,7 +162,8 @@
 		<property name="moment" value="2020/10/01 00:00"/>
 		<property name="inventor" value="Inventor 2"/>
 		<property name="description" value="Description of figment 2"/>
-		<property name="priceInterval" value="5."/>
+		<property name="rangeMin" value="100€"/>
+		<property name="rangeMax" value="5000€"/>
 	</bean>
 		
 	<bean id="figment03" class="acme.entities.figments.Figment"> <!-- title moment inventor description priceInterval -->
@@ -169,7 +171,8 @@
 		<property name="moment" value="2020/10/01 00:00"/>
 		<property name="inventor" value="Inventor 3"/>
 		<property name="description" value="Description of figment 3"/>
-		<property name="priceInterval" value="10."/>
+		<property name="rangeMin" value="100€"/>
+		<property name="rangeMax" value="5000€"/>
 	</bean>
 		
 	<!-- Advertisements -->

@@ -1,6 +1,7 @@
 
 package acme.features.administrator.advertisement;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,8 @@ public class AdministratorAdvertisementCreateService implements AbstractCreateSe
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "picture", "inicialDate", "finalDate", "text", "volumeDiscounts");
+		request.unbind(entity, model, "title", "picture", "moment", "inicialDate", "finalDate", "text",
+			"volumeDiscounts");
 
 	}
 
@@ -61,25 +63,31 @@ public class AdministratorAdvertisementCreateService implements AbstractCreateSe
 		assert entity != null;
 		assert errors != null;
 
-		Boolean inicialBeforeFinal;
-
 		//Check Display Period is not null
 		if (!errors.hasErrors("finalDate") && !errors.hasErrors("inicialDate")) {
-			errors.state(request, entity.getInicialDate() != null, "inicialDate", "administrator.form.advertisement.error.inicialDateNull");
-			errors.state(request, entity.getFinalDate() != null, "finalDate", "administrator.form.advertisement.error.finalDateNull");
-		}
-
-		if (!errors.hasErrors("finalDate") && !errors.hasErrors("inicialDate")) {
+			Date moment = Calendar.getInstance().getTime();
 			Date finalDate = entity.getFinalDate();
 			Date inicialDate = entity.getInicialDate();
-			inicialBeforeFinal = inicialDate.before(finalDate);
 
-			errors.state(request, inicialBeforeFinal, "inicialDate", "administrator.form.advertisement.error.inicialBeforeFinal");
+			Boolean inicialAfterMoment = inicialDate.after(moment);
+			errors.state(request, inicialAfterMoment, "inicialDate",
+				"administrator.form.advertisement.error.inicialAfterMoment");
+
+			Boolean inicialBeforeFinal = inicialDate.before(finalDate);
+			errors.state(request, inicialBeforeFinal, "inicialDate",
+				"administrator.form.advertisement.error.inicialBeforeFinal");
 		}
+
 	}
 
 	@Override
 	public void create(final Request<Advertisement> request, final Advertisement entity) {
+		assert request != null;
+		assert entity != null;
+
+		Date moment;
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setMoment(moment);
 		repository.save(entity);
 	}
 }

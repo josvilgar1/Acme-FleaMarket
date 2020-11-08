@@ -6,7 +6,7 @@
 <acme:list >
 	<acme:list-column code="administrator.list.figment.label.title" path="title" width="25%" />
 	<acme:list-column code="administrator.list.figment.label.inventor" path="inventor" width="25%"/>			
-	<acme:list-column code="administrator.list.figment.label.priceInterval" path="priceInterval" width="25%"/>		
+	<acme:list-column code="administrator.list.figment.label.description" path="description" width="50%"/>		
 </acme:list>
 
 <acme:form>

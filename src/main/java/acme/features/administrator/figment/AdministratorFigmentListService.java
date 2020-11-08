@@ -31,7 +31,7 @@ public class AdministratorFigmentListService implements AbstractListService<Admi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "inventor", "priceInterval");
+		request.unbind(entity, model, "title", "inventor", "description");
 	}
 
 	@Override

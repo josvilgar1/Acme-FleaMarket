@@ -30,7 +30,7 @@ public class AuthenticatedFigmentShowService implements AbstractShowService<Auth
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "inventor", "moment", "description", "priceInterval");
+		request.unbind(entity, model, "title", "inventor", "moment", "description", "rangeMin", "rangeMax");
 	}
 
 	@Override

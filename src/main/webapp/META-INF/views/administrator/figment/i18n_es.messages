@@ -2,11 +2,12 @@
 administrator.form.figment.label.inventor = Inventor
 administrator.form.figment.label.title = Título
 administrator.form.figment.label.description = Descripción
-administrator.form.figment.label.priceInterval = Intervalo de precio
+administrator.form.figment.label.rangeMin = Precio mínimo
+administrator.form.figment.label.rangeMax = Precio máximo
 
 administrator.list.figment.label.title = Título
 administrator.list.figment.label.inventor = Inventor
-administrator.list.figment.label.priceInterval= Intervalo de Precio
+administrator.list.figment.label.description= Descripción
 
 
 #Buttons
@@ -14,3 +15,8 @@ administrator.form.figment.label.button.update = Actualizar
 administrator.form.figment.label.button.create = Crear
 administrator.form.figment.label.button.delete = Eliminar
 administrator.form.figment.label.button.return = Volver
+
+#Errors
+administrator.form.figment.errors.rangeMax.currency = La moneda debe ser Euro
+administrator.form.figment.errors.rangeMin.currency = La moneda debe ser Euro
+administrator.form.figment.errors.maxbiggerthanmin = El rango mínimo no puede ser superior al rango superior
