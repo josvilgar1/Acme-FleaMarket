@@ -395,7 +395,7 @@ Suggestion
       <x>567</x>
       <y>511</y>
       <w>252</w>
-      <h>91</h>
+      <h>98</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Figment
@@ -404,7 +404,8 @@ Figment
 +moment: Date {Temporal(TIMESTAMP), Past}
 +inventor: String {NotBlank} 
 +description: String {NotBlank}
-+priceInterval: Double {NotNull}</panel_attributes>
++rangeMin: Money {Valid, NotNull}
++rangeMax: Money {Valid, NotNull}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
