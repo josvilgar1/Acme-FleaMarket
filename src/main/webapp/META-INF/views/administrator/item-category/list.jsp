@@ -17,7 +17,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 
-<acme:list readonly="true">
+<acme:list>
 	<acme:list-column code="administrator.itemCategory.list.label.items" path="items" width="100%" sortable="false"/>
 </acme:list>
 

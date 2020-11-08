@@ -1,0 +1,27 @@
+#Labels
+administrator.form.advertisement.label.title = Título
+administrator.form.advertisement.label.picture = Imagen
+administrator.form.advertisement.label.moment = Fecha Creación
+administrator.form.advertisement.label.inicialDate = Fecha Inicial
+administrator.form.advertisement.label.finalDate = Fecha Final
+administrator.form.advertisement.label.text = Texto
+administrator.form.advertisement.label.volumeDiscounts = Descuentos
+
+administrator.list.advertisement.label.title = Título
+administrator.list.advertisement.label.inicialDate = Fecha Inicial
+administrator.list.advertisement.label.finalDate = Fecha Final
+
+
+#Buttons
+administrator.form.advertisement.label.button.update = Actualizar
+administrator.form.advertisement.label.button.create = Crear
+administrator.form.advertisement.label.button.delete = Eliminar
+administrator.form.advertisement.label.button.return = Volver
+
+
+#Errors
+administrator.form.advertisement.error.finalDateNull = No puede estar en blanco
+administrator.form.advertisement.error.inicialDateNull = No puede estar en blanco
+administrator.form.advertisement.error.outOfPeriod = No puedes eliminar o actualizar el anuncio fuera del periodo de muestra
+administrator.form.advertisement.error.inicialBeforeFinal = La fecha inicial no puede ir después de la fecha final
+administrator.form.advertisement.error.inicialAfterMoment = La fecha inicial no puede ser anterior al momento actual

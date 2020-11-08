@@ -8,21 +8,26 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-anonymous.administrator.list.label.category = Category
-anonymous.administrator.list.label.headerPicture = Header
-anonymous.administrator.list.label.title  = Title
-anonymous.administrator.list.label.creationMoment = Creation moment
-anonymous.administrator.list.label.deadlineMoment = Deadline moment
-anonymous.administrator.list.label.body = administrator
-anonymous.administrator.list.label.links = Links
+administrator.new.list.label.category = Category
+administrator.new.list.label.headerPicture = Header
+administrator.new.list.label.title  = Title
+administrator.new.list.label.creationMoment = Creation moment
+administrator.new.list.label.deadlineMoment = Deadline moment
+administrator.new.list.label.body = administrator
+administrator.new.list.label.links = Links
 
-anonymous.administrator.form.label.category = Category
-anonymous.administrator.form.label.headerPicture = Header
-anonymous.administrator.form.label.title  = Title
-anonymous.administrator.form.label.creationMoment = Creation moment
-anonymous.administrator.form.label.deadlineMoment = Deadline moment
-anonymous.administrator.form.label.body = administrator
-anonymous.administrator.form.label.links = Links
+administrator.new.form.label.category = Category
+administrator.new.form.label.headerPicture = Header
+administrator.new.form.label.title  = Title
+administrator.new.form.label.creationMoment = Creation moment
+administrator.new.form.label.deadlineMoment = Deadline moment
+administrator.new.form.label.body = New
+administrator.new.form.label.links = Links
 
-anonymous.administrator.form.button.create = Create
-anonymous.administrator.form.button.return = Return
+administrator.new.form.label.confirmation = Confirmation
+
+administrator.new.form.errors.confirmation = Not confirmed
+administrator.new.form.errors.deadlineMoment = The deadline must be in the future
+
+administrator.new.form.button.create = Create
+administrator.new.form.button.return = Return

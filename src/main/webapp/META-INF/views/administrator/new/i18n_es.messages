@@ -9,24 +9,29 @@
 # they accept any liabilities with respect to them.
 
 
-anonymous.administrator.list.label.category = Categoria
-anonymous.administrator.list.label.headerPicture = Cabecera
-anonymous.administrator.list.label.title  = Título
-anonymous.administrator.list.label.creationMoment = Fecha inicio
-anonymous.administrator.list.label.deadlineMoment = Fecha final
-anonymous.administrator.list.label.body = Noticia
-anonymous.administrator.list.label.links = Enlaces
+administrator.new.list.label.category = Categoria
+administrator.new.list.label.headerPicture = Cabecera
+administrator.new.list.label.title  = Título
+administrator.new.list.label.creationMoment = Fecha inicio
+administrator.new.list.label.deadlineMoment = Fecha final
+administrator.new.list.label.body = Noticia
+administrator.new.list.label.links = Enlaces
 
-anonymous.administrator.form.label.category = Categoria
-anonymous.administrator.form.label.headerPicture = Cabecera
-anonymous.administrator.form.label.title  = Título
-anonymous.administrator.form.label.creationMoment = Fecha inicio
-anonymous.administrator.form.label.deadlineMoment = Fecha final
-anonymous.administrator.form.label.body = Noticia
-anonymous.administrator.form.label.links = Enlaces
+administrator.new.form.label.category = Categoria
+administrator.new.form.label.headerPicture = Cabecera
+administrator.new.form.label.title  = Título
+administrator.new.form.label.creationMoment = Fecha inicio
+administrator.new.form.label.deadlineMoment = Fecha final
+administrator.new.form.label.body = Noticia
+administrator.new.form.label.links = Enlaces
 
-anonymous.administrator.form.button.create = Crear
-anonymous.administrator.form.button.return = Volver
+administrator.new.form.label.confirmation = Confirmación
+
+administrator.new.form.errors.confirmation = No se ha confirmado
+administrator.new.form.errors.deadlineMoment = La fecha límite debe ser futura
+
+administrator.new.form.button.create = Crear
+administrator.new.form.button.return = Volver
 
 
 

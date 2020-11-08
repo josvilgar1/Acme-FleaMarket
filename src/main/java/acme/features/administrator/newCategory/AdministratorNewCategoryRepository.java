@@ -15,4 +15,7 @@ public interface AdministratorNewCategoryRepository extends AbstractRepository {
 	@Query("select nc from NewCategory nc")
 	Collection<NewCategory> findMany();
 
+	@Query("select nc from NewCategory nc where nc.id = ?1")
+	NewCategory findOneNewCategoryById(int id);
+
 }

@@ -1,0 +1,17 @@
+#Labels
+administrator.form.material.label.providerName = Proveedor
+administrator.form.material.label.title = Titulo
+administrator.form.material.label.description = Descripción
+administrator.form.material.label.homePage = Página principal
+administrator.form.material.label.stars = Estrellas
+
+administrator.list.material.label.title = Titulo
+administrator.list.material.label.providerName = Proveedor
+administrator.list.material.label.stars = Estrellas
+
+
+#Buttons
+administrator.form.material.label.button.update = Actualizar
+administrator.form.material.label.button.create = Crear
+administrator.form.material.label.button.delete = Eliminar
+administrator.form.material.label.button.return = Volver

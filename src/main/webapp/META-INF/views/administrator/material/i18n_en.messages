@@ -1,0 +1,17 @@
+#Labels
+administrator.form.material.label.providerName = Provider
+administrator.form.material.label.title = Title
+administrator.form.material.label.description = Description
+administrator.form.material.label.homePage= Home Page
+administrator.form.material.label.stars = Stars
+
+administrator.list.material.label.title = Title
+administrator.list.material.label.providerName = Provider
+administrator.list.material.label.stars = Stars
+
+
+#Buttons
+administrator.form.material.label.button.update = Update
+administrator.form.material.label.button.create = Create
+administrator.form.material.label.button.delete = Delete
+administrator.form.material.label.button.return = Return

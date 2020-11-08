@@ -17,12 +17,20 @@ import acme.framework.entities.Administrator;
 public class AdministratorItemCategoryController extends AbstractController<Administrator, ItemCategory> {
 
 	@Autowired
-	private AdministratorItemCategoryListService listService;
+	private AdministratorItemCategoryListService	listService;
+
+	@Autowired
+	private AdministratorItemCategoryShowService	showService;
+
+	@Autowired
+	private AdministratorItemCategoryUpdateService	updateService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, listService);
+		super.addBasicCommand(BasicCommand.SHOW, showService);
+		super.addBasicCommand(BasicCommand.UPDATE, updateService);
 	}
 
 }
