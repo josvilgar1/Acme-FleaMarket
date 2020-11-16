@@ -196,4 +196,735 @@
 		<property name="volumeDiscounts" value="average"/>
 	</bean>
 	
+	<!-- ##################################################################### -->
+
+	<!-- Suppliers -->
+	<bean name="supplier01UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="supplier01" />
+		<property name="password" value="supplier01" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="supplier01" />
+				<property name="surname" value="supplier01" />
+				<property name="email" value="supplier.01@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="supplier01Supplier" />
+				<ref bean="supplier01Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="supplier01Supplier" class="acme.entities.roles.Supplier">
+		<property name="userAccount" ref="supplier01UserAccount" />
+		<property name="company" value="comany01" />
+		<property name="homePage" value="http://www.homepage01.com" />
+		<property name="itemCategory" value="itemCategory01" />
+		<property name="description" value="description01" />
+	</bean>
+	
+	<bean name="supplier01Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="supplier01UserAccount" />
+	</bean>
+	
+	<bean name="supplier02UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="supplier02" />
+		<property name="password" value="supplier02" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="supplier02" />
+				<property name="surname" value="supplier02" />
+				<property name="email" value="supplier.02@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="supplier02Supplier" />
+				<ref bean="supplier02Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="supplier02Supplier" class="acme.entities.roles.Supplier">
+		<property name="userAccount" ref="supplier02UserAccount" />
+		<property name="company" value="comany02" />
+		<property name="homePage" value="http://www.homepage02.com" />
+		<property name="itemCategory" value="itemCategory02" />
+		<property name="description" value="description02" />	</bean>
+	
+	<bean name="supplier02Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="supplier02UserAccount" />
+	</bean>
+	
+	<bean name="supplier03UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="supplier03" />
+		<property name="password" value="supplier03" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="supplier03" />
+				<property name="surname" value="supplier03" />
+				<property name="email" value="supplier.03@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="supplier03Supplier" />
+				<ref bean="supplier03Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="supplier03Supplier" class="acme.entities.roles.Supplier">
+		<property name="userAccount" ref="supplier03UserAccount" />
+		<property name="company" value="comany03" />
+		<property name="homePage" value="http://www.homepage03.com" />
+		<property name="itemCategory" value="itemCategory03" />
+		<property name="description" value="description03" />
+	</bean>
+	
+	<bean name="supplier03Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="supplier03UserAccount" />
+	</bean>
+	
+	<bean name="supplier04UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="supplier04" />
+		<property name="password" value="supplier04" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="supplier04" />
+				<property name="surname" value="supplier04" />
+				<property name="email" value="supplier.04@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="supplier04Supplier" />
+				<ref bean="supplier04Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="supplier04Supplier" class="acme.entities.roles.Supplier">
+		<property name="userAccount" ref="supplier04UserAccount" />
+		<property name="company" value="comany04" />
+		<property name="homePage" value="http://www.homepage04.com" />
+		<property name="itemCategory" value="itemCategory04" />
+		<property name="description" value="description04" />
+	</bean>
+	
+	<bean name="supplier04Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="supplier04UserAccount" />
+	</bean>
+	
+	<bean name="supplier05UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="supplier05" />
+		<property name="password" value="supplier05" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="supplier05" />
+				<property name="surname" value="supplier05" />
+				<property name="email" value="supplier.05@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="supplier05Supplier" />
+				<ref bean="supplier05Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="supplier05Supplier" class="acme.entities.roles.Supplier">
+		<property name="userAccount" ref="supplier05UserAccount" />
+		<property name="company" value="comany05" />
+		<property name="homePage" value="http://www.homepage05.com" />
+		<property name="itemCategory" value="itemCategory05" />
+		<property name="description" value="description05" />
+	</bean>
+	
+	<bean name="supplier05Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="supplier05UserAccount" />
+	</bean>
+	
+	<!-- Buyers -->
+	
+	<bean name="buyer01UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="buyer01" />
+		<property name="password" value="buyer01" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="buyer01" />
+				<property name="surname" value="buyer01" />
+				<property name="email" value="buyer.01@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="buyer01Buyer" />
+				<ref bean="buyer01Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="buyer01Buyer" class="acme.entities.roles.Buyer">
+		<property name="userAccount" ref="buyer01UserAccount" />
+		<property name="email" value="buyer01@acme.com" />
+		<property name="phone" value="+111(2222)333331" />
+		<property name="address" value="address01" />
+		<property name="creditCardNumber" value="1111222233334444" />
+		<property name="creditCardName" value="buyer01" />
+		<property name="creditCardMonth" value="12" />
+		<property name="creditCardYear" value="2021" />
+		<property name="creditCardCVV" value="666" />
+		<property name="creditCardType" value="Visa" />
+	</bean>
+	
+	<bean name="buyer01Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="buyer01UserAccount" />
+	</bean>
+	
+	<bean name="buyer02UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="buyer02" />
+		<property name="password" value="buyer02" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="buyer02" />
+				<property name="surname" value="buyer02" />
+				<property name="email" value="buyer.02@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="buyer02Buyer" />
+				<ref bean="buyer02Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="buyer02Buyer" class="acme.entities.roles.Buyer">
+		<property name="userAccount" ref="buyer02UserAccount" />
+		<property name="email" value="buyer02@acme.com" />
+		<property name="phone" value="+111(2222)333332" />
+		<property name="address" value="address02" />
+		<property name="creditCardNumber" value="1111222233334444" />
+		<property name="creditCardName" value="buyer02" />
+		<property name="creditCardMonth" value="12" />
+		<property name="creditCardYear" value="2021" />
+		<property name="creditCardCVV" value="666" />
+		<property name="creditCardType" value="Visa" />
+	</bean>
+	
+	<bean name="buyer02Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="buyer02UserAccount" />
+	</bean>
+	
+	<bean name="buyer03UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="buyer03" />
+		<property name="password" value="buyer03" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="buyer03" />
+				<property name="surname" value="buyer03" />
+				<property name="email" value="buyer.03@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="buyer03Buyer" />
+				<ref bean="buyer03Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="buyer03Buyer" class="acme.entities.roles.Buyer">
+		<property name="userAccount" ref="buyer03UserAccount" />
+		<property name="email" value="buyer03@acme.com" />
+		<property name="phone" value="+111(2222)333333" />
+		<property name="address" value="address03" />
+		<property name="creditCardNumber" value="1111222233334444" />
+		<property name="creditCardName" value="buyer03" />
+		<property name="creditCardMonth" value="12" />
+		<property name="creditCardYear" value="2021" />
+		<property name="creditCardCVV" value="666" />
+		<property name="creditCardType" value="Visa" />
+	</bean>
+	
+	<bean name="buyer03Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="buyer03UserAccount" />
+	</bean>
+	
+	<bean name="buyer04UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="buyer04" />
+		<property name="password" value="buyer04" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="buyer04" />
+				<property name="surname" value="buyer04" />
+				<property name="email" value="buyer.04@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="buyer04Buyer" />
+				<ref bean="buyer04Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="buyer04Buyer" class="acme.entities.roles.Buyer">
+		<property name="userAccount" ref="buyer04UserAccount" />
+		<property name="email" value="buyer04@acme.com" />
+		<property name="phone" value="+111(2222)333334" />
+		<property name="address" value="address04" />
+		<property name="creditCardNumber" value="1111222233334444" />
+		<property name="creditCardName" value="buyer04" />
+		<property name="creditCardMonth" value="12" />
+		<property name="creditCardYear" value="2021" />
+		<property name="creditCardCVV" value="666" />
+		<property name="creditCardType" value="Visa" />
+	</bean>
+	
+	<bean name="buyer04Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="buyer04UserAccount" />
+	</bean>
+	
+	<bean name="buyer05UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="buyer05" />
+		<property name="password" value="buyer05" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="buyer05" />
+				<property name="surname" value="buyer05" />
+				<property name="email" value="buyer.05@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="buyer05Buyer" />
+				<ref bean="buyer05Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="buyer05Buyer" class="acme.entities.roles.Buyer">
+		<property name="userAccount" ref="buyer05UserAccount" />
+		<property name="email" value="buyer05@acme.com" />
+		<property name="phone" value="+111(2222)333335" />
+		<property name="address" value="address05" />
+		<property name="creditCardNumber" value="1111222233334444" />
+		<property name="creditCardName" value="buyer05" />
+		<property name="creditCardMonth" value="12" />
+		<property name="creditCardYear" value="2021" />
+		<property name="creditCardCVV" value="666" />
+		<property name="creditCardType" value="Visa" />
+	</bean>
+	
+	<bean name="buyer05Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="buyer05UserAccount" />
+	</bean>
+	
+	<!-- Auditors -->
+	
+	<bean name="auditor01UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor01" />
+		<property name="password" value="auditor01" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="auditor01" />
+				<property name="surname" value="auditor01" />
+				<property name="email" value="auditor.01@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor01Auditor" />
+				<ref bean="auditor01Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="auditor01Auditor" class="acme.entities.roles.Auditor">
+		<property name="userAccount" ref="auditor01UserAccount" />
+		<property name="firm" value="firm01" />
+		<property name="responsibility" value="responsibility01" />
+	</bean>
+	
+	<bean name="auditor01Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditor01UserAccount" />
+	</bean>
+	
+	<bean name="auditor02UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor02" />
+		<property name="password" value="auditor02" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="auditor02" />
+				<property name="surname" value="auditor02" />
+				<property name="email" value="auditor.02@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor02Auditor" />
+				<ref bean="auditor02Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="auditor02Auditor" class="acme.entities.roles.Auditor">
+		<property name="userAccount" ref="auditor02UserAccount" />
+		<property name="firm" value="firm02" />
+		<property name="responsibility" value="responsibility02" />
+	</bean>
+	
+	<bean name="auditor02Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditor02UserAccount" />
+	</bean>
+	
+	<bean name="auditor03UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor03" />
+		<property name="password" value="auditor03" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="auditor03" />
+				<property name="surname" value="auditor03" />
+				<property name="email" value="auditor.03@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor03Auditor" />
+				<ref bean="auditor03Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="auditor03Auditor" class="acme.entities.roles.Auditor">
+		<property name="userAccount" ref="auditor03UserAccount" />
+		<property name="firm" value="firm03" />
+		<property name="responsibility" value="responsibility03" />
+	</bean>
+	
+	<bean name="auditor03Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditor03UserAccount" />
+	</bean>
+	
+	<bean name="auditor04UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor04" />
+		<property name="password" value="auditor04" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="auditor04" />
+				<property name="surname" value="auditor04" />
+				<property name="email" value="auditor.04@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor04Auditor" />
+				<ref bean="auditor04Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="auditor04Auditor" class="acme.entities.roles.Auditor">
+		<property name="userAccount" ref="auditor04UserAccount" />
+		<property name="firm" value="firm04" />
+		<property name="responsibility" value="responsibility04" />
+	</bean>
+	
+	<bean name="auditor04Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditor04UserAccount" />
+	</bean>
+	
+	<bean name="auditor05UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor05" />
+		<property name="password" value="auditor05" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="auditor05" />
+				<property name="surname" value="auditor05" />
+				<property name="email" value="auditor.05@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor05Auditor" />
+				<ref bean="auditor05Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="auditor05Auditor" class="acme.entities.roles.Auditor">
+		<property name="userAccount" ref="auditor05UserAccount" />
+		<property name="firm" value="firm05" />
+		<property name="responsibility" value="responsibility05" />
+	</bean>
+	
+	<bean name="auditor05Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditor05UserAccount" />
+	</bean>
+		
+	<!-- Items -->
+	
+	<bean id="item01" class="acme.entities.items.Item">
+		<property name="ticker" value="AAA-21-111111"/>
+		<property name="creationMoment" value="2020/10/01 00:00"/>
+		<property name="title" value="title01"/>
+		<property name="itemCategory" value="itemCategory01"/>
+		<property name="description" value="description01"/>
+		<property name="price" value="100€"/>
+		<property name="photo" value="http://www.photo01.com"/>
+		<property name="link" value="http://www.link01.com"/>
+		<property name="supplier" ref="supplier01Supplier"/>
+	</bean>
+	
+	<bean id="item02" class="acme.entities.items.Item">
+		<property name="ticker" value="AAA-21-111112"/>
+		<property name="creationMoment" value="2020/10/02 00:00"/>
+		<property name="title" value="title02"/>
+		<property name="itemCategory" value="itemCategory02"/>
+		<property name="description" value="description02"/>
+		<property name="price" value="100€"/>
+		<property name="photo" value="http://www.photo02.com"/>
+		<property name="link" value="http://www.link02.com"/>
+		<property name="supplier" ref="supplier02Supplier"/>
+	</bean>
+	
+	<bean id="item03" class="acme.entities.items.Item">
+		<property name="ticker" value="AAA-21-111113"/>
+		<property name="creationMoment" value="2020/10/03 00:00"/>
+		<property name="title" value="title03"/>
+		<property name="itemCategory" value="itemCategory03"/>
+		<property name="description" value="description03"/>
+		<property name="price" value="100€"/>
+		<property name="photo" value="http://www.photo03.com"/>
+		<property name="link" value="http://www.link03.com"/>
+		<property name="supplier" ref="supplier03Supplier"/>
+	</bean>
+	
+	<bean id="item04" class="acme.entities.items.Item">
+		<property name="ticker" value="AAA-21-111114"/>
+		<property name="creationMoment" value="2020/10/04 00:00"/>
+		<property name="title" value="title04"/>
+		<property name="itemCategory" value="itemCategory04"/>
+		<property name="description" value="description04"/>
+		<property name="price" value="100€"/>
+		<property name="photo" value="http://www.photo04.com"/>
+		<property name="link" value="http://www.link04.com"/>
+		<property name="supplier" ref="supplier04Supplier"/>
+	</bean>
+
+	<bean id="item05" class="acme.entities.items.Item">
+		<property name="ticker" value="AAA-21-111115"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="title" value="title05"/>
+		<property name="itemCategory" value="itemCategory05"/>
+		<property name="description" value="description05"/>
+		<property name="price" value="100€"/>
+		<property name="photo" value="http://www.photo05.com"/>
+		<property name="link" value="http://www.link05.com"/>
+		<property name="supplier" ref="supplier05Supplier"/>
+	</bean>	
+	
+	<!-- Sections -->
+	
+	<bean id="section01" class="acme.entities.sections.Section">
+		<property name="index" value="1"/>
+		<property name="title" value="title01"/>
+		<property name="description" value="description01"/>
+		<property name="photo" value="http://www.photo01.com"/>
+		<property name="item" ref="item01"/>
+	</bean>
+	
+	<bean id="section02" class="acme.entities.sections.Section">
+		<property name="index" value="2"/>
+		<property name="title" value="title02"/>
+		<property name="description" value="description02"/>
+		<property name="photo" value="http://www.photo02.com"/>
+		<property name="item" ref="item02"/>
+	</bean>
+	
+	<bean id="section03" class="acme.entities.sections.Section">
+		<property name="index" value="3"/>
+		<property name="title" value="title03"/>
+		<property name="description" value="description03"/>
+		<property name="photo" value="http://www.photo03.com"/>
+		<property name="item" ref="item03"/>
+	</bean>	
+	
+	<bean id="section04" class="acme.entities.sections.Section">
+		<property name="index" value="4"/>
+		<property name="title" value="title04"/>
+		<property name="description" value="description04"/>
+		<property name="photo" value="http://www.photo04.com"/>
+		<property name="item" ref="item04"/>
+	</bean>
+	
+	<bean id="section05" class="acme.entities.sections.Section">
+		<property name="index" value="5"/>
+		<property name="title" value="title05"/>
+		<property name="description" value="description05"/>
+		<property name="photo" value="http://www.photo05.com"/>
+		<property name="item" ref="item05"/>
+	</bean>
+
+	<!-- Requests -->
+	
+	<bean id="request01" class="acme.entities.requests.Request">
+		<property name="ticker" value="AAA-21-111101"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="quantity" value="01"/>
+		<property name="notes" value="notes01"/>
+		<property name="buyer" ref="buyer01Buyer"/>
+		<property name="item" ref="item01"/>
+	</bean>
+	
+	<bean id="request02" class="acme.entities.requests.Request">
+		<property name="ticker" value="AAA-21-111102"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="quantity" value="02"/>
+		<property name="notes" value="notes02"/>
+		<property name="buyer" ref="buyer02Buyer"/>
+		<property name="item" ref="item02"/>
+	</bean>
+	
+	<bean id="request03" class="acme.entities.requests.Request">
+		<property name="ticker" value="AAA-21-111103"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="quantity" value="03"/>
+		<property name="notes" value="notes03"/>
+		<property name="buyer" ref="buyer03Buyer"/>
+		<property name="item" ref="item03"/>
+	</bean>
+	
+	<bean id="request04" class="acme.entities.requests.Request">
+		<property name="ticker" value="AAA-21-111104"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="quantity" value="04"/>
+		<property name="notes" value="notes04"/>
+		<property name="buyer" ref="buyer04Buyer"/>
+		<property name="item" ref="item04"/>
+	</bean>
+	
+	<bean id="request05" class="acme.entities.requests.Request">
+		<property name="ticker" value="AAA-21-111105"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="quantity" value="05"/>
+		<property name="notes" value="notes05"/>
+		<property name="buyer" ref="buyer05Buyer"/>
+		<property name="item" ref="item05"/>
+	</bean>
+	
+	<!-- AuditRecords -->
+	
+	<bean id="auditRecord01" class="acme.entities.auditrecords.AuditRecord">
+		<property name="title" value="title01"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="body" value="body01"/>
+		<property name="status" value="DRAFT"/>
+		<property name="item" ref="item01"/>
+		<property name="auditor" ref="auditor01Auditor"/>
+	</bean>
+	
+	<bean id="auditRecord02" class="acme.entities.auditrecords.AuditRecord">
+		<property name="title" value="title02"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="body" value="body02"/>
+		<property name="status" value="DRAFT"/>
+		<property name="item" ref="item02"/>
+		<property name="auditor" ref="auditor02Auditor"/>
+	</bean>
+	
+	<bean id="auditRecord03" class="acme.entities.auditrecords.AuditRecord">
+		<property name="title" value="title03"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="body" value="body03"/>
+		<property name="status" value="DRAFT"/>
+		<property name="item" ref="item03"/>
+		<property name="auditor" ref="auditor03Auditor"/>
+	</bean>
+	
+	<bean id="auditRecord04" class="acme.entities.auditrecords.AuditRecord">
+		<property name="title" value="title04"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="body" value="body04"/>
+		<property name="status" value="PUBLISHED"/>
+		<property name="item" ref="item04"/>
+		<property name="auditor" ref="auditor04Auditor"/>
+	</bean>
+	
+	<bean id="auditRecord05" class="acme.entities.auditrecords.AuditRecord">
+		<property name="title" value="title05"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="body" value="body05"/>
+		<property name="status" value="PUBLISHED"/>
+		<property name="item" ref="item05"/>
+		<property name="auditor" ref="auditor05Auditor"/>
+	</bean>
+	
+	<!-- Messages -->
+	
+	<bean id="message01" class="acme.entities.messages.Message">
+		<property name="title" value="title01"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="tags" value="tags01"/>
+		<property name="body" value="body05"/>
+		<property name="authenticated" ref="supplier01Authenticated"/>
+		<property name="item" ref="item01"/>
+	</bean>
+	
+	<bean id="message02" class="acme.entities.messages.Message">
+		<property name="title" value="title02"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="tags"><null/></property>
+		<property name="body" value="body01"/>
+		<property name="authenticated" ref="buyer02Authenticated"/>
+		<property name="item" ref="item02"/>
+	</bean>
+	
+	<bean id="message03" class="acme.entities.messages.Message">
+		<property name="title" value="title03"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="tags"><null/></property>
+		<property name="body" value="body03"/>
+		<property name="authenticated" ref="auditor04Authenticated"/>
+		<property name="item" ref="item03"/>
+	</bean>
+	
+	<bean id="message04" class="acme.entities.messages.Message">
+		<property name="title" value="title04"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="tags" value="tags04"/>
+		<property name="body" value="body04"/>
+		<property name="authenticated" ref="buyer05Authenticated"/>
+		<property name="item" ref="item04"/>
+	</bean>
+	
+	<bean id="message05" class="acme.entities.messages.Message">
+		<property name="title" value="title05"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="tags" value="tags05"/>
+		<property name="body" value="body05"/>
+		<property name="authenticated" ref="supplier05Authenticated"/>
+		<property name="item" ref="item05"/>
+	</bean>
+	
 </beans>
