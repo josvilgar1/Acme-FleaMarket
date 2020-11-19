@@ -49,6 +49,12 @@ master.menu.administrator.figments = List Figments
 master.menu.administrator.advertisements =  List Advertisements
 master.menu.administrator.shutdown = Shut down
 
+# master.menu.supplier ########################################################
+
+master.menu.supplier = Supplier
+master.menu.supplier.item.list = My Items
+master.menu.supplier.request.list = My Requests
+
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Authenticated

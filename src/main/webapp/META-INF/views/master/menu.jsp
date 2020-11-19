@@ -42,6 +42,12 @@
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.supplier" access="hasRole('Supplier')">
+			<acme:menu-suboption code="master.menu.supplier.item.list" action="/supplier/item/list"/>
+			<acme:menu-suboption code="master.menu.supplier.request.list" action="/supplier/request/list"/>
+		</acme:menu-option>
+		
+		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.material.list" action="/authenticated/material/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.advertisement.list" action="/authenticated/advertisement/list"/>

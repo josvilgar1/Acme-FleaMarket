@@ -49,6 +49,12 @@ master.menu.administrator.figments = Listar Productos
 master.menu.administrator.advertisements =  Listar Anuncios
 master.menu.administrator.shutdown = Parar el sistema
 
+# master.menu.supplier ########################################################
+
+master.menu.supplier = Proveedor
+master.menu.supplier.item.list = Mis Artículos
+master.menu.supplier.request.list = Mis solicitudes
+
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Autenticado

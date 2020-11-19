@@ -1,0 +1,28 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+supplier.item.list.label.title = Title
+supplier.item.list.label.itemCategory = Category
+supplier.item.list.label.price = Price
+
+supplier.item.form.label.ticker = Ticker
+supplier.item.form.label.creationMoment = Creation moment
+supplier.item.form.label.title = Title
+supplier.item.form.label.itemCategory = Category
+supplier.item.form.label.description = Description
+supplier.item.form.label.price = Price
+supplier.item.form.label.photo = Photo
+supplier.item.form.label.link = Link
+
+supplier.item.show.button.return = Return
+supplier.item.form.button.create = Crear
+supplier.item.form.button.update = Actualizar
+supplier.item.form.button.delete = Borrar
+supplier.item.form.button.return = Volver
