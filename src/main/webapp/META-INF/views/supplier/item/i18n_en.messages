@@ -26,3 +26,5 @@ supplier.item.form.button.create = Crear
 supplier.item.form.button.update = Actualizar
 supplier.item.form.button.delete = Borrar
 supplier.item.form.button.return = Volver
+
+supplier.item.show.button.list.auditrecord = AuditRecords

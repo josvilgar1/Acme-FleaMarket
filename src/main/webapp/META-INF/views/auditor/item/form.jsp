@@ -17,5 +17,6 @@
 	<acme:form-textbox code="auditor.item.form.label.photo" path="photo"/>
 	<acme:form-textbox code="auditor.item.form.label.link" path="link"/>
 	
+	<acme:form-submit method="get" code="auditor.item.show.button.list.auditrecord" action="/authenticated/auditrecord/list?id=${id}"/>
 	<acme:form-return code="auditor.item.show.button.return"/>
 </acme:form>

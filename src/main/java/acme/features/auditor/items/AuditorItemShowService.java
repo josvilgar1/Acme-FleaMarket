@@ -30,7 +30,7 @@ public class AuditorItemShowService implements AbstractShowService<Auditor, Item
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "creationMoment", "title", "itemCategory", "description", "price",
+		request.unbind(entity, model, "id", "ticker", "creationMoment", "title", "itemCategory", "description", "price",
 			"photo", "link");
 	}
 
