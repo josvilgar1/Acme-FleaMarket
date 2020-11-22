@@ -12,7 +12,7 @@ import acme.framework.components.Model;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class BuyerRequestListService implements AbstractListService<Buyer, Request> {
+public class BuyerRequestListMineService implements AbstractListService<Buyer, Request> {
 
 	@Autowired
 	BuyerRequestRepository repository;
@@ -21,7 +21,12 @@ public class BuyerRequestListService implements AbstractListService<Buyer, Reque
 	@Override
 	public boolean authorise(acme.framework.components.Request<Request> request) {
 		assert request != null;
+
+		Integer user = request.getPrincipal().getActiveRoleId();
+
+		//TODO: Must check is principal is buyer
 		return true;
+
 	}
 
 	@Override
@@ -30,7 +35,7 @@ public class BuyerRequestListService implements AbstractListService<Buyer, Reque
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "item.title", "buyer.email", "quantity");
+		request.unbind(entity, model, "ticker", "creationMoment", "quantity", "item.title");
 	}
 
 	@Override

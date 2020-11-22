@@ -20,6 +20,8 @@ public class BuyerRequestShowService implements AbstractShowService<Buyer, Reque
 	public boolean authorise(acme.framework.components.Request<Request> request) {
 		assert request != null;
 
+		//TODO: must check buyer request is the same as logged and principal is Buyer
+
 		return true;
 	}
 
@@ -29,7 +31,7 @@ public class BuyerRequestShowService implements AbstractShowService<Buyer, Reque
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "id", "ticker", "creationMoment", "title", "itemCategory", "description", "price", "photo", "link");
+		request.unbind(entity, model, "ticker", "creationMoment", "quantity", "notes", "buyer.email", "item.title");
 	}
 
 	@Override

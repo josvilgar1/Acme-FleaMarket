@@ -27,7 +27,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.toolsheet.list" action="/anonymous/toolsheet/list"/>
 		</acme:menu-option>
 		
-		<!-- AUTHENTICATED -->
+		<!-- ADMINISTRATOR -->
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
@@ -56,6 +56,12 @@
 			<acme:menu-suboption code="master.menu.auditor.list.have" action="/auditor/item/list-have"/>
 			<acme:menu-suboption code="master.menu.auditor.list.not.have" action="/auditor/item/list-not-have"/>
 		</acme:menu-option>
+			
+		<!-- BUYER -->
+		<acme:menu-option code="master.menu.buyer" access="hasRole('Buyer')">
+			<acme:menu-suboption code="master.menu.buyer.list.request" action="/buyer/request/list"/>
+		</acme:menu-option>
+		
 		
 		<!-- AUTHENTICATED -->
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
