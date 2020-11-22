@@ -744,6 +744,18 @@
 		<property name="supplier" ref="supplier05Supplier"/>
 	</bean>	
 	
+	<bean id="item06" class="acme.entities.items.Item">
+		<property name="ticker" value="AAA-21-111116"/>
+		<property name="creationMoment" value="2020/10/06 00:00"/>
+		<property name="title" value="title06"/>
+		<property name="itemCategory" value="itemCategory06"/>
+		<property name="description" value="description06"/>
+		<property name="price" value="100€"/>
+		<property name="photo"><null/></property>
+		<property name="link" value="http://www.link06.com"/>
+		<property name="supplier" ref="supplier05Supplier"/>
+	</bean>	
+	
 	<!-- Sections -->
 	
 	<bean id="section01" class="acme.entities.sections.Section">

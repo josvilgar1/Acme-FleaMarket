@@ -70,6 +70,7 @@ master.menu.authenticated.figment.list = Listar Productos
 master.menu.authenticated.new.activate = Listar Noticias activas
 master.menu.authenticated.toolsheet.list = Listar Herramientas
 master.menu.authenticated.suggestion.list = Listar Sugerencias
+master.menu.authenticated.item.list = Listar Items
 
 # master.menu.provider ########################################################
 
