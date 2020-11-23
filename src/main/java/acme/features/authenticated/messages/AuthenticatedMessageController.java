@@ -1,5 +1,5 @@
 
-package acme.features.buyer.requests;
+package acme.features.authenticated.messages;
 
 import javax.annotation.PostConstruct;
 
@@ -7,29 +7,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.requests.Request;
-import acme.entities.roles.Buyer;
+import acme.entities.messages.Message;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/buyer/request/")
-public class BuyerRequestController extends AbstractController<Buyer, Request> {
+@RequestMapping("/authenticated/message/")
+public class AuthenticatedMessageController extends AbstractController<Authenticated, Message> {
 
 	@Autowired
-	BuyerRequestListMineService	listService;
+	AuthenticatedMessageListService	listService;
 
 	@Autowired
-	BuyerRequestShowService		showService;
-
-	@Autowired
-	BuyerRequestCreateService	createService;
+	AuthenticatedMessageShowService	showService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, listService);
 		super.addBasicCommand(BasicCommand.SHOW, showService);
-		super.addBasicCommand(BasicCommand.CREATE, createService);
 	}
 }

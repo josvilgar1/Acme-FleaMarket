@@ -29,5 +29,15 @@
 	<acme:form-textbox code="authenticated.item.form.label.photo" path="photo"/>
 	<acme:form-textbox code="authenticated.item.form.label.link" path="link"/>
 	
+<%-- 	<jstl:if test="${hasRole('Buyer')}">
+		<acme:form-submit method="get" code="authenticated.item.form.button.request" action="/buyer/request/create?itemId=${id}" />
+	</jstl:if> --%>
+	
+	<acme:form-submit 
+		method="get" 
+		code="authenticated.item.form.button.message-list" 
+		action="/authenticated/message/list?itemId=${id}" />
+	
+	
 	<acme:form-return code="authenticated.item.show.button.return"/>
 </acme:form>

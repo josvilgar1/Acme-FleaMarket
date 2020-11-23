@@ -22,9 +22,10 @@ authenticated.item.form.label.photo = Photo
 authenticated.item.form.label.link = Link
 
 authenticated.item.show.button.return = Return
-authenticated.item.form.button.create = Crear
-authenticated.item.form.button.update = Actualizar
-authenticated.item.form.button.delete = Borrar
-authenticated.item.form.button.return = Volver
+authenticated.item.form.button.create = Create
+authenticated.item.form.button.update = Update
+authenticated.item.form.button.delete = Delete
+authenticated.item.form.button.return = Return
 
+authenticated.item.form.button.message-list = Forum
 authenticated.item.show.button.list.auditrecord = AuditRecords

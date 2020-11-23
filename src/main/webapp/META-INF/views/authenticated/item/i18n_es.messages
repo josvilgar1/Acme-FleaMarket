@@ -12,6 +12,7 @@
 authenticated.item.list.label.title = Título
 authenticated.item.list.label.itemCategory = Categoría
 authenticated.item.list.label.price = Precio
+authenticated.item.list.button.return = Volver
 
 authenticated.item.form.label.ticker = Ticker
 authenticated.item.form.label.creationMoment = Fecha inicio
@@ -28,4 +29,5 @@ authenticated.item.form.button.update = Actualizar
 authenticated.item.form.button.delete = Borrar
 authenticated.item.form.button.return = Volver
 
+authenticated.item.form.button.message-list = Foro
 authenticated.item.show.button.list.auditrecord = Auditorias

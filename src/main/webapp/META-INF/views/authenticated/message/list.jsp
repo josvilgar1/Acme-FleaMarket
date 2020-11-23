@@ -17,10 +17,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list >
-	<acme:list-column code="authenticated.item.list.label.title" path="title" width="30%"/>
-	<acme:list-column code="authenticated.item.list.label.itemCategory" path="itemCategory" width="40%"/>
-	<acme:list-column code="authenticated.item.list.label.price" path="price" width="30%"/>
+	<acme:list-column code="authenticated.message.list.label.title" path="title" width="30%"/>
+	<acme:list-column code="authenticated.message.list.label.creationMoment" path="creationMoment" width="40%"/>
+ 	<acme:list-column code="authenticated.message.list.label.publisher" path="authenticated.identity.name" width="30%"/> 
 </acme:list>
 
-<acme:form-return code="authenticated.item.list.button.return"/>
-
+<acme:form-return code="authenticated.message.list.button.return"/>

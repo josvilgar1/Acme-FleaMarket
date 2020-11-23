@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.requests.Request;
 import acme.entities.roles.Buyer;
 import acme.framework.components.Model;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -21,8 +22,21 @@ public class BuyerRequestShowService implements AbstractShowService<Buyer, Reque
 		assert request != null;
 
 		//TODO: must check buyer request is the same as logged and principal is Buyer
+		Boolean result;
+		int userRequestId;
+		Request userRequest;
+		Buyer buyer;
+		Principal principal;
 
-		return true;
+		userRequestId = request.getModel().getInteger("id");
+		userRequest = repository.findOneById(userRequestId);
+		buyer = userRequest.getBuyer();
+
+		principal = request.getPrincipal();
+
+		result = buyer.getUserAccount().getId() == principal.getAccountId();
+
+		return result;
 	}
 
 	@Override
