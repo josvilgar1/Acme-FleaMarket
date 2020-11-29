@@ -71,6 +71,7 @@ master.menu.authenticated.new.activate = List Active News
 master.menu.authenticated.toolsheet.list = List Tools
 master.menu.authenticated.suggestion.list = List Suggestions
 master.menu.authenticated.item.list = List Items
+master.menu.authenticated.item.forum.list = List Forum
 
 # master.menu.provider ########################################################
 

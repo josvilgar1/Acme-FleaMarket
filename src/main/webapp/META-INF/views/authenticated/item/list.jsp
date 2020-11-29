@@ -21,6 +21,3 @@
 	<acme:list-column code="authenticated.item.list.label.itemCategory" path="itemCategory" width="40%"/>
 	<acme:list-column code="authenticated.item.list.label.price" path="price" width="30%"/>
 </acme:list>
-
-<acme:form-return code="authenticated.item.list.button.return"/>
-

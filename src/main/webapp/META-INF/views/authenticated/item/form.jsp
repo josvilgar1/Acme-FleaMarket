@@ -33,11 +33,7 @@
 		<acme:form-submit method="get" code="authenticated.item.form.button.request" action="/buyer/request/create?itemId=${id}" />
 	</jstl:if> --%>
 	
-	<acme:form-submit 
-		method="get" 
-		code="authenticated.item.form.button.message-list" 
-		action="/authenticated/message/list?itemId=${id}" />
-	
-	
+	<acme:form-submit method="get" code="authenticated.item.form.button.list.message" action="/authenticated/message/list?itemId=${id}" />
+	<acme:form-submit method="get" code="authenticated.item.form.button.list.auditrecord" action="/authenticated/auditrecord/list?id=${id}"/>
 	<acme:form-return code="authenticated.item.show.button.return"/>
 </acme:form>
