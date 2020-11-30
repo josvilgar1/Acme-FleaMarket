@@ -640,8 +640,8 @@ audited by &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>854</x>
-      <y>518</y>
+      <x>868</x>
+      <y>273</y>
       <w>287</w>
       <h>77</h>
     </coordinates>
@@ -658,31 +658,61 @@ Message
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>749</x>
-      <y>553</y>
-      <w>119</w>
-      <h>35</h>
+      <x>987</x>
+      <y>343</y>
+      <w>133</w>
+      <h>238</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 
 writed a &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+    <additional_attributes>10.0;310.0;150.0;310.0;150.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>826</x>
       <y>231</y>
-      <w>203</w>
-      <h>301</h>
+      <w>217</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 
 writed by &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;250.0;20.0;250.0;410.0</additional_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0;270.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>847</x>
+      <y>532</y>
+      <w>147</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Forum
+--
++title: String {Unique, NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>546</y>
+      <w>112</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+
+m1=1
+m2=1
+
+belonging to &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
 </diagram>

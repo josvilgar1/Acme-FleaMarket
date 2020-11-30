@@ -27,4 +27,6 @@ auditor.item.form.button.update = Actualizar
 auditor.item.form.button.delete = Borrar
 auditor.item.form.button.return = Volver
 
-auditor.item.show.button.list.auditrecord = AuditRecords
+auditor.item.form.button.list.section = Sections
+auditor.item.form.button.list.message = Messages
+auditor.item.form.button.list.auditrecord = AuditRecords

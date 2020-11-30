@@ -1,0 +1,26 @@
+# i18n_en.sections
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.section.list.label.index = Index
+authenticated.section.list.label.title = Title
+authenticated.section.list.label.item = Item
+
+authenticated.section.form.label.index = Index
+authenticated.section.form.label.title = Title
+authenticated.section.form.label.item = Item
+authenticated.section.form.label.description = Description
+authenticated.section.form.label.photo = Photo
+
+authenticated.section.show.button.return = Return
+authenticated.section.form.button.create = Create
+authenticated.section.form.button.update = Update
+authenticated.section.form.button.delete = Delete
+authenticated.section.form.button.return = Return
+

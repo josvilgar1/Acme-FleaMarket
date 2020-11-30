@@ -27,5 +27,6 @@ authenticated.item.form.button.update = Update
 authenticated.item.form.button.delete = Delete
 authenticated.item.form.button.return = Return
 
-authenticated.item.form.button.message-list = Forum
-authenticated.item.show.button.list.auditrecord = AuditRecords
+authenticated.item.form.button.list.section = Sections
+authenticated.item.form.button.list.message = Messages
+authenticated.item.form.button.list.auditrecord = AuditRecords

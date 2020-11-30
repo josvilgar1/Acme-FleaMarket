@@ -25,10 +25,8 @@
 	</jstl:if>
 	<acme:form-textbox code="authenticated.message.form.label.tags" path="tags"/>
 	<acme:form-textbox code="authenticated.message.form.label.authenticated" path="authenticated.identity.name"/>
-	<acme:form-textbox code="authenticated.message.form.label.item" path="item.title"/>
+	<acme:form-textbox code="authenticated.message.form.label.item" path="forum.item.title"/>
 	<acme:form-textarea code="authenticated.message.form.label.body" path="body"/>
 
-	
-	
 	<acme:form-return code="authenticated.message.show.button.return"/>
 </acme:form>

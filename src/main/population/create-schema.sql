@@ -93,6 +93,14 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `forum` (
+       `id` integer not null,
+        `version` integer not null,
+        `title` varchar(255),
+        `item_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `item` (
        `id` integer not null,
         `version` integer not null,
@@ -135,7 +143,7 @@
         `tags` varchar(255),
         `title` varchar(255),
         `authenticated_id` integer not null,
-        `item_id` integer not null,
+        `forum_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -255,6 +263,9 @@
     alter table `buyer` 
        add constraint UK_r3ondcmf3r5ogjok74v1gq8hj unique (`phone`);
 
+    alter table `forum` 
+       add constraint UK_c5hjl933amnwf8mq1v2lf45jo unique (`item_id`);
+
     alter table `item` 
        add constraint UK_d60jfv0vlrqswikfeec1le23u unique (`ticker`);
 
@@ -304,6 +315,11 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `forum` 
+       add constraint `FKrgdtbakxmpiv2k47q778a77qa` 
+       foreign key (`item_id`) 
+       references `item` (`id`);
+
     alter table `item` 
        add constraint `FK7r7pmef5wvaepffbi0xfrso2c` 
        foreign key (`supplier_id`) 
@@ -315,9 +331,9 @@
        references `authenticated` (`id`);
 
     alter table `message` 
-       add constraint `FK8n5k756tjwjd5bmhdi551u6ny` 
-       foreign key (`item_id`) 
-       references `item` (`id`);
+       add constraint `FKfwwpivgx5j4vw4594dgrw884q` 
+       foreign key (`forum_id`) 
+       references `forum` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

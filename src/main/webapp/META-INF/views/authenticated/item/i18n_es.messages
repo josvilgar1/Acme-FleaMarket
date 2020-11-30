@@ -29,5 +29,6 @@ authenticated.item.form.button.update = Actualizar
 authenticated.item.form.button.delete = Borrar
 authenticated.item.form.button.return = Volver
 
-authenticated.item.form.button.message-list = Foro
-authenticated.item.show.button.list.auditrecord = Auditorias
+authenticated.item.form.button.list.section = Secciones
+authenticated.item.form.button.list.message = Mensajes
+authenticated.item.form.button.list.auditrecord = Auditorias
