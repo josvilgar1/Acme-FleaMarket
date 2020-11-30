@@ -1,44 +1,43 @@
 
-package acme.features.authenticated.messages;
+package acme.features.authenticated.section;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.messages.Message;
+import acme.entities.sections.Section;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedMessageShowService implements AbstractShowService<Authenticated, Message> {
+public class AuthenticatedSectionShowService implements AbstractShowService<Authenticated, Section> {
 
 	@Autowired
-	AuthenticatedMessageRepository repository;
+	AuthenticatedSectionRepository repository;
 
 
 	@Override
-	public boolean authorise(Request<Message> request) {
+	public boolean authorise(Request<Section> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(Request<Message> request, Message entity, Model model) {
+	public void unbind(Request<Section> request, Section entity, Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "creationMoment", "tags", "authenticated.identity.name",
-			"forum.item.title", "body");
+		request.unbind(entity, model, "index", "title", "item.title", "description", "photo");
 	}
 
 	@Override
-	public Message findOne(Request<Message> request) {
+	public Section findOne(Request<Section> request) {
 		assert request != null;
 
-		Message result;
+		Section result;
 
 		int id = request.getModel().getInteger("id");
 		result = repository.findOneById(id);

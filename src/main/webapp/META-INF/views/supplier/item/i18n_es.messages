@@ -28,5 +28,6 @@ supplier.item.form.button.update = Actualizar
 supplier.item.form.button.delete = Borrar
 supplier.item.form.button.return = Volver
 
-supplier.item.form.button.list.message = Foro
+supplier.item.form.button.list.section = Secciones
+supplier.item.form.button.list.message = Mensajes
 supplier.item.show.button.list.auditrecord = Auditorias

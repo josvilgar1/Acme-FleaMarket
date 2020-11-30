@@ -31,6 +31,10 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `forum` 
+       drop 
+       foreign key `FKrgdtbakxmpiv2k47q778a77qa`;
+
     alter table `item` 
        drop 
        foreign key `FK7r7pmef5wvaepffbi0xfrso2c`;
@@ -41,7 +45,7 @@
 
     alter table `message` 
        drop 
-       foreign key `FK8n5k756tjwjd5bmhdi551u6ny`;
+       foreign key `FKfwwpivgx5j4vw4594dgrw884q`;
 
     alter table `provider` 
        drop 
@@ -80,6 +84,8 @@
     drop table if exists `consumer`;
 
     drop table if exists `figment`;
+
+    drop table if exists `forum`;
 
     drop table if exists `item`;
 

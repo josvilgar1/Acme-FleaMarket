@@ -797,6 +797,14 @@
 		<property name="photo" value="http://www.photo05.com"/>
 		<property name="item" ref="item05"/>
 	</bean>
+	
+	<bean id="section06" class="acme.entities.sections.Section">
+		<property name="index" value="6"/>
+		<property name="title" value="title06"/>
+		<property name="description" value="description06"/>
+		<property name="photo" value="http://www.photo06.com"/>
+		<property name="item" ref="item06"/>
+	</bean>
 
 	<!-- Requests -->
 	
@@ -892,6 +900,38 @@
 		<property name="auditor" ref="auditor05Auditor"/>
 	</bean>
 	
+	<!-- Forums -->
+	
+	<bean id="forum01" class="acme.entities.forums.Forum">
+		<property name="title" value="title01"/>
+		<property name="item" ref="item01"/>
+	</bean>
+	
+	<bean id="forum02" class="acme.entities.forums.Forum">
+		<property name="title" value="title02"/>
+		<property name="item" ref="item02"/>
+	</bean>
+	
+	<bean id="forum03" class="acme.entities.forums.Forum">
+		<property name="title" value="title03"/>
+		<property name="item" ref="item03"/>
+	</bean>
+	
+	<bean id="forum04" class="acme.entities.forums.Forum">
+		<property name="title" value="title04"/>
+		<property name="item" ref="item04"/>
+	</bean>
+	
+	<bean id="forum05" class="acme.entities.forums.Forum">
+		<property name="title" value="title05"/>
+		<property name="item" ref="item05"/>
+	</bean>
+	
+	<bean id="forum06" class="acme.entities.forums.Forum">
+		<property name="title" value="title06"/>
+		<property name="item" ref="item06"/>
+	</bean>
+	
 	<!-- Messages -->
 	
 	<bean id="message01" class="acme.entities.messages.Message">
@@ -900,7 +940,7 @@
 		<property name="tags" value="tags01"/>
 		<property name="body" value="body05"/>
 		<property name="authenticated" ref="supplier01Authenticated"/>
-		<property name="item" ref="item01"/>
+		<property name="forum" ref="forum01"/>
 	</bean>
 	
 	<bean id="message02" class="acme.entities.messages.Message">
@@ -909,7 +949,7 @@
 		<property name="tags"><null/></property>
 		<property name="body" value="body01"/>
 		<property name="authenticated" ref="buyer02Authenticated"/>
-		<property name="item" ref="item02"/>
+		<property name="forum" ref="forum02"/>
 	</bean>
 	
 	<bean id="message03" class="acme.entities.messages.Message">
@@ -918,7 +958,7 @@
 		<property name="tags"><null/></property>
 		<property name="body" value="body03"/>
 		<property name="authenticated" ref="auditor04Authenticated"/>
-		<property name="item" ref="item03"/>
+		<property name="forum" ref="forum03"/>
 	</bean>
 	
 	<bean id="message04" class="acme.entities.messages.Message">
@@ -927,7 +967,7 @@
 		<property name="tags" value="tags04"/>
 		<property name="body" value="body04"/>
 		<property name="authenticated" ref="buyer05Authenticated"/>
-		<property name="item" ref="item04"/>
+		<property name="forum" ref="forum04"/>
 	</bean>
 	
 	<bean id="message05" class="acme.entities.messages.Message">
@@ -936,7 +976,7 @@
 		<property name="tags" value="tags05"/>
 		<property name="body" value="body05"/>
 		<property name="authenticated" ref="supplier05Authenticated"/>
-		<property name="item" ref="item05"/>
+		<property name="forum" ref="forum05"/>
 	</bean>
 	
 </beans>

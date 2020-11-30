@@ -29,6 +29,7 @@
 	<acme:form-textbox code="supplier.item.form.label.photo" path="photo"/>
 	<acme:form-textbox code="supplier.item.form.label.link" path="link"/>
 	
+	<acme:form-submit method="get" code="supplier.item.form.button.list.section" action="/authenticated/section/list?itemId=${id}" />
 	<acme:form-submit method="get" code="supplier.item.form.button.list.message" action="/authenticated/message/list?itemId=${id}" />
 	<acme:form-submit method="get" code="supplier.item.show.button.list.auditrecord" action="/authenticated/auditrecord/list?id=${id}"/>
 	<acme:form-return code="supplier.item.show.button.return"/>

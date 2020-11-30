@@ -73,6 +73,8 @@
       		<acme:menu-suboption code="master.menu.authenticated.item.list" action="/authenticated/item/list"/>
       		<acme:menu-suboption code="master.menu.authenticated.suggestion.list" action="/authenticated/suggestion/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.figment.list" action="/authenticated/figment/list"/>
+			<acme:menu-separator/>
+      		<acme:menu-suboption code="master.menu.authenticated.forum.list" action="/authenticated/forum/list"/>
 		</acme:menu-option>
 
 		<!-- PROVIDER -->

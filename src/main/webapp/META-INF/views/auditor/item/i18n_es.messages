@@ -28,5 +28,6 @@ auditor.item.form.button.update = Actualizar
 auditor.item.form.button.delete = Borrar
 auditor.item.form.button.return = Volver
 
-auditor.item.form.button.list.message = Foro
+auditor.item.form.button.list.section = Secciones
+auditor.item.form.button.list.message = Mensajes
 auditor.item.form.button.list.auditrecord = Auditorias

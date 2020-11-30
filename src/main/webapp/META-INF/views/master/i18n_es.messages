@@ -71,7 +71,7 @@ master.menu.authenticated.new.activate = Listar Noticias activas
 master.menu.authenticated.toolsheet.list = Listar Herramientas
 master.menu.authenticated.suggestion.list = Listar Sugerencias
 master.menu.authenticated.item.list = Listar Artículos
-master.menu.authenticated.item.forum.list = Listar foros
+master.menu.authenticated.forum.list = Listar foros
 
 # master.menu.provider ########################################################
 

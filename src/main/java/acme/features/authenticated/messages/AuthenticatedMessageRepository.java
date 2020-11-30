@@ -18,7 +18,7 @@ public interface AuthenticatedMessageRepository extends AbstractRepository {
 	@Query("select m from Message m")
 	Collection<Message> findManyAll();
 
-	@Query("select m from Message m where m.item.id = ?1")
+	@Query("select m from Message m where m.forum.item.id = ?1")
 	Collection<Message> findManyByItemId(int itemId);
 
 }
