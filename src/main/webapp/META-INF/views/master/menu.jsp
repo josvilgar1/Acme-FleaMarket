@@ -18,13 +18,16 @@
 
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
+	
+		<!-- ANONYMOUS -->
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.material.list" action="/anonymous/material/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.advertisement.list" action="/anonymous/advertisement/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.new.activate" action="/anonymous/new/list-active"/>
 			<acme:menu-suboption code="master.menu.anonymous.toolsheet.list" action="/anonymous/toolsheet/list"/>
 		</acme:menu-option>
-
+		
+		<!-- ADMINISTRATOR -->
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
@@ -42,20 +45,44 @@
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
 		
+		<!-- SUPPLIER -->
+		<acme:menu-option code="master.menu.supplier" access="hasRole('Supplier')">
+			<acme:menu-suboption code="master.menu.supplier.item.list" action="/supplier/item/list"/>
+			<acme:menu-suboption code="master.menu.supplier.request.list" action="/supplier/request/list"/>
+		</acme:menu-option>
+		
+		<!-- AUDITOR -->
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.list.have" action="/auditor/item/list-have"/>
+			<acme:menu-suboption code="master.menu.auditor.list.not.have" action="/auditor/item/list-not-have"/>
+		</acme:menu-option>
+			
+		<!-- BUYER -->
+		<acme:menu-option code="master.menu.buyer" access="hasRole('Buyer')">
+			<acme:menu-suboption code="master.menu.buyer.list.request" action="/buyer/request/list"/>
+		</acme:menu-option>
+		
+		
+		<!-- AUTHENTICATED -->
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.material.list" action="/authenticated/material/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.advertisement.list" action="/authenticated/advertisement/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.new.activate" action="/authenticated/new/list-active"/>
 			<acme:menu-suboption code="master.menu.authenticated.toolsheet.list" action="/authenticated/toolsheet/list"/>
 		    <acme:menu-separator/>
+      		<acme:menu-suboption code="master.menu.authenticated.item.list" action="/authenticated/item/list"/>
       		<acme:menu-suboption code="master.menu.authenticated.suggestion.list" action="/authenticated/suggestion/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.figment.list" action="/authenticated/figment/list"/>
+			<acme:menu-separator/>
+      		<acme:menu-suboption code="master.menu.authenticated.forum.list" action="/authenticated/forum/list"/>
 		</acme:menu-option>
 
+		<!-- PROVIDER -->
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 
+		<!-- CONSUMER -->
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>

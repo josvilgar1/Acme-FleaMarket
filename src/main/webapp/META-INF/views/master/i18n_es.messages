@@ -49,6 +49,18 @@ master.menu.administrator.figments = Listar Productos
 master.menu.administrator.advertisements =  Listar Anuncios
 master.menu.administrator.shutdown = Parar el sistema
 
+# master.menu.supplier ########################################################
+
+master.menu.supplier = Proveedor
+master.menu.supplier.item.list = Mis Artículos
+master.menu.supplier.request.list = Mis solicitudes
+
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list.have = Listar Artículos Auditados
+master.menu.auditor.list.not.have = Listar Artículos No Auditados
+
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Autenticado
@@ -58,6 +70,8 @@ master.menu.authenticated.figment.list = Listar Productos
 master.menu.authenticated.new.activate = Listar Noticias activas
 master.menu.authenticated.toolsheet.list = Listar Herramientas
 master.menu.authenticated.suggestion.list = Listar Sugerencias
+master.menu.authenticated.item.list = Listar Artículos
+master.menu.authenticated.forum.list = Listar foros
 
 # master.menu.provider ########################################################
 
@@ -68,6 +82,11 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+
+# master.menu.buyer ############################################################ 
+
+master.menu.buyer = Comprador
+master.menu.buyer.list.request = Listar Solicitudes
 
 # master.menu.user-account ####################################################
 

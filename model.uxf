@@ -18,13 +18,13 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>539</x>
+      <x>588</x>
       <y>203</y>
-      <w>70</w>
-      <h>77</h>
+      <w>63</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;70.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -62,25 +62,13 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>665</x>
-      <y>441</y>
-      <w>21</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>lt=..
-</panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>588</x>
+      <x>224</x>
       <y>203</y>
-      <w>70</w>
-      <h>77</h>
+      <w>385</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;90.0</additional_attributes>
+    <additional_attributes>530.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -179,31 +167,40 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>441</x>
-      <y>266</y>
-      <w>140</w>
-      <h>63</h>
+      <x>532</x>
+      <y>273</y>
+      <w>168</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
-Provider
+Supplier
 --
 + company: String {NotBlank}
-+ sector: String {NotBlank}</panel_attributes>
++ homePage: String {NotBlank, URL}
++ itemCategory: String {NotBlank}
++ description: String {NotBlank}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>602</x>
-      <y>266</y>
-      <w>147</w>
-      <h>63</h>
+      <x>189</x>
+      <y>273</y>
+      <w>336</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
-Consumer
+Buyer
 --
-+ company: String {NotBlank}
-+ sector: String {NotBlank}</panel_attributes>
++ email: String {Unique, NotBlank, Email}
++ phone: String {Unique, NotBlank, Pattern([\+]\d{1,3}[\(]\d{1,4}[\)]\d{6,10}$)}
++ address: String {NotBlank}
++ creditCardNumber: String {CreditCardNumber}
++ creditCardName: String {NotBlank}
++ creditCardMonth: Integer {Range(min = 1, max = 12), NotNull}
++ creditCardYear: Integer {Min(value = 2020), NotNull}
++ creditCardCVV: Integer {Range(min = 1, max = 999), NotNull}
++ creditCardType: String {NotBlank}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -299,8 +296,8 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>49</x>
-      <y>378</y>
+      <x>1169</x>
+      <y>84</y>
       <w>252</w>
       <h>112</h>
     </coordinates>
@@ -319,8 +316,8 @@ New
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>329</x>
-      <y>378</y>
+      <x>1169</x>
+      <y>707</y>
       <w>189</w>
       <h>91</h>
     </coordinates>
@@ -337,8 +334,8 @@ Toolsheet
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>539</x>
-      <y>378</y>
+      <x>1169</x>
+      <y>357</y>
       <w>189</w>
       <h>91</h>
     </coordinates>
@@ -355,8 +352,8 @@ Material
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>49</x>
-      <y>511</y>
+      <x>1169</x>
+      <y>217</y>
       <w>217</w>
       <h>112</h>
     </coordinates>
@@ -375,8 +372,8 @@ Advertisement
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>294</x>
-      <y>511</y>
+      <x>1169</x>
+      <y>476</y>
       <w>252</w>
       <h>77</h>
     </coordinates>
@@ -392,8 +389,8 @@ Suggestion
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>567</x>
-      <y>511</y>
+      <x>1169</x>
+      <y>581</y>
       <w>252</w>
       <h>98</h>
     </coordinates>
@@ -412,7 +409,7 @@ Figment
     <id>UMLClass</id>
     <coordinates>
       <x>861</x>
-      <y>84</y>
+      <y>0</y>
       <w>280</w>
       <h>56</h>
     </coordinates>
@@ -427,7 +424,7 @@ Spam
     <id>UMLClass</id>
     <coordinates>
       <x>861</x>
-      <y>161</y>
+      <y>70</y>
       <w>280</w>
       <h>42</h>
     </coordinates>
@@ -441,7 +438,7 @@ NewCategory
     <id>UMLClass</id>
     <coordinates>
       <x>861</x>
-      <y>231</y>
+      <y>119</y>
       <w>280</w>
       <h>42</h>
     </coordinates>
@@ -450,5 +447,272 @@ ItemCategory
 --
 +items: String {NotBlank}</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>469</x>
+      <y>469</y>
+      <w>287</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Item
+--
++ticker: String {Unique, NotBlank, Pattern(^[A-Z]{3}-\d{2}-\d{6}$)}
++creationMoment: Date {Temporal(TIMESTAMP), Past}
++title: String {NotBlank}
++itemCategory: String {NotBlank}
++description: String {NotBlank}
++price: Money {Valid, NotNull}
++photo: String {URL}
++link: String {URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>665</y>
+      <w>266</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Section
+--
++index: Integer {NotNull, Min(1), Column(name = "index_")}
++title: String {NotBlank}
++description: String {NotBlank}
++photo: String {URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>497</y>
+      <w>287</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Request
+--
++ticker: String {Unique, NotBlank, Pattern(^[A-Z]{3}-\d{2}-\d{6}$)}
++creationMoment: Date {Temporal(TIMESTAMP), Past}
++quantity: Integer {NotNull, Min(1)}
++notes: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>602</x>
+      <y>343</y>
+      <w>91</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=0..*
+
+Registered by &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>525</y>
+      <w>133</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=0..*
+
+Requested to &gt;</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>203</x>
+      <y>399</y>
+      <w>168</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=0..*
+
+Maked a &gt;</panel_attributes>
+    <additional_attributes>210.0;10.0;210.0;70.0;10.0;70.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>588</y>
+      <w>84</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=1..*
+
+Consisted to &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>707</x>
+      <y>273</y>
+      <w>154</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Auditor
+--
++ firm: String {NotBlank}
++ responsibility: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>707</x>
+      <y>385</y>
+      <w>252</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+AuditRecord
+--
++title: String {NotBlank}
++creationMoment: Date{Temporal(TIMESTAMP), Past}
++body: String {NotBlank}
++status: Status {NotNull, Enumerated}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>203</y>
+      <w>203</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;270.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>777</x>
+      <y>322</y>
+      <w>91</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=0..*
+
+writed by &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;90.0;50.0;90.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>455</y>
+      <w>133</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=0..*
+
+audited by &gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;150.0;80.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>868</x>
+      <y>273</y>
+      <w>287</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Message
+--
++title: String {NotBlank}
++creationMoment: Date{Temporal(TIMESTAMP), Past}
++tags: String
++body: String {NotBlank}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>987</x>
+      <y>343</y>
+      <w>133</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=0..*
+
+writed a &gt;</panel_attributes>
+    <additional_attributes>10.0;310.0;150.0;310.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>826</x>
+      <y>231</y>
+      <w>217</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=0..*
+
+writed by &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0;270.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>847</x>
+      <y>532</y>
+      <w>147</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Forum
+--
++title: String {Unique, NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>546</y>
+      <w>112</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+
+m1=1
+m2=1
+
+belonging to &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
 </diagram>

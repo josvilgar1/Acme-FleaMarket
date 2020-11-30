@@ -49,6 +49,18 @@ master.menu.administrator.figments = List Figments
 master.menu.administrator.advertisements =  List Advertisements
 master.menu.administrator.shutdown = Shut down
 
+# master.menu.supplier ########################################################
+
+master.menu.supplier = Supplier
+master.menu.supplier.item.list = My Items
+master.menu.supplier.request.list = My Requests
+
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list.have = List Items With AuditRecords
+master.menu.auditor.list.not.have = List Items Without AuditRecords
+
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Authenticated
@@ -58,6 +70,8 @@ master.menu.authenticated.figment.list = List Figments
 master.menu.authenticated.new.activate = List Active News
 master.menu.authenticated.toolsheet.list = List Tools
 master.menu.authenticated.suggestion.list = List Suggestions
+master.menu.authenticated.item.list = List Items
+master.menu.authenticated.forum.list = List Forums
 
 # master.menu.provider ########################################################
 
@@ -68,6 +82,11 @@ master.menu.provider.favourite-link = Favourite link
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.buyer ############################################################ 
+
+master.menu.buyer = Buyer
+master.menu.buyer.list.request = List Requests
 
 # master.menu.user-account ####################################################
 
