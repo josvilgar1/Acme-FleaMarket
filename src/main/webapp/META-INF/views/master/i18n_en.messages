@@ -92,10 +92,12 @@ master.menu.buyer.list.request = List Requests
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.supplier = Provider data
+master.menu.user-account.become-supplier = Become a provider
+master.menu.user-account.buyer = Buyer data
+master.menu.user-account.become-buyer = Become a buyer
+master.menu.user-account.auditor = Auditor data
+master.menu.user-account.become-auditor = Become a auditor
 
 # master.footer ###############################################################
 

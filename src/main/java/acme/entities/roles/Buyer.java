@@ -28,7 +28,6 @@ public class Buyer extends UserRole {
 	// Attributes -------------------------------------------------------------
 
 	@Email
-	@Column(unique = true)
 	@NotBlank
 	private String				email;
 

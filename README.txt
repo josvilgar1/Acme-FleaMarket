@@ -22,3 +22,7 @@ up and running very quickly.
 ## v3.0.0
 **Entities**
 -Figment: The price range property has been modified by two attributes of type Money.
+
+## v5.0.0
+**Entities**
+-Email: Single column annotation has been removed because it is not requested in the requirements
