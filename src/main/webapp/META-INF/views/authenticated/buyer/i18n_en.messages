@@ -18,8 +18,8 @@ authenticated.buyer.form.label.creditCardYear = Credit card year:
 authenticated.buyer.form.label.creditCardCVV = CVV:
 authenticated.buyer.form.label.creditCardType = Credit card type:
 
-authenticated.provider.form.button.create = Register
-authenticated.provider.form.button.update = Update
-authenticated.provider.form.button.return = Return
+authenticated.buyer.form.button.create = Register
+authenticated.buyer.form.button.update = Update
+authenticated.buyer.form.button.return = Return
 
 authenticated.buyer.form.errors.creditCardMonth = The month can not be past

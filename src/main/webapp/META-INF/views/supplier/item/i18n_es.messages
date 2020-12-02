@@ -21,12 +21,12 @@ supplier.item.form.label.description = Descripción
 supplier.item.form.label.price = Precio
 supplier.item.form.label.photo = Foto
 supplier.item.form.label.link = Enlace
+supplier.item.form.label.status = Estado
 
 supplier.item.show.button.return = Volver
 supplier.item.form.button.create = Crear
 supplier.item.form.button.update = Actualizar
 supplier.item.form.button.delete = Borrar
-supplier.item.form.button.return = Volver
 
 supplier.item.form.button.list.section = Secciones
 supplier.item.form.button.list.message = Mensajes

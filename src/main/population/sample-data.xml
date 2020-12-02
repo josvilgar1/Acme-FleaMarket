@@ -693,6 +693,7 @@
 		<property name="price" value="100€"/>
 		<property name="photo" value="http://www.photo01.com"/>
 		<property name="link" value="http://www.link01.com"/>
+		<property name="status" value="DRAFT"/>
 		<property name="supplier" ref="supplier01Supplier"/>
 	</bean>
 	
@@ -705,6 +706,7 @@
 		<property name="price" value="100€"/>
 		<property name="photo" value="http://www.photo02.com"/>
 		<property name="link" value="http://www.link02.com"/>
+		<property name="status" value="PUBLISHED"/>
 		<property name="supplier" ref="supplier02Supplier"/>
 	</bean>
 	
@@ -717,6 +719,7 @@
 		<property name="price" value="100€"/>
 		<property name="photo" value="http://www.photo03.com"/>
 		<property name="link" value="http://www.link03.com"/>
+		<property name="status" value="DRAFT"/>
 		<property name="supplier" ref="supplier03Supplier"/>
 	</bean>
 	
@@ -729,6 +732,7 @@
 		<property name="price" value="100€"/>
 		<property name="photo" value="http://www.photo04.com"/>
 		<property name="link" value="http://www.link04.com"/>
+		<property name="status" value="PUBLISHED"/>
 		<property name="supplier" ref="supplier04Supplier"/>
 	</bean>
 
@@ -741,6 +745,7 @@
 		<property name="price" value="100€"/>
 		<property name="photo" value="http://www.photo05.com"/>
 		<property name="link" value="http://www.link05.com"/>
+		<property name="status" value="DRAFT"/>
 		<property name="supplier" ref="supplier05Supplier"/>
 	</bean>	
 	
@@ -753,6 +758,7 @@
 		<property name="price" value="100€"/>
 		<property name="photo"><null/></property>
 		<property name="link" value="http://www.link06.com"/>
+		<property name="status" value="PUBLISHED"/>
 		<property name="supplier" ref="supplier05Supplier"/>
 	</bean>	
 	

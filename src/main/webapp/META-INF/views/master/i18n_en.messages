@@ -92,8 +92,8 @@ master.menu.buyer.list.request = List Requests
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.supplier = Provider data
-master.menu.user-account.become-supplier = Become a provider
+master.menu.user-account.supplier = Supplier data
+master.menu.user-account.become-supplier = Become a supplier
 master.menu.user-account.buyer = Buyer data
 master.menu.user-account.become-buyer = Become a buyer
 master.menu.user-account.auditor = Auditor data

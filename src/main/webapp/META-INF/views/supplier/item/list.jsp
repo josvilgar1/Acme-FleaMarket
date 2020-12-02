@@ -21,3 +21,7 @@
 	<acme:list-column code="supplier.item.list.label.itemCategory" path="itemCategory" width="40%"/>
 	<acme:list-column code="supplier.item.list.label.price" path="price" width="30%"/>
 </acme:list>
+
+<acme:form>
+	<acme:form-submit method="get" code="supplier.item.form.button.create" action="/supplier/item/create"/>
+</acme:form>
