@@ -1,6 +1,5 @@
-
 <%--
-- list.jsp
+- form.jsp
 -
 - Copyright (c) 2019 Rafael Corchuelo.
 -
@@ -16,12 +15,11 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:list >
-	<acme:list-column code="supplier.item.list.label.title" path="title" width="30%"/>
-	<acme:list-column code="supplier.item.list.label.itemCategory" path="itemCategory" width="40%"/>
-	<acme:list-column code="supplier.item.list.label.price" path="price" width="30%"/>
-</acme:list>
-
 <acme:form>
-	<acme:form-submit method="get" code="supplier.item.form.button.create" action="/supplier/item/create"/>
+	<acme:form-textbox code="authenticated.auditor.form.label.firm" path="firm"/>
+	<acme:form-textbox code="authenticated.auditor.form.label.responsibility" path="responsibility"/>
+	
+	<acme:form-submit test="${command == 'create'}" code="authenticated.auditor.form.button.create" action="/authenticated/auditor/create"/>
+	<acme:form-submit test="${command == 'update'}" code="authenticated.auditor.form.button.update" action="/authenticated/auditor/update"/>
+	<acme:form-return code="authenticated.auditor.form.button.return"/>
 </acme:form>

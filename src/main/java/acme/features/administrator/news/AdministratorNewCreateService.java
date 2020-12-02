@@ -72,7 +72,7 @@ public class AdministratorNewCreateService implements AbstractCreateService<Admi
 			//Check if deadline is in future------------------------------------------------------
 			Calendar calendar = Calendar.getInstance();
 			errors.state(request, entity.getDeadlineMoment().after(calendar.getTime()), "deadlineMoment",
-				"administrator.new.form.errors.deadlineMoment");
+				"authenticated.buyer.form.errors.creditCardMonth");
 		}
 
 	}

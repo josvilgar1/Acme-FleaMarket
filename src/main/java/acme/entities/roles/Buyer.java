@@ -1,7 +1,6 @@
 
 package acme.entities.roles;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
@@ -28,12 +27,10 @@ public class Buyer extends UserRole {
 	// Attributes -------------------------------------------------------------
 
 	@Email
-	@Column(unique = true)
 	@NotBlank
 	private String				email;
 
 	@Pattern(regexp = "^(\\+\\d{1,3})?(\\(\\d{1,4}\\))?\\d{6,10}$")
-	@Column(unique = true)
 	@NotBlank
 	private String				phone;
 

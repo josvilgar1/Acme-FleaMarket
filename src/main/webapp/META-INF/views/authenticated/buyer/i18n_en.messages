@@ -1,0 +1,25 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.buyer.form.label.email = Email:
+authenticated.buyer.form.label.phone = Phone:
+authenticated.buyer.form.label.address = Address:
+authenticated.buyer.form.label.creditCardNumber = Credit card number:
+authenticated.buyer.form.label.creditCardName = Credit card name:
+authenticated.buyer.form.label.creditCardMonth = Credit card Month:
+authenticated.buyer.form.label.creditCardYear = Credit card year:
+authenticated.buyer.form.label.creditCardCVV = CVV:
+authenticated.buyer.form.label.creditCardType = Credit card type:
+
+authenticated.buyer.form.button.create = Register
+authenticated.buyer.form.button.update = Update
+authenticated.buyer.form.button.return = Return
+
+authenticated.buyer.form.errors.creditCardMonth = The month can not be past

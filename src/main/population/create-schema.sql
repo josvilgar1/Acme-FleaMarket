@@ -111,6 +111,7 @@
         `photo` varchar(255),
         `price_amount` double precision,
         `price_currency` varchar(255),
+        `status` integer,
         `ticker` varchar(255),
         `title` varchar(255),
         `supplier_id` integer not null,
@@ -256,9 +257,6 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
-
-    alter table `buyer` 
-       add constraint UK_su1kgh6nfis1ne524jy1vobm5 unique (`email`);
 
     alter table `buyer` 
        add constraint UK_r3ondcmf3r5ogjok74v1gq8hj unique (`phone`);
