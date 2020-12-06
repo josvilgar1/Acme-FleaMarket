@@ -13,6 +13,7 @@ buyer.request.list.label.ticker = Ticker
 buyer.request.list.label.creationMoment = Fecha de creación
 buyer.request.list.label.quantity = Cantidad
 buyer.request.list.label.item-title = Artículo
+buyer.item.form.button.create.request = Crear petición
 
 authenticated.advertisement.show.label.ticker = Ticker
 authenticated.advertisement.show.label.creationMoment = Fecha de creación
@@ -23,3 +24,5 @@ authenticated.advertisement.show.label.item-title = Artículo
 
 buyer.request.show.button.return = Volver
 buyer.request.list.button.return = Volver
+
+buyer.item.form.button.create = Crear

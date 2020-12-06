@@ -31,6 +31,7 @@
 	
 	<acme:form-submit method="get" code="authenticated.item.form.button.list.section" action="/authenticated/section/list?itemId=${id}" />
 	<acme:form-submit method="get" code="authenticated.item.form.button.list.message" action="/authenticated/message/list?itemId=${id}" />
+	<acme:form-submit method="get" code="authenticated.item.form.button.list.message.create" action="/authenticated/message/create?itemId=${id}"/>
 	<acme:form-submit method="get" code="authenticated.item.form.button.list.auditrecord" action="/authenticated/auditrecord/list?id=${id}"/>
 	<acme:form-return code="authenticated.item.show.button.return"/>
 </acme:form>
