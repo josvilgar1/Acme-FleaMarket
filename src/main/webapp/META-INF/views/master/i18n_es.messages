@@ -62,6 +62,7 @@ master.menu.auditor = Auditor
 master.menu.auditor.list.have = Listar Artículos Auditados
 master.menu.auditor.list.not.have = Listar Artículos No Auditados
 master.menu.auditor.list.auditRecord.mine = Listar mis Auditorías
+
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Autenticado
@@ -73,16 +74,6 @@ master.menu.authenticated.toolsheet.list = Listar Herramientas
 master.menu.authenticated.suggestion.list = Listar Sugerencias
 master.menu.authenticated.item.list = Listar Artículos
 master.menu.authenticated.forum.list = Listar foros
-
-# master.menu.provider ########################################################
-
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
 
 # master.menu.buyer ############################################################ 
 

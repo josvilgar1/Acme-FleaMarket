@@ -1021,4 +1021,67 @@
 		<property name="status"><null/></property>
 		<property name="authenticated" ref="buyer05Authenticated"/>
 	</bean>
+	
+	<!-- Banners -->	
+	
+	<bean id="banner01" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://upload.wikimedia.org/wikipedia/commons/5/5b/ETSI_Inform%C3%A1tica_Sevilla_y_DrupalCamp_Spain_2011.jpg"/>
+		<property name="slogan" value="Universidad de sevilla"/>
+		<property name="url" value="http://www.us.es"/>
+		<property name="creditCardName" value="Nombre1Apellido1Apellido2"/>
+		<property name="creditCardNumber" value="1111222233334444"/>
+		<property name="creditCardMonth" value="12"/>
+		<property name="creditCardYear" value="2023"/>
+		<property name="creditCardType" value="Visa"/>
+		<property name="creditCardCVV" value="330"/>
+	</bean>
+	
+	<bean id="banner02" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://www.profesionalreview.com/wp-content/uploads/2018/10/Ordenadores-baratos-1280x720.jpg"/>
+		<property name="slogan" value="Universidad de sevilla"/>
+		<property name="url" value="http://www.us.es"/>
+		<property name="creditCardName" value="Nombre1Apellido1Apellido2"/>
+		<property name="creditCardNumber" value="1111222233334444"/>
+		<property name="creditCardMonth" value="12"/>
+		<property name="creditCardYear" value="2023"/>
+		<property name="creditCardType" value="Visa"/>
+		<property name="creditCardCVV" value="330"/>
+	</bean>
+	
+	<bean id="banner03" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/06/16/15923253592398.jpg"/>
+		<property name="slogan" value="Universidad de sevilla"/>
+		<property name="url" value="http://www.us.es"/>
+		<property name="creditCardName" value="Nombre1Apellido1Apellido2"/>
+		<property name="creditCardNumber" value="1111222233334444"/>
+		<property name="creditCardMonth" value="12"/>
+		<property name="creditCardYear" value="2023"/>
+		<property name="creditCardType" value="Visa"/>
+		<property name="creditCardCVV" value="330"/>
+	</bean>
+	
+	<bean id="banner04" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://i.blogs.es/a0b71b/tv-led-43_---xiaomi-mi-tv-4s-uhd-4k--quad-core--bluetooth--android-tv--patchwall--google-assistant--chromecast/450_1000.png"/>
+		<property name="slogan" value="Universidad de sevilla"/>
+		<property name="url" value="http://www.us.es"/>
+		<property name="creditCardName" value="Nombre1Apellido1Apellido2"/>
+		<property name="creditCardNumber" value="1111222233334444"/>
+		<property name="creditCardMonth" value="12"/>
+		<property name="creditCardYear" value="2023"/>
+		<property name="creditCardType" value="Visa"/>
+		<property name="creditCardCVV" value="330"/>
+	</bean>
+	
+	<bean id="banner05" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://as01.epimg.net/meristation/imagenes/2020/03/02/betech/1583161547_749146_1583161917_noticia_normal_recorte1.jpg"/>
+		<property name="slogan" value="Universidad de sevilla"/>
+		<property name="url" value="http://www.us.es"/>
+		<property name="creditCardName" value="Nombre1Apellido1Apellido2"/>
+		<property name="creditCardNumber" value="1111222233334444"/>
+		<property name="creditCardMonth" value="12"/>
+		<property name="creditCardYear" value="2023"/>
+		<property name="creditCardType" value="Visa"/>
+		<property name="creditCardCVV" value="330"/>
+	</bean>
+	
 </beans>
