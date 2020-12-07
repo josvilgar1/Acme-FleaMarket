@@ -81,7 +81,8 @@ public class BuyerRequestCreateService implements AbstractCreateService<Buyer ,R
 				spamUtils.getThreshold(), spamUtils.getSpamWords());
 
 		//Check Item is in FinalMode
-		errors.state(request, entity.getItem().getStatus()==Status.DRAFT, 
+		Boolean bool = entity.getItem().getStatus()==Status.DRAFT;
+		errors.state(request, entity.getItem().getStatus()!=Status.DRAFT, 
 				"haveErrors", 
 				"buyer.request.form.errors.status.notPublished");
 	}
