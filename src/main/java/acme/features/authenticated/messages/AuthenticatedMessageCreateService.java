@@ -1,3 +1,4 @@
+
 package acme.features.authenticated.messages;
 
 import java.util.Date;
@@ -5,6 +6,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.SpamUtils;
 import acme.entities.forums.Forum;
 import acme.entities.messages.Message;
 import acme.framework.components.Errors;
@@ -15,13 +17,13 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class AuthenticatedMessageCreateService  implements AbstractCreateService<Authenticated, Message> {
+public class AuthenticatedMessageCreateService implements AbstractCreateService<Authenticated, Message> {
 
 	@Autowired
 	AuthenticatedMessageRepository	repository;
 
-//	@Autowired
-//	private SpamUtils				spamUtils;
+	@Autowired
+	private SpamUtils				spamUtils;
 
 
 	@Override
@@ -29,7 +31,7 @@ public class AuthenticatedMessageCreateService  implements AbstractCreateService
 		assert request != null;
 
 		int authId = request.getPrincipal().getActiveRoleId();
-		Authenticated auth = this.repository.findAuthenticatedById(authId);
+		Authenticated auth = repository.findAuthenticatedById(authId);
 
 		return auth != null;
 	}
@@ -63,18 +65,17 @@ public class AuthenticatedMessageCreateService  implements AbstractCreateService
 		Integer itemId;
 		Authenticated authenticated;
 		Message result;
-		
+
 		principal = request.getPrincipal();
 		itemId = request.getModel().getInteger("itemId");
-		
-		if(itemId==null) {
+
+		if (itemId == null) {
 			Integer forumId = request.getModel().getInteger("forum.id");
-			forum = this.repository.findForumById(forumId);
-		}else {
-			forum = this.repository.findForumByItemId(itemId);
-		}
-		
-		authenticated = this.repository.findAuthenticatedById(principal.getActiveRoleId());
+			forum = repository.findForumById(forumId);
+		} else
+			forum = repository.findForumByItemId(itemId);
+
+		authenticated = repository.findAuthenticatedById(principal.getActiveRoleId());
 
 		result = new Message();
 
@@ -96,11 +97,12 @@ public class AuthenticatedMessageCreateService  implements AbstractCreateService
 			confirmed = request.getModel().getBoolean("confirm");
 			errors.state(request, confirmed, "confirm", "forum.message.form.error.confirmation");
 		}
-//		//2: Comprobar Spam
-//		if (!errors.hasErrors()) {
-//			errors.state(request, !this.spamUtils.checkSpam(entity.getBody()), "body", "authenticated.message.form.error.spam");
-//		}
-
+		errors.state(request, !spamUtils.checkSpam(entity.getTitle()), "title", "acme.validation.spam",
+			spamUtils.getThreshold(), spamUtils.getSpamWords());
+		errors.state(request, !spamUtils.checkSpam(entity.getTags()), "tags", "acme.validation.spam",
+			spamUtils.getThreshold(), spamUtils.getSpamWords());
+		errors.state(request, !spamUtils.checkSpam(entity.getBody()), "body", "acme.validation.spam",
+			spamUtils.getThreshold(), spamUtils.getSpamWords());
 	}
 
 	@Override
@@ -113,23 +115,22 @@ public class AuthenticatedMessageCreateService  implements AbstractCreateService
 		Integer forumId;
 		Forum forum;
 		Principal principal;
-		
+
 		principal = request.getPrincipal();
 		itemId = request.getModel().getInteger("itemId");
-		
-		if(itemId==null) {
+
+		if (itemId == null) {
 			forumId = request.getModel().getInteger("forum.id");
-			forum = this.repository.findForumById(forumId);
-		}else {
-			forum = this.repository.findForumByItemId(itemId);
-		}
-		Authenticated authenticated = this.repository.findAuthenticatedById(principal.getActiveRoleId());
-		
+			forum = repository.findForumById(forumId);
+		} else
+			forum = repository.findForumByItemId(itemId);
+		Authenticated authenticated = repository.findAuthenticatedById(principal.getActiveRoleId());
+
 		entity.setAuthenticated(authenticated);
 		entity.setForum(forum);
 		entity.setCreationMoment(date);
 
-		this.repository.save(entity);
+		repository.save(entity);
 
 	}
 

@@ -16,7 +16,6 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	
 	<acme:form-hidden path="forum.id"/>
 	<acme:form-textbox code="authenticated.message.form.label.title" path="title"/>
 	<jstl:if test="${command != 'create'}">
@@ -25,8 +24,10 @@
 			readonly="true"/>
 	</jstl:if>
 	<acme:form-textbox code="authenticated.message.form.label.tags" path="tags"/>
-	<acme:form-textbox code="authenticated.message.form.label.authenticated" path="authenticated.identity.name"/>
-	<acme:form-textbox code="authenticated.message.form.label.item" path="forum.item.title"/>
+	<jstl:if test="${command != 'create'}">
+		<acme:form-textbox code="authenticated.message.form.label.authenticated" path="authenticated.identity.name"/>
+		<acme:form-textbox code="authenticated.message.form.label.item" path="forum.item.title"/>
+	</jstl:if>
 	<acme:form-textarea code="authenticated.message.form.label.body" path="body"/>
 
 	<jstl:if test="${command == 'create'}">

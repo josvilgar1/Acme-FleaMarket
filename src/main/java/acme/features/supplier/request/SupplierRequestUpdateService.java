@@ -73,12 +73,17 @@ public class SupplierRequestUpdateService implements AbstractUpdateService<Suppl
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
-		errors.state(request, entity.getProcess().equals(Process.REJECTED) && !entity.getJustification().isEmpty(),
-			"justification", "supplier.request.form.errors.justification.empty");
-
+		
+		if(entity.getProcess().equals(Process.REJECTED)) {
+			errors.state(request, !entity.getJustification().isEmpty(),
+				"justification", "supplier.request.form.errors.justification.empty");
+		}
 		errors.state(request, !spamUtils.checkSpam(entity.getJustification()), "justification", "acme.validation.spam",
 			spamUtils.getThreshold(), spamUtils.getSpamWords());
+		
+		if(errors.hasErrors()) {
+			request.getModel().setAttribute("process", Process.PENDING);
+		}
 	}
 
 	@Override
