@@ -64,6 +64,21 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `credit_cardcvv` integer,
+        `credit_card_month` integer,
+        `credit_card_name` varchar(255),
+        `credit_card_number` varchar(255),
+        `credit_card_type` varchar(255),
+        `credit_card_year` integer,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `url` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `buyer` (
        `id` integer not null,
         `version` integer not null,

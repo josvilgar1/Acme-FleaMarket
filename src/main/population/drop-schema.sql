@@ -77,6 +77,8 @@
 
     drop table if exists `authenticated`;
 
+    drop table if exists `banner`;
+
     drop table if exists `buyer`;
 
     drop table if exists `figment`;
