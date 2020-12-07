@@ -33,7 +33,7 @@ public class Request extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
-	@Pattern(regexp = "^[A-Z]{3}-\\d{2}-\\d{6}$")
+	@Pattern(regexp = "^[A-Z]{3}-\\d{2}-\\d{1,6}$")
 	@Column(unique = true)
 	private String				ticker;
 

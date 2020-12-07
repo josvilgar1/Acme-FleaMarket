@@ -21,7 +21,7 @@ anonymous.authenticated.form.label.headerPicture = Header
 anonymous.authenticated.form.label.title  = Title
 anonymous.authenticated.form.label.creationMoment = Creation moment
 anonymous.authenticated.form.label.deadlineMoment = Deadline moment
-anonymous.authenticated.form.label.body = authenticated
+anonymous.authenticated.form.label.body = New
 anonymous.authenticated.form.label.links = Links
 
 anonymous.authenticated.form.button.create = Create
