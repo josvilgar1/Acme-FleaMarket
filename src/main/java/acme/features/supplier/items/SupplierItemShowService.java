@@ -36,8 +36,9 @@ public class SupplierItemShowService implements AbstractShowService<Supplier, It
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "id", "ticker", "creationMoment", "title", "itemCategory", "description", "price",
-			"photo", "link");
+		model.setAttribute("haveSections", !repository.findAllSectionByItemId(entity.getId()).isEmpty());
+		request.unbind(entity, model, "ticker", "creationMoment", "title", "itemCategory");
+		request.unbind(entity, model, "description", "price", "photo", "link", "status");
 	}
 
 	@Override

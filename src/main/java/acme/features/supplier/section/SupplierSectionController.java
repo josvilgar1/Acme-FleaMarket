@@ -1,5 +1,5 @@
 
-package acme.features.supplier.items;
+package acme.features.supplier.section;
 
 import javax.annotation.PostConstruct;
 
@@ -7,29 +7,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.items.Item;
 import acme.entities.roles.Supplier;
+import acme.entities.sections.Section;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/supplier/item/")
-public class SupplierItemController extends AbstractController<Supplier, Item> {
+@RequestMapping("/supplier/section/")
+public class SupplierSectionController extends AbstractController<Supplier, Section> {
 
 	@Autowired
-	SupplierItemListService		listService;
+	SupplierSectionListService		listService;
 
 	@Autowired
-	SupplierItemShowService		showService;
+	SupplierSectionShowService		showService;
 
 	@Autowired
-	SupplierItemCreateService	createService;
+	SupplierSectionCreateService	createService;
 
 	@Autowired
-	SupplierItemUpdateService	updateService;
+	SupplierSectionUpdateService	updateService;
 
 	@Autowired
-	SupplierItemDeleteService	deleteService;
+	SupplierSectionDeleteService	deleteService;
 
 
 	@PostConstruct

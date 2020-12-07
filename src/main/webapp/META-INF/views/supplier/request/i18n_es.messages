@@ -12,7 +12,8 @@
 supplier.request.list.label.ticker = Ticker
 supplier.request.list.label.item = Artículo
 supplier.request.list.label.buyer = Comprador
-supplier.request.list.label.quantity = Cantidad
+supplier.request.list.label.creationMoment = Momento creación
+supplier.request.list.label.item.isnew = Artículo nuevo
 
 supplier.request.form.label.ticker = Ticker
 supplier.request.form.label.creationMoment = Fecha inicio
@@ -20,9 +21,17 @@ supplier.request.form.label.item = Artículo
 supplier.request.form.label.buyer = Comprador
 supplier.request.form.label.quantity = Cantidad
 supplier.request.form.label.notes = Notas
+supplier.request.form.label.item.isnew = Nuevo
+supplier.request.form.label.process = Estado
+supplier.request.form.label.process.pending = PENDIENTE
+supplier.request.form.label.process.accepted = ACEPTADO
+supplier.request.form.label.process.rejected = RECHAZADO
+supplier.request.form.label.item.justification = Justificación
 
 supplier.request.show.button.return = Volver
 supplier.request.form.button.create = Crear
 supplier.request.form.button.update = Actualizar
 supplier.request.form.button.delete = Borrar
 supplier.request.form.button.return = Volver
+
+supplier.request.form.errors.justification.empty = Debe indicar una justificación

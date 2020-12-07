@@ -9,9 +9,8 @@
 # they accept any liabilities with respect to them.
 
 
-authenticated.forum.list.label.title = Foro
+authenticated.forum.list.label.title = Foros
 
-authenticated.forum.form.label.title = Foro
 authenticated.forum.form.label.item = Artículo
 
 authenticated.forum.show.button.return = Volver

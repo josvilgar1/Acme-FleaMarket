@@ -6,9 +6,12 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.SpamUtils;
+import acme.entities.forums.Forum;
 import acme.entities.items.Item;
-import acme.entities.items.Item.Status;
 import acme.entities.roles.Supplier;
+import acme.enumeration.Status;
+import acme.features.authenticated.forum.AuthenticatedForumRepository;
 import acme.features.authenticated.supplier.AuthenticatedSupplierRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -23,6 +26,12 @@ public class SupplierItemCreateService implements AbstractCreateService<Supplier
 
 	@Autowired
 	AuthenticatedSupplierRepository	supplierRepository;
+
+	@Autowired
+	AuthenticatedForumRepository	forumRepository;
+
+	@Autowired
+	private SpamUtils				spamUtils;
 
 
 	@Override
@@ -64,6 +73,11 @@ public class SupplierItemCreateService implements AbstractCreateService<Supplier
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		errors.state(request, !spamUtils.checkSpam(entity.getTitle()), "title", "acme.validation.spam",
+			spamUtils.getThreshold(), spamUtils.getSpamWords());
+		errors.state(request, !spamUtils.checkSpam(entity.getDescription()), "description", "acme.validation.spam",
+			spamUtils.getThreshold(), spamUtils.getSpamWords());
 	}
 
 	@Override
@@ -74,8 +88,19 @@ public class SupplierItemCreateService implements AbstractCreateService<Supplier
 		Date moment;
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setCreationMoment(moment);
-		entity.generateTicker();
-		repository.save(entity);
-
+		boolean existsTicker;
+		synchronized (this) {
+			do {
+				entity.generateTicker();
+				if (!repository.findAllByTicker(entity.getTicker()).isEmpty())
+					existsTicker = true;
+				else
+					existsTicker = false;
+			} while (existsTicker);
+			repository.save(entity);
+		}
+		Forum forum = new Forum();
+		forum.setItem(entity);
+		forumRepository.save(forum);
 	}
 }

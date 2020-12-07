@@ -24,6 +24,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
 import org.springframework.web.context.WebApplicationContext;
 
+import acme.entities.configuration.SpamUtils;
 import acme.framework.helpers.FactoryHelper;
 import acme.framework.helpers.ProfileHelper;
 import acme.framework.helpers.StringHelper;
@@ -82,14 +83,14 @@ public class Launcher extends SpringBootServletInitializer {
 	// Internal methods -------------------------------------------------------
 
 	private static void checkArguments(final String... arguments) {
-		if (arguments.length > 1) {
+		if (arguments.length > 1)
 			Launcher.showUsage();
-		}
 	}
 
 	private static void showUsage() {
 		System.err.println("");
-		System.err.println("Usage: launcher (--run | --database:export | --database:populate-initial | --database:populate-sample | --database:inquire)?");
+		System.err.println(
+			"Usage: launcher (--run | --database:export | --database:populate-initial | --database:populate-sample | --database:inquire)?");
 		System.err.println("");
 		System.err.println("--run\t\truns the system (default)");
 		System.err.println("--database\tperforms an action on the database");
@@ -99,7 +100,8 @@ public class Launcher extends SpringBootServletInitializer {
 		System.err.println("\t\tinquire           opens a shell to query the database");
 		System.err.println("");
 		System.err.println("Note that populating the database requires exporting the create/drop scripts, which is");
-		System.err.println("performed automatically.  Note, too, that populating the database with sample data requires");
+		System.err
+			.println("performed automatically.  Note, too, that populating the database with sample data requires");
 		System.err.println("populating it with the initial data, which is also performed automatically.");
 		System.err.println("");
 		System.exit(1);
@@ -139,16 +141,20 @@ public class Launcher extends SpringBootServletInitializer {
 		DatabaseExporter databaseExporter;
 		DatabasePopulator databasePopulator;
 		DatabaseInquirer databaseInquirer;
+		SpamUtils spamUtils;
 		String mapFilename, initialFilename, sampleFilename;
 
 		environment = FactoryHelper.getBean(Environment.class);
 		databaseExporter = FactoryHelper.getBean(DatabaseExporter.class);
 		databasePopulator = FactoryHelper.getBean(DatabasePopulator.class);
 		databaseInquirer = FactoryHelper.getBean(DatabaseInquirer.class);
+		spamUtils = FactoryHelper.getBean(SpamUtils.class);
 
 		switch (command) {
 		case "--run":
 			System.out.printf("The application is running (Development)...%n");
+			// FIXME: Iniciamos el control de palabras Spam
+			spamUtils.init();
 			break;
 		case "--database:export":
 			databaseExporter.run();

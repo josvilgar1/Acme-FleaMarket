@@ -1,22 +1,22 @@
 
-package acme.features.authenticated.section;
+package acme.features.supplier.section;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.roles.Supplier;
 import acme.entities.sections.Section;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedSectionListService implements AbstractListService<Authenticated, Section> {
+public class SupplierSectionListService implements AbstractListService<Supplier, Section> {
 
 	@Autowired
-	AuthenticatedSectionRepository repository;
+	SupplierSectionRepository repository;
 
 
 	@Override
@@ -31,6 +31,7 @@ public class AuthenticatedSectionListService implements AbstractListService<Auth
 		assert entity != null;
 		assert model != null;
 
+		model.setAttribute("itemId", entity.getItem().getId());
 		request.unbind(entity, model, "index", "title", "item.title");
 	}
 

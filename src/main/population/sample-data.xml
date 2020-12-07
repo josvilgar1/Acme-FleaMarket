@@ -699,7 +699,7 @@
 	
 	<bean id="item02" class="acme.entities.items.Item">
 		<property name="ticker" value="AAA-21-111112"/>
-		<property name="creationMoment" value="2020/10/02 00:00"/>
+		<property name="creationMoment" value="2020/12/05 00:00"/>
 		<property name="title" value="title02"/>
 		<property name="itemCategory" value="itemCategory02"/>
 		<property name="description" value="description02"/>
@@ -819,15 +819,19 @@
 		<property name="creationMoment" value="2020/10/05 00:00"/>
 		<property name="quantity" value="01"/>
 		<property name="notes" value="notes01"/>
+		<property name="process" value="PENDING"/>
+		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer01Buyer"/>
 		<property name="item" ref="item01"/>
 	</bean>
 	
 	<bean id="request02" class="acme.entities.requests.Request">
 		<property name="ticker" value="AAA-21-111102"/>
-		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="creationMoment" value="2020/12/07 00:00"/>
 		<property name="quantity" value="02"/>
 		<property name="notes" value="notes02"/>
+		<property name="process" value="PENDING"/>
+		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer02Buyer"/>
 		<property name="item" ref="item02"/>
 	</bean>
@@ -837,6 +841,8 @@
 		<property name="creationMoment" value="2020/10/05 00:00"/>
 		<property name="quantity" value="03"/>
 		<property name="notes" value="notes03"/>
+		<property name="process" value="PENDING"/>
+		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer03Buyer"/>
 		<property name="item" ref="item03"/>
 	</bean>
@@ -846,6 +852,8 @@
 		<property name="creationMoment" value="2020/10/05 00:00"/>
 		<property name="quantity" value="04"/>
 		<property name="notes" value="notes04"/>
+		<property name="process" value="PENDING"/>
+		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer04Buyer"/>
 		<property name="item" ref="item04"/>
 	</bean>
@@ -855,6 +863,8 @@
 		<property name="creationMoment" value="2020/10/05 00:00"/>
 		<property name="quantity" value="05"/>
 		<property name="notes" value="notes05"/>
+		<property name="process" value="PENDING"/>
+		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer05Buyer"/>
 		<property name="item" ref="item05"/>
 	</bean>
@@ -872,7 +882,7 @@
 	
 	<bean id="auditRecord02" class="acme.entities.auditrecords.AuditRecord">
 		<property name="title" value="title02"/>
-		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="creationMoment" value="2020/12/05 00:00"/>
 		<property name="body" value="body02"/>
 		<property name="status" value="DRAFT"/>
 		<property name="item" ref="item02"/>
@@ -906,35 +916,38 @@
 		<property name="auditor" ref="auditor05Auditor"/>
 	</bean>
 	
+	<bean id="auditRecord06" class="acme.entities.auditrecords.AuditRecord">
+		<property name="title" value="title06"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="body" value="body06"/>
+		<property name="status" value="PUBLISHED"/>
+		<property name="item" ref="item06"/>
+		<property name="auditor" ref="auditor05Auditor"/>
+	</bean>
+	
 	<!-- Forums -->
 	
 	<bean id="forum01" class="acme.entities.forums.Forum">
-		<property name="title" value="title01"/>
 		<property name="item" ref="item01"/>
 	</bean>
 	
 	<bean id="forum02" class="acme.entities.forums.Forum">
-		<property name="title" value="title02"/>
 		<property name="item" ref="item02"/>
 	</bean>
 	
 	<bean id="forum03" class="acme.entities.forums.Forum">
-		<property name="title" value="title03"/>
 		<property name="item" ref="item03"/>
 	</bean>
 	
 	<bean id="forum04" class="acme.entities.forums.Forum">
-		<property name="title" value="title04"/>
 		<property name="item" ref="item04"/>
 	</bean>
 	
 	<bean id="forum05" class="acme.entities.forums.Forum">
-		<property name="title" value="title05"/>
 		<property name="item" ref="item05"/>
 	</bean>
 	
 	<bean id="forum06" class="acme.entities.forums.Forum">
-		<property name="title" value="title06"/>
 		<property name="item" ref="item06"/>
 	</bean>
 	
