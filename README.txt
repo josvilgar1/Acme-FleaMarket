@@ -35,3 +35,8 @@ up and running very quickly.
 	readonly, so we have set the entity values to the model.
 -Launcher: We have added the initialization of our SpamUtil bean when launching the application to have the words spam at 
 	the beginning of the application
+	
+## v6.0.0
+**Entities**
+-Banner: By not specifying anything in the requirements about who can handle this entity, 5 values for this entity have been added 
+	in the sample-data.xml, but they cannot be created, modified or deleted by any role

@@ -64,6 +64,21 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `credit_cardcvv` integer,
+        `credit_card_month` integer,
+        `credit_card_name` varchar(255),
+        `credit_card_number` varchar(255),
+        `credit_card_type` varchar(255),
+        `credit_card_year` integer,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `url` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `buyer` (
        `id` integer not null,
         `version` integer not null,
@@ -77,15 +92,6 @@
         `credit_card_year` integer,
         `email` varchar(255),
         `phone` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `consumer` (
-       `id` integer not null,
-        `version` integer not null,
-        `user_account_id` integer,
-        `company` varchar(255),
-        `sector` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -177,15 +183,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `provider` (
-       `id` integer not null,
-        `version` integer not null,
-        `user_account_id` integer,
-        `company` varchar(255),
-        `sector` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `request` (
        `id` integer not null,
         `version` integer not null,
@@ -268,18 +265,24 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+create index IDXof878cqun8l1ynh0ao94bw3au on `audit_record` (`status`);
 
     alter table `auditorrequest` 
        add constraint UK_9sejnknunem58jlkxhyopcsy2 unique (`authenticated_id`);
 
     alter table `forum` 
        add constraint UK_c5hjl933amnwf8mq1v2lf45jo unique (`item_id`);
+create index IDXcwu0qfw55u9ch6dfk5xk6ihvn on `item` (`ticker`);
+create index IDX1sdue983wkfa8cd4x6r5i51k3 on `item` (`status`);
 
     alter table `item` 
        add constraint UK_d60jfv0vlrqswikfeec1le23u unique (`ticker`);
+create index IDX3qepdx8lwew1ng35nkn22076s on `message` (`forum_id`);
+create index IDXh9syauj4iixf18uts83saik5d on `request` (`ticker`);
 
     alter table `request` 
        add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
+create index IDX9aghglfhyij49iwyr26qi6bt3 on `section` (`item_id`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
@@ -324,11 +327,6 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-    alter table `consumer` 
-       add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
-       foreign key (`user_account_id`) 
-       references `user_account` (`id`);
-
     alter table `forum` 
        add constraint `FKrgdtbakxmpiv2k47q778a77qa` 
        foreign key (`item_id`) 
@@ -348,11 +346,6 @@
        add constraint `FKfwwpivgx5j4vw4594dgrw884q` 
        foreign key (`forum_id`) 
        references `forum` (`id`);
-
-    alter table `provider` 
-       add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
-       foreign key (`user_account_id`) 
-       references `user_account` (`id`);
 
     alter table `request` 
        add constraint `FKxmj75t0jkph9b4xh8v8pph38` 

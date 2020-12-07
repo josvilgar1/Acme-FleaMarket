@@ -9,12 +9,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.Index;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
@@ -29,6 +30,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "ticker")
+})
 public class Request extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
@@ -63,7 +67,7 @@ public class Request extends DomainEntity {
 	@NotNull
 	private Item				item;
 
-	
+
 	public String generateTicker() {
 		StringBuilder sb = new StringBuilder();
 		// Add category
@@ -74,7 +78,7 @@ public class Request extends DomainEntity {
 		else
 			sb.append(item.getItemCategory().substring(0, 1).toUpperCase()).append("XX");
 		sb.append("-");
-		// Add last 2 year's digits 
+		// Add last 2 year's digits
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(creationMoment);
 		sb.append(String.valueOf(calendar.get(Calendar.YEAR)).substring(2, 4));
