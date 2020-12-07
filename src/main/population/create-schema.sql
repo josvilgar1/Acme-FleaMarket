@@ -265,18 +265,24 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+create index IDXof878cqun8l1ynh0ao94bw3au on `audit_record` (`status`);
 
     alter table `auditorrequest` 
        add constraint UK_9sejnknunem58jlkxhyopcsy2 unique (`authenticated_id`);
 
     alter table `forum` 
        add constraint UK_c5hjl933amnwf8mq1v2lf45jo unique (`item_id`);
+create index IDXcwu0qfw55u9ch6dfk5xk6ihvn on `item` (`ticker`);
+create index IDX1sdue983wkfa8cd4x6r5i51k3 on `item` (`status`);
 
     alter table `item` 
        add constraint UK_d60jfv0vlrqswikfeec1le23u unique (`ticker`);
+create index IDX3qepdx8lwew1ng35nkn22076s on `message` (`forum_id`);
+create index IDXh9syauj4iixf18uts83saik5d on `request` (`ticker`);
 
     alter table `request` 
        add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
+create index IDX9aghglfhyij49iwyr26qi6bt3 on `section` (`item_id`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
