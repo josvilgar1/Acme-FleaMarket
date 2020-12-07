@@ -20,6 +20,7 @@ authenticated.message.form.label.tags = Tags
 authenticated.message.form.label.authenticated = Author
 authenticated.message.form.label.item = Item
 authenticated.message.form.label.body = Message
+authenticated.message.form.label.confirm = Confirm
 
 authenticated.message.show.button.return = Return
 authenticated.message.form.button.create = Create
@@ -27,3 +28,4 @@ authenticated.message.form.button.update = Update
 authenticated.message.form.button.delete = Delete
 authenticated.message.form.button.return = Return
 
+forum.message.form.error.confirmation = You must confirm before you publish your message

@@ -1,7 +1,9 @@
 
 package acme.entities.requests;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,7 +35,6 @@ public class Request extends DomainEntity {
 
 	@Pattern(regexp = "^[A-Z]{3}-\\d{2}-\\d{6}$")
 	@Column(unique = true)
-	@NotBlank
 	private String				ticker;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -62,4 +63,27 @@ public class Request extends DomainEntity {
 	@NotNull
 	private Item				item;
 
+	
+	public String generateTicker() {
+		StringBuilder sb = new StringBuilder();
+		// Add category
+		if (item.getItemCategory().length() >= 3)
+			sb.append(item.getItemCategory().substring(0, 3).toUpperCase());
+		else if (item.getItemCategory().length() == 2)
+			sb.append(item.getItemCategory().substring(0, 2).toUpperCase()).append("X");
+		else
+			sb.append(item.getItemCategory().substring(0, 1).toUpperCase()).append("XX");
+		sb.append("-");
+		// Add last 2 year's digits 
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(creationMoment);
+		sb.append(String.valueOf(calendar.get(Calendar.YEAR)).substring(2, 4));
+		sb.append("-");
+		// Add secuential
+		Random r = new Random();
+		int seq = r.nextInt(1000000);
+		sb.append(seq);
+		// Assign value obtained to ticker
+		return sb.toString();
+	}
 }

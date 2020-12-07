@@ -12,6 +12,7 @@ buyer.request.list.label.ticker = Ticker
 buyer.request.list.label.creationMoment = Creation Moment
 buyer.request.list.label.quantity = Quantity
 buyer.request.list.label.item-title = Item
+buyer.item.form.button.create.request = Create request
 
 authenticated.advertisement.show.label.ticker = Ticker
 authenticated.advertisement.show.label.creationMoment = Creation moment
@@ -22,3 +23,5 @@ authenticated.advertisement.show.label.item-title = Item
 
 buyer.request.show.button.return = Return
 buyer.request.list.button.return = Return
+
+buyer.item.form.button.create = Create

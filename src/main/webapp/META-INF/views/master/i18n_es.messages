@@ -60,7 +60,7 @@ master.menu.supplier.request.list = Mis solicitudes
 master.menu.auditor = Auditor
 master.menu.auditor.list.have = Listar Artículos Auditados
 master.menu.auditor.list.not.have = Listar Artículos No Auditados
-
+master.menu.auditor.list.auditRecord.mine = Listar mis Auditorías
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Autenticado

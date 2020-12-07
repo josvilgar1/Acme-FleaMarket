@@ -22,10 +22,13 @@ public class AuthenticatedMessageController extends AbstractController<Authentic
 	@Autowired
 	AuthenticatedMessageShowService	showService;
 
+	@Autowired
+	AuthenticatedMessageCreateService	createService;
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, listService);
 		super.addBasicCommand(BasicCommand.SHOW, showService);
+		super.addBasicCommand(BasicCommand.CREATE, createService);
 	}
 }

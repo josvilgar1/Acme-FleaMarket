@@ -26,9 +26,10 @@
 	<acme:form-textbox code="authenticated.item.form.label.itemCategory" path="itemCategory"/>
 	<acme:form-textarea code="authenticated.item.form.label.description" path="description"/>
 	<acme:form-money code="authenticated.item.form.label.price" path="price"/>
-	<acme:form-textbox code="authenticated.item.form.label.photo" path="photo"/>
-	<acme:form-textbox code="authenticated.item.form.label.link" path="link"/>
+	<acme:form-url code="authenticated.item.form.label.photo" path="photo"/>
+	<acme:form-url code="authenticated.item.form.label.link" path="link"/>
 	
+	<acme:form-submit method="get" code="authenticated.item.form.button.list.message.create" action="/authenticated/message/create?itemId=${id}"/>
 	<acme:form-submit method="get" code="authenticated.item.form.button.list.section" action="/authenticated/section/list?item.id=${id}" />
 	<acme:form-submit method="get" code="authenticated.item.form.button.list.message" action="/authenticated/message/list?item.id=${id}" />
 	<acme:form-submit method="get" code="authenticated.item.form.button.list.auditrecord" action="/authenticated/auditrecord/list?id=${id}"/>

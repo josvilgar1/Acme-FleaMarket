@@ -14,11 +14,12 @@
 	<acme:form-textbox code="auditor.item.form.label.itemCategory" path="itemCategory"/>
 	<acme:form-textarea code="auditor.item.form.label.description" path="description"/>
 	<acme:form-money code="auditor.item.form.label.price" path="price"/>
-	<acme:form-textbox code="auditor.item.form.label.photo" path="photo"/>
-	<acme:form-textbox code="auditor.item.form.label.link" path="link"/>
-	
+	<acme:form-url code="auditor.item.form.label.photo" path="photo"/>
+	<acme:form-url code="auditor.item.form.label.link" path="link"/>
+
+	<acme:form-submit method="get" code="auditor.item.form.button.list.auditrecord" action="/auditor/auditrecord/list?id=${id}"/>
+	<acme:form-submit method="get" code="auditor.item.form.button.auditrecord.create" action="/auditor/auditrecord/create?itemId=${id}" />
 	<acme:form-submit method="get" code="auditor.item.form.button.list.section" action="/authenticated/section/list?item.id=${id}" />
 	<acme:form-submit method="get" code="auditor.item.form.button.list.message" action="/authenticated/message/list?item.id=${id}" />
-	<acme:form-submit method="get" code="auditor.item.form.button.list.auditrecord" action="/authenticated/auditrecord/list?id=${id}"/>
 	<acme:form-return code="auditor.item.show.button.return"/>
 </acme:form>
