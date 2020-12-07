@@ -121,7 +121,8 @@ public abstract class AbstractController<R extends UserRole, E> {
 		this.commandManager.addBasicCommand(basicCommand, service);
 	}
 
-	public void addCustomCommand(final CustomCommand customCommand, final BasicCommand baseCommand, final AbstractService<R, E> service) {
+	public void addCustomCommand(final CustomCommand customCommand, final BasicCommand baseCommand,
+		final AbstractService<R, E> service) {
 		assert customCommand != null;
 		assert !this.commandManager.isRegistered(customCommand);
 		assert service != null;
@@ -192,10 +193,9 @@ public abstract class AbstractController<R extends UserRole, E> {
 
 			// HINT: let's deal with CSRF hacking.
 
-			if (model.containsKey("_csrf")) {
+			if (model.containsKey("_csrf"))
 				// HINT: Remove it so that a new token is generated automatically
 				model.remove("_csrf");
-			}
 
 			// HINT: let's make sure that the command is available.
 
@@ -262,9 +262,8 @@ public abstract class AbstractController<R extends UserRole, E> {
 			// HINT: if a throwable is caught, then the current transaction must be rollbacked, if any,
 			// HINT: the service must execute the 'onFailure' method, and the panic view must be returned.
 
-			if (this.isTransactionActive()) {
+			if (this.isTransactionActive())
 				this.rollbackTransaction();
-			}
 			if (service != null) {
 				this.startTransaction();
 				service.onFailure(request, response, oops);
@@ -410,12 +409,10 @@ public abstract class AbstractController<R extends UserRole, E> {
 			service.bind(request, entity, errors);
 			ValidationHelper.validate(request, entity, errors);
 			service.validate(request, entity, errors);
-			if (!errors.hasErrors()) {
+			if (!errors.hasErrors())
 				service.perform(request, entity, errors);
-			}
-			if (!errors.hasErrors()) {
+			if (!errors.hasErrors())
 				service.unbind(request, entity, model);
-			}
 			break;
 		case CREATE:
 			// HINT: dealing with a CREATE request involves the following steps: a) binding the request onto
@@ -425,9 +422,8 @@ public abstract class AbstractController<R extends UserRole, E> {
 			service.bind(request, entity, errors);
 			ValidationHelper.validate(request, entity, errors);
 			service.validate(request, entity, errors);
-			if (!errors.hasErrors()) {
+			if (!errors.hasErrors())
 				service.create(request, entity);
-			}
 			break;
 		case UPDATE:
 			// HINT: dealing with an UPDATE request involves the following steps: a) binding the request onto
@@ -437,17 +433,15 @@ public abstract class AbstractController<R extends UserRole, E> {
 			service.bind(request, entity, errors);
 			ValidationHelper.validate(request, entity, errors);
 			service.validate(request, entity, errors);
-			if (!errors.hasErrors()) {
+			if (!errors.hasErrors())
 				service.update(request, entity);
-			}
 			break;
 		case DELETE:
 			// HINT: dealing with a DELETE request involves validating that the entity can be deleted
 			// HINT+ and then invoking the service to delete the entity.
 			service.validate(request, entity, errors);
-			if (!errors.hasErrors()) {
+			if (!errors.hasErrors())
 				service.delete(request, entity);
-			}
 			break;
 		default:
 			Assert.state(false, request.getLocale(), "default.error.endpoint-unavailable");
@@ -461,20 +455,17 @@ public abstract class AbstractController<R extends UserRole, E> {
 			// HINT: if we're dealing with a PERFORM request, then we return the same view and
 			// HINT+ reset the model if there are any errors.
 			view = this.formViewName;
-			if (errors.hasErrors()) {
+			if (errors.hasErrors())
 				model.append(request.getModel());
-			}
-		} else {
-			if (!errors.hasErrors() && !request.getBaseCommand().equals(BasicCommand.PERFORM)) {
-				// HINT: if there aren't any errors, then we must redirect to the referrer view, which cares of
-				// HINT+ returning to the appropriate listing or /master/welcome.
-				view = "redirect:/master/referrer";
-			} else {
-				// HINT: if there are some errors, then we must redirect to the same view.  The model
-				// HINT+ is the same, so that the user may make changes and submit the form again.
-				view = this.formViewName;
-				model.append(request.getModel());
-			}
+		} else if (!errors.hasErrors() && !request.getBaseCommand().equals(BasicCommand.PERFORM))
+			// HINT: if there aren't any errors, then we must redirect to the referrer view, which cares of
+			// HINT+ returning to the appropriate listing or /master/welcome.
+			view = "redirect:/master/referrer";
+		else {
+			// HINT: if there are some errors, then we must redirect to the same view.  The model
+			// HINT+ is the same, so that the user may make changes and submit the form again.
+			view = this.formViewName;
+			model.append(request.getModel());
 		}
 
 		// HINT: unless an exception is thrown, the previous statements must produce a view name, a model,
@@ -491,7 +482,8 @@ public abstract class AbstractController<R extends UserRole, E> {
 
 	// Internal methods -------------------------------------------------------
 
-	private void unbind(final Request<E> request, final Collection<E> list, final Model model, final ServiceWrapper<R, E> service) {
+	private void unbind(final Request<E> request, final Collection<E> list, final Model model,
+		final ServiceWrapper<R, E> service) {
 		assert request != null;
 		assert !CollectionHelper.someNull(list);
 		assert service != null;
@@ -527,25 +519,23 @@ public abstract class AbstractController<R extends UserRole, E> {
 				key = entry.getKey();
 				value = entry.getValue();
 
-				if (size == 1) {
+				if (size == 1)
 					fullKey = key;
-				} else {
+				else
 					fullKey = String.format("%s[%d]", key, index);
-				}
 
 				result.addObject(fullKey, value);
 			}
 		}
 
 		// TODO: errors are not bound if the model is a list, which avoids editing lists.
-		if (response.hasErrors()) {
+		if (response.hasErrors())
 			for (Entry<String, List<String>> entry : response.getErrors()) {
 				name = String.format("%s$error", entry.getKey());
 				messages = entry.getValue();
 				text = StringHelper.toString(messages, ". ", ".");
 				result.addObject(name, text);
 			}
-		}
 
 		return result;
 	}

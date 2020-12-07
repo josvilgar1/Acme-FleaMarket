@@ -31,7 +31,7 @@ public class AuthenticatedForumListService implements AbstractListService<Authen
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title");
+		request.unbind(entity, model, "item.title");
 	}
 
 	@Override

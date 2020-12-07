@@ -7,6 +7,8 @@ import java.util.Random;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,6 +21,7 @@ import javax.validation.constraints.Pattern;
 
 import acme.entities.items.Item;
 import acme.entities.roles.Buyer;
+import acme.enumeration.Process;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -43,6 +46,12 @@ public class Request extends DomainEntity {
 	private Integer				quantity;
 
 	private String				notes;
+
+	@Enumerated(EnumType.ORDINAL)
+	@NotNull
+	private Process				process;
+
+	private String				justification;
 
 	@ManyToOne(optional = false)
 	@Valid

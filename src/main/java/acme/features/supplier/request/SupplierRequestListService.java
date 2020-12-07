@@ -31,7 +31,7 @@ public class SupplierRequestListService implements AbstractListService<Supplier,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "item.title", "buyer.email", "quantity");
+		request.unbind(entity, model, "ticker", "item.title", "buyer.email", "creationMoment", "item.isNew");
 	}
 
 	@Override

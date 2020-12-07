@@ -8,9 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.forum.list.label.title = Forum
+authenticated.forum.list.label.title = Forums
 
-authenticated.forum.form.label.title = Forum
 authenticated.forum.form.label.item = Item
 
 authenticated.forum.show.button.return = Volver

@@ -16,9 +16,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	<acme:form-textbox code="authenticated.forum.form.label.title" path="title"/>
 	<acme:form-textbox code="authenticated.forum.form.label.item" path="item.title"/>
 	
-	<acme:form-submit method="get" code="authenticated.forum.form.button.list.message" action="/authenticated/message/list?itemId=${itemId}" />
+	<acme:form-submit method="get" code="authenticated.forum.form.button.list.message" action="/authenticated/message/list?item.id=${itemId}" />
 	<acme:form-return code="authenticated.forum.show.button.return"/>
 </acme:form>

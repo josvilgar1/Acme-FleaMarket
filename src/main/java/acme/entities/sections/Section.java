@@ -25,7 +25,7 @@ public class Section extends DomainEntity {
 
 	// They must be unique within each specification sheet
 	@Min(1)
-	@NotNull
+	//	@NotNull
 	// index is a MySQL reserved word, it is changed to index_
 	@Column(name = "index_")
 	private Integer				index;

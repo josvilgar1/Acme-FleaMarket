@@ -106,7 +106,6 @@
     create table `forum` (
        `id` integer not null,
         `version` integer not null,
-        `title` varchar(255),
         `item_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -191,7 +190,9 @@
        `id` integer not null,
         `version` integer not null,
         `creation_moment` datetime(6),
+        `justification` varchar(255),
         `notes` varchar(255),
+        `process` integer,
         `quantity` integer,
         `ticker` varchar(255),
         `buyer_id` integer not null,

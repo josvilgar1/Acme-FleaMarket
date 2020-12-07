@@ -1,0 +1,27 @@
+# i18n_en.sections
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+supplier.section.list.label.index = Index
+supplier.section.list.label.title = Title
+supplier.section.list.label.item = Item
+
+supplier.section.form.label.index = Index
+supplier.section.form.label.title = Title
+supplier.section.form.label.item = Item
+supplier.section.form.label.description = Description
+supplier.section.form.label.photo = Photo
+
+supplier.section.show.button.return = Return
+supplier.section.form.button.create = Create
+supplier.section.form.button.update = Update
+supplier.section.form.button.delete = Delete
+supplier.section.form.button.return = Return
+
+supplier.section.form.errors.have.request = Unable to delete a section with requests in your item
