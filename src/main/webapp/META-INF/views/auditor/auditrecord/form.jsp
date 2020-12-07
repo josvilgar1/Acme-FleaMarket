@@ -26,7 +26,11 @@
 	</jstl:if>
 	<acme:form-textbox code="auditor.auditrecord.form.label.title" path="title"/>
 	<acme:form-textarea code="auditor.auditrecord.form.label.body" path="body"/>
-	<acme:form-textbox code="auditor.auditrecord.form.label.status" path="status"/>
+	
+	<acme:form-select code="supplier.item.form.label.status" path="status">
+		<acme:form-option code="supplier.item.form.label.status.draft" value="DRAFT" selected="${status != 'PUBLISHED'}"/>
+		<acme:form-option code="supplier.item.form.label.status.published" value="PUBLISHED" selected="${status == 'PUBLISHED'}"/>
+	</acme:form-select>
 	
 	 <acme:form-submit 
 	 	test = "${(command=='show' || command=='update') && status!='PUBLISHED'}" 

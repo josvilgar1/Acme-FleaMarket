@@ -19,6 +19,8 @@ auditor.auditrecord.form.label.creationMoment = Creation moment
 auditor.auditrecord.form.label.description = Description
 auditor.auditrecord.form.label.body = Body
 auditor.auditrecord.form.label.status = Status
+supplier.item.form.label.status.draft = Draft
+supplier.item.form.label.status.published = Published
 
 auditor.auditrecord.form.button.return = Return
 auditor.auditrecord.form.button.create = Create

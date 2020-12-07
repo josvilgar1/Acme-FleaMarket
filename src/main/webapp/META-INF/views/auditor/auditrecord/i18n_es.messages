@@ -19,7 +19,8 @@ auditor.auditrecord.form.label.auditor.firm = Auditor Firma
 auditor.auditrecord.form.label.creationMoment = Fecha inicio
 auditor.auditrecord.form.label.description = Descripción
 auditor.auditrecord.form.label.body = Cuerpo
-auditor.auditrecord.form.label.status = Estado
+supplier.item.form.label.status.draft = Borrador
+supplier.item.form.label.status.published = Publicado
 
 auditor.auditrecord.form.button.return = Volver
 auditor.auditrecord.form.button.create = Crear

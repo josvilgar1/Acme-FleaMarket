@@ -50,7 +50,7 @@ public class BuyerRequestCreateService implements AbstractCreateService<Buyer ,R
 		
 		Integer itemId = request.getModel().getInteger("item.id");
 		if (itemId == null) {
-			itemId = request.getModel().getInteger("id");
+			itemId = request.getModel().getInteger("itemId");
 		}
 		
 		Item item = repository.findItemById(itemId);
