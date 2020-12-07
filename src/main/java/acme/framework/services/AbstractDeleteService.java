@@ -65,7 +65,8 @@ public interface AbstractDeleteService<R extends UserRole, E> extends //
 	}
 
 	/**
-	 * Maps the entity attributes to the request model
+	 * Maps the entity attributes to the request model.
+	 * Relationships are not mapped
 	 *
 	 * @param request Request
 	 * @param entity Entity

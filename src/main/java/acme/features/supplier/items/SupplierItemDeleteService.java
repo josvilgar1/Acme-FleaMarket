@@ -68,12 +68,12 @@ public class SupplierItemDeleteService implements AbstractDeleteService<Supplier
 		assert entity != null;
 		assert errors != null;
 
-		errors.state(request, repository.findAllRequestByItemId(entity.getId()).isEmpty(), "haveErrors",
-			"supplier.item.form.errors.have.request");
+		boolean containsRequest = repository.findAllRequestByItemId(entity.getId()).isEmpty();
+		errors.state(request, containsRequest, "haveErrors", "supplier.item.form.errors.have.request");
 
 		if (errors.hasErrors("haveErrors")) {
 			Hashtable<String, Object> properties = new Hashtable<>();
-			properties.put("haveSections", !repository.findAllSectionByItemId(entity.getId()).isEmpty());
+			properties.put("haveSections", !containsRequest);
 			toMapAttributes(request, entity, properties);
 		}
 	}

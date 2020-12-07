@@ -46,16 +46,16 @@ public class Request extends DomainEntity {
 
 	private String				notes;
 
-	@ManyToOne(optional = false)
-	@Valid
-	@NotNull
-	private Buyer				buyer;
-
 	@Enumerated(EnumType.ORDINAL)
 	@NotNull
 	private Process				process;
 
 	private String				justification;
+
+	@ManyToOne(optional = false)
+	@Valid
+	@NotNull
+	private Buyer				buyer;
 
 	@ManyToOne(optional = false)
 	@Valid
