@@ -16,6 +16,7 @@ import javax.validation.constraints.Past;
 
 import acme.entities.items.Item;
 import acme.entities.roles.Auditor;
+import acme.enumeration.Status;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,29 +26,27 @@ import lombok.Setter;
 @Setter
 public class AuditRecord extends DomainEntity {
 
-	private static final long serialVersionUID = 1L;
-
-	private enum Status {DRAFT, PUBLISHED}
+	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
-	private String	title;
+	private String				title;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private Date	creationMoment;
+	private Date				creationMoment;
 
 	@NotBlank
-	private String	body;
+	private String				body;
 
 	@Enumerated(EnumType.ORDINAL)
 	@NotNull
-	private Status	status;
-	
+	private Status				status;
+
 	@ManyToOne(optional = false)
 	@Valid
 	@NotNull
 	private Item				item;
-	
+
 	@ManyToOne(optional = false)
 	@Valid
 	@NotNull

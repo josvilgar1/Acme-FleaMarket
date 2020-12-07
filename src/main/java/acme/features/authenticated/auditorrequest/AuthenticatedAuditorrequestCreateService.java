@@ -85,6 +85,9 @@ public class AuthenticatedAuditorrequestCreateService implements AbstractCreateS
 			spamUtils.getThreshold(), spamUtils.getSpamWords());
 		errors.state(request, !spamUtils.checkSpam(entity.getResponsibility()), "responsibility",
 			"acme.validation.spam", spamUtils.getThreshold(), spamUtils.getSpamWords());
+
+		if (errors.hasErrors())
+			request.getModel().setAttribute("hasRequest", false);
 	}
 
 	@Override

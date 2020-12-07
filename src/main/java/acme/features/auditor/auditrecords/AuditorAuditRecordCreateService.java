@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.auditrecords.AuditRecord;
+import acme.entities.configuration.SpamUtils;
 import acme.entities.items.Item;
 import acme.entities.roles.Auditor;
 import acme.framework.components.Errors;
@@ -18,13 +19,16 @@ import acme.framework.services.AbstractCreateService;
 public class AuditorAuditRecordCreateService implements AbstractCreateService<Auditor, AuditRecord> {
 
 	@Autowired
-	AuditorAuditRecordRepository			repository;
+	AuditorAuditRecordRepository	repository;
+
+	@Autowired
+	private SpamUtils				spamUtils;
+
 
 	@Override
 	public boolean authorise(final Request<AuditRecord> request) {
 		assert request != null;
-		
-		//must be auditor
+
 		return true;
 	}
 
@@ -53,16 +57,15 @@ public class AuditorAuditRecordCreateService implements AbstractCreateService<Au
 		Integer itemId;
 		Auditor auditor;
 		Item item;
-		
+
 		principalId = request.getPrincipal().getAccountId();
 		auditor = repository.findAuditorByUserAccount(principalId);
-		
+
 		itemId = request.getModel().getInteger("itemId");
-		if(itemId == null) {
+		if (itemId == null)
 			itemId = request.getModel().getInteger("item.id");
-		}
 		item = repository.findItemById(itemId);
-		
+
 		result.setAuditor(auditor);
 		result.setItem(item);
 		return result;
@@ -73,8 +76,11 @@ public class AuditorAuditRecordCreateService implements AbstractCreateService<Au
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		//TODO make sure doesn't contain Spam words.
+
+		errors.state(request, !spamUtils.checkSpam(entity.getTitle()), "title", "acme.validation.spam",
+			spamUtils.getThreshold(), spamUtils.getSpamWords());
+		errors.state(request, !spamUtils.checkSpam(entity.getBody()), "body", "acme.validation.spam",
+			spamUtils.getThreshold(), spamUtils.getSpamWords());
 	}
 
 	@Override

@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.auditrecords.AuditRecord;
+import acme.entities.configuration.SpamUtils;
 import acme.entities.roles.Auditor;
+import acme.enumeration.Status;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -15,7 +17,10 @@ import acme.framework.services.AbstractUpdateService;
 public class AuditorAuditRecordUpdateService implements AbstractUpdateService<Auditor, AuditRecord> {
 
 	@Autowired
-	AuditorAuditRecordRepository repository;
+	AuditorAuditRecordRepository	repository;
+
+	@Autowired
+	private SpamUtils				spamUtils;
 
 
 	@Override
@@ -39,7 +44,7 @@ public class AuditorAuditRecordUpdateService implements AbstractUpdateService<Au
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "item.title","item.id", "creationMoment", "body", "status");
+		request.unbind(entity, model, "title", "item.title", "item.id", "creationMoment", "body", "status");
 	}
 
 	@Override
@@ -58,7 +63,14 @@ public class AuditorAuditRecordUpdateService implements AbstractUpdateService<Au
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
+
+		errors.state(request, !spamUtils.checkSpam(entity.getTitle()), "title", "acme.validation.spam",
+			spamUtils.getThreshold(), spamUtils.getSpamWords());
+		errors.state(request, !spamUtils.checkSpam(entity.getBody()), "body", "acme.validation.spam",
+			spamUtils.getThreshold(), spamUtils.getSpamWords());
+
+		if (errors.hasErrors())
+			request.getModel().setAttribute("status", Status.DRAFT);
 	}
 
 	@Override
