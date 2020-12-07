@@ -36,7 +36,8 @@ public class SupplierRequestShowService implements AbstractShowService<Supplier,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "creationMoment", "item.title", "buyer.email", "quantity", "notes");
+		request.unbind(entity, model, "ticker", "creationMoment", "item.title", "buyer.email", "quantity", "notes",
+			"item.isNew", "process", "justification");
 	}
 
 	@Override

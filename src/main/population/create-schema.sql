@@ -96,7 +96,6 @@
     create table `forum` (
        `id` integer not null,
         `version` integer not null,
-        `title` varchar(255),
         `item_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -181,7 +180,9 @@
        `id` integer not null,
         `version` integer not null,
         `creation_moment` datetime(6),
+        `justification` varchar(255),
         `notes` varchar(255),
+        `process` integer,
         `quantity` integer,
         `ticker` varchar(255),
         `buyer_id` integer not null,
@@ -257,9 +258,6 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
-
-    alter table `buyer` 
-       add constraint UK_r3ondcmf3r5ogjok74v1gq8hj unique (`phone`);
 
     alter table `forum` 
        add constraint UK_c5hjl933amnwf8mq1v2lf45jo unique (`item_id`);

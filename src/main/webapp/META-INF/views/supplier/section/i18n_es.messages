@@ -1,0 +1,27 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+supplier.section.list.label.index = Índice
+supplier.section.list.label.title = Título
+supplier.section.list.label.item = Artículo
+
+supplier.section.form.label.index = Índice
+supplier.section.form.label.title = Título
+supplier.section.form.label.item = Artículo
+supplier.section.form.label.description = Descripción
+supplier.section.form.label.photo = Foto
+
+supplier.section.show.button.return = Volver
+supplier.section.form.button.create = Crear
+supplier.section.form.button.update = Actualizar
+supplier.section.form.button.delete = Borrar
+
+supplier.section.form.errors.have.request = No se puede eliminar una sección con solicitudes en su artículo

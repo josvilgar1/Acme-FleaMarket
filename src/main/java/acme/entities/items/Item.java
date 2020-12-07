@@ -12,6 +12,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -21,6 +22,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.URL;
 
 import acme.entities.roles.Supplier;
+import acme.enumeration.Status;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -31,46 +33,56 @@ import lombok.Setter;
 @Setter
 public class Item extends DomainEntity {
 
-	private static final long serialVersionUID = 1L;
+	private static final long	serialVersionUID	= 1L;
 
-	public enum Status { DRAFT, PUBLISHED }
-
-	@Pattern(regexp = "^[A-Z]{3}-\\d{2}-\\d{6}$")
+	@Pattern(regexp = "^[A-Z]{3}-\\d{2}-\\d{1,6}$")
 	@Column(unique = true)
-	private String		ticker;
+	private String				ticker;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private Date		creationMoment;
+	private Date				creationMoment;
 
 	@NotBlank
-	private String		title;
+	private String				title;
 
 	@NotBlank
-	private String		itemCategory;
+	private String				itemCategory;
 
 	@NotBlank
-	private String		description;
+	private String				description;
 
 	@Valid
 	@NotNull
-	private Money		price;
+	private Money				price;
 
 	@URL
-	private String		photo;
+	private String				photo;
 
 	@URL
-	private String		link;
+	private String				link;
 
 	@Enumerated(EnumType.ORDINAL)
 	@NotNull
-	private Status		status;
+	private Status				status;
 
 	@ManyToOne(optional = false)
 	@Valid
 	@NotNull
-	private Supplier	supplier;
+	private Supplier			supplier;
 
+	@Transient
+	private boolean				isNew;
+
+
+	public boolean getIsNew() {
+		Calendar creationMoment = Calendar.getInstance();
+		creationMoment.setTime(this.creationMoment);
+		Calendar instance = Calendar.getInstance();
+		instance.add(Calendar.DAY_OF_YEAR, -7);
+		isNew = instance.before(creationMoment) || instance.equals(creationMoment);
+		return isNew;
+	}
 
 	public void generateTicker() {
 		StringBuilder sb = new StringBuilder();

@@ -17,15 +17,19 @@ import acme.framework.controllers.AbstractController;
 public class SupplierRequestController extends AbstractController<Supplier, Request> {
 
 	@Autowired
-	SupplierRequestListService	listService;
+	SupplierRequestListService		listService;
 
 	@Autowired
-	SupplierRequestShowService	showService;
+	SupplierRequestShowService		showService;
+
+	@Autowired
+	SupplierRequestUpdateService	updateService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, listService);
 		super.addBasicCommand(BasicCommand.SHOW, showService);
+		super.addBasicCommand(BasicCommand.UPDATE, updateService);
 	}
 }

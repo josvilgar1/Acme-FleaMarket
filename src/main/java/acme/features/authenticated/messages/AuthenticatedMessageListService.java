@@ -39,12 +39,9 @@ public class AuthenticatedMessageListService implements AbstractListService<Auth
 	public Collection<Message> findMany(Request<Message> request) {
 		assert request != null;
 
-		int itemId;
+		int itemId = request.getModel().getInteger("item.id");
 
-		itemId = request.getModel().getInteger("itemId");
-
-		Collection<Message> result;
-		result = repository.findManyByItemId(itemId);
+		Collection<Message> result = repository.findManyByItemId(itemId);
 
 		return result;
 	}

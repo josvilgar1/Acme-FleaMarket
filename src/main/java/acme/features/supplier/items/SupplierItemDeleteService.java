@@ -1,26 +1,23 @@
 
 package acme.features.supplier.items;
 
+import java.util.Hashtable;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.configuration.SpamUtils;
 import acme.entities.items.Item;
 import acme.entities.roles.Supplier;
-import acme.enumeration.Status;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.services.AbstractUpdateService;
+import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class SupplierItemUpdateService implements AbstractUpdateService<Supplier, Item> {
+public class SupplierItemDeleteService implements AbstractDeleteService<Supplier, Item> {
 
 	@Autowired
-	SupplierItemRepository	repository;
-
-	@Autowired
-	private SpamUtils		spamUtils;
+	SupplierItemRepository repository;
 
 
 	@Override
@@ -51,14 +48,14 @@ public class SupplierItemUpdateService implements AbstractUpdateService<Supplier
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "itemCategory", "description", "price", "photo", "link", "status");
+		request.unbind(entity, model);
 	}
 
 	@Override
 	public Item findOne(Request<Item> request) {
 		assert request != null;
 
-		Item item = new Item();
+		Item item;
 		int id = request.getModel().getInteger("id");
 		item = repository.findOneById(id);
 
@@ -71,27 +68,30 @@ public class SupplierItemUpdateService implements AbstractUpdateService<Supplier
 		assert entity != null;
 		assert errors != null;
 
-		// antes de publicar se debe comprobar que tenga almenos una sección
-		if (!errors.hasErrors("status") && entity.getStatus().equals(Status.PUBLISHED))
-			errors.state(request, !repository.findAllSectionByItemId(entity.getId()).isEmpty(), "haveErrors",
-				"supplier.item.form.errors.section.empty");
+		errors.state(request, repository.findAllRequestByItemId(entity.getId()).isEmpty(), "haveErrors",
+			"supplier.item.form.errors.have.request");
 
-		// comprobamos palabras spam en el título y la descripción
-		errors.state(request, !spamUtils.checkSpam(entity.getTitle()), "title", "acme.validation.spam",
-			spamUtils.getThreshold(), spamUtils.getSpamWords());
-		errors.state(request, !spamUtils.checkSpam(entity.getDescription()), "description", "acme.validation.spam",
-			spamUtils.getThreshold(), spamUtils.getSpamWords());
-
-		if (errors.hasErrors())
-			request.getModel().setAttribute("status", Status.DRAFT);
+		if (errors.hasErrors("haveErrors")) {
+			Hashtable<String, Object> properties = new Hashtable<>();
+			properties.put("haveSections", !repository.findAllSectionByItemId(entity.getId()).isEmpty());
+			toMapAttributes(request, entity, properties);
+		}
 	}
 
 	@Override
-	public void update(Request<Item> request, Item entity) {
+	public void delete(Request<Item> request, Item entity) {
 		assert request != null;
 		assert entity != null;
 
-		repository.save(entity);
+		// eliminamos los mensajes del item
+		repository.deleteMessagesByItem(entity.getId());
+		// eliminamos el foro del item
+		repository.deleteForumByItem(entity.getId());
+		// eliminamos las secciones del item
+		repository.deleteSectionsByItem(entity.getId());
+		// eliminamos los registros de auditoria del item
+		repository.deleteAuditrecordByItem(entity.getId());
+		repository.delete(entity);
 	}
 
 }
