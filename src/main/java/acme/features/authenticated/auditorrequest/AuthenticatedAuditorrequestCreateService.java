@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.auditorrequests.Auditorrequest;
+import acme.entities.configuration.SpamUtils;
 import acme.framework.components.Errors;
 import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
@@ -20,8 +21,8 @@ public class AuthenticatedAuditorrequestCreateService implements AbstractCreateS
 	@Autowired
 	AuthenticatedAuditorrequestRepository	repository;
 
-//	@Autowired
-//	private SpamUtils						spamUtils;
+	@Autowired
+	private SpamUtils						spamUtils;
 
 
 	@Override
@@ -46,13 +47,18 @@ public class AuthenticatedAuditorrequestCreateService implements AbstractCreateS
 		assert entity != null;
 		assert model != null;
 
-		int id = request.getPrincipal().getActiveRoleId();
-		Auditorrequest ar = this.repository.findOneByAuthenticatedId(id);
+		int id = request.getPrincipal().getAccountId();
+		Auditorrequest ar = repository.findOneByUserAccountId(id);
 		boolean hasRequest = ar != null;
 
 		model.setAttribute("hasRequest", hasRequest);
-
-		request.unbind(entity, model, "firm", "responsibility", "status");
+		if (hasRequest) {
+			model.setAttribute("firm", ar.getFirm());
+			model.setAttribute("responsibility", ar.getResponsibility());
+			model.setAttribute("status", ar.getStatus() != null ? ar.getStatus() : null);
+			request.unbind(entity, model);
+		} else
+			request.unbind(entity, model, "firm", "responsibility");
 	}
 
 	@Override
@@ -61,7 +67,7 @@ public class AuthenticatedAuditorrequestCreateService implements AbstractCreateS
 
 		int id = request.getPrincipal().getActiveRoleId();
 
-		Authenticated auth = this.repository.findAuthenticatedById(id);
+		Authenticated auth = repository.findAuthenticatedById(id);
 
 		result = new Auditorrequest();
 		result.setAuthenticated(auth);
@@ -74,15 +80,16 @@ public class AuthenticatedAuditorrequestCreateService implements AbstractCreateS
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-//TODO: mirar SPAM!
-//		errors.state(request, !this.spamUtils.checkSpam(entity.getFirm()), "firm", "authenticated.auditorrequest.form.errors.spam.firm");
-//		errors.state(request, !this.spamUtils.checkSpam(entity.getResponsibility()), "responsibility", "authenticated.auditorrequest.form.errors.spam.responsibility");
 
+		errors.state(request, !spamUtils.checkSpam(entity.getFirm()), "firm", "acme.validation.spam",
+			spamUtils.getThreshold(), spamUtils.getSpamWords());
+		errors.state(request, !spamUtils.checkSpam(entity.getResponsibility()), "responsibility",
+			"acme.validation.spam", spamUtils.getThreshold(), spamUtils.getSpamWords());
 	}
 
 	@Override
 	public void create(final Request<Auditorrequest> request, final Auditorrequest entity) {
-		this.repository.save(entity);
+		repository.save(entity);
 
 	}
 
@@ -91,8 +98,7 @@ public class AuthenticatedAuditorrequestCreateService implements AbstractCreateS
 		assert request != null;
 		assert response != null;
 
-		if (request.isMethod(HttpMethod.POST)) {
+		if (request.isMethod(HttpMethod.POST))
 			PrincipalHelper.handleUpdate();
-		}
 	}
 }

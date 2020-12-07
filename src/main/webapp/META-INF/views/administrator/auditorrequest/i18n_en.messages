@@ -14,7 +14,7 @@ administrator.auditorrequest.list.label.responsibility = Responsibility statemen
 administrator.auditorrequest.form.lable.authenticated.userAccount.Username = User Name
 administrator.auditorrequest.form.lable.firm = Firm
 administrator.auditorrequest.form.lable.responsibility = Responsibility statement 
-administrator.auditorrequest.form.lable.status = Status
+authenticated.auditorrequest.form.label.status.rejected = Request rejected
 administrator.auditorrequest.form.button.return = Return
 
 administrator.auditorrequest.form.button.update = Update

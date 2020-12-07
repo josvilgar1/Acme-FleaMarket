@@ -15,13 +15,9 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<jstl:if test="${status == false }">
-	<acme:message code="authenticated.auditorrequest.form.label.status.rejected"/>
-</jstl:if>
-<acme:form readonly="${hasRequest}">
-	<acme:form-textbox code="authenticated.auditorrequest.form.label.firm" path="firm"/>
-	<acme:form-textarea code="authenticated.auditorrequest.form.label.responsibility" path="responsibility"/>
+<acme:form>
+	<acme:form-textbox code="auditor.auditor.auditor.form.label.firm" path="firm"/>
+	<acme:form-textarea code="auditor.auditor.auditor.form.label.responsibility" path="responsibility"/>
 	
-	<acme:form-submit test="${command == 'create' and hasRequest == false}" code="authenticated.auditorrequest.form.button.create" action="/authenticated/auditorrequest/create"/>
-	<acme:form-return code="authenticated.auditorrequest.form.button.return"/>
+	<acme:form-return code="auditor.auditor.auditor.form.button.return"/>
 </acme:form>

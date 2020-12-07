@@ -38,6 +38,7 @@ master.menu.anonymous.advertisement.list = Listar Anuncios
 
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
+master.menu.administrator.auditorrequest = Listar solicitudes de auditor
 master.menu.administrator.new.list = Listar Noticias
 master.menu.administrator.toolsheet.list = Listar Herramientas
 master.menu.administrator.suggestion.list = Listar Sugerencias
