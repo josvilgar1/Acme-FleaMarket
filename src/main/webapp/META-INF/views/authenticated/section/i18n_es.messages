@@ -20,6 +20,6 @@ authenticated.section.form.label.description = Descripción
 authenticated.section.form.label.photo = Foto
 
 authenticated.section.show.button.return = Volver
-authenticated.message.form.button.create = Crear
-authenticated.message.form.button.update = Actualizar
-authenticated.message.form.button.delete = Borrar
+authenticated.section.form.button.create = Crear
+authenticated.section.form.button.update = Actualizar
+authenticated.section.form.button.delete = Borrar

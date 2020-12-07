@@ -38,6 +38,7 @@ master.menu.anonymous.advertisement.list = Listar Anuncios
 
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
+master.menu.administrator.auditorrequest = Listar solicitudes de auditor
 master.menu.administrator.new.list = Listar Noticias
 master.menu.administrator.toolsheet.list = Listar Herramientas
 master.menu.administrator.suggestion.list = Listar Sugerencias
@@ -60,7 +61,7 @@ master.menu.supplier.request.list = Mis solicitudes
 master.menu.auditor = Auditor
 master.menu.auditor.list.have = Listar Artículos Auditados
 master.menu.auditor.list.not.have = Listar Artículos No Auditados
-
+master.menu.auditor.list.auditRecord.mine = Listar mis Auditorías
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Autenticado
@@ -92,10 +93,12 @@ master.menu.buyer.list.request = Listar Solicitudes
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.supplier = Datos de proveedor
+master.menu.user-account.become-supplier = Hazte proveedor
+master.menu.user-account.buyer = Datos de comprador
+master.menu.user-account.become-buyer = Hazte comprador
+master.menu.user-account.auditor = Datos de auditor
+master.menu.user-account.become-auditor = Hazte auditor
 
 ﻿# master.footer ###############################################################
 

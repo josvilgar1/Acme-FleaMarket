@@ -20,13 +20,19 @@ supplier.item.form.label.description = Description
 supplier.item.form.label.price = Price
 supplier.item.form.label.photo = Photo
 supplier.item.form.label.link = Link
+supplier.item.form.label.status = Status
+supplier.item.form.label.status.draft = DRAFT
+supplier.item.form.label.status.published = PUBLISHED
 
 supplier.item.show.button.return = Return
-supplier.item.form.button.create = Crear
-supplier.item.form.button.update = Actualizar
-supplier.item.form.button.delete = Borrar
-supplier.item.form.button.return = Volver
+supplier.item.form.button.create = Create
+supplier.item.form.button.update = Update
+supplier.item.form.button.delete = Delete
 
 supplier.item.form.button.list.section = Sections
+supplier.item.form.button.create.section = Create section
 supplier.item.form.button.list.message = Messages
 supplier.item.show.button.list.auditrecord = AuditRecords
+
+supplier.item.form.errors.section.empty = The list of sections cannot be empty
+supplier.item.form.errors.have.request = Cannot delete an item with requests

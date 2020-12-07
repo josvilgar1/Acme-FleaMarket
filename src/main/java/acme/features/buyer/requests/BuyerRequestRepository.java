@@ -26,4 +26,9 @@ public interface BuyerRequestRepository extends AbstractRepository {
 	@Query("select i from Item i where i.id = ?1")
 	Item findItemById(int itemId);
 
+	@Query("select b from Buyer b where b.userAccount.id = ?1")
+	Buyer findBuyerByUserAccount(int userAccountId);
+	
+	@Query("select r from Request r where r.ticker = ?1")
+	Request findItemByTicker(String ticker);
 }

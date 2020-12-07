@@ -47,6 +47,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `auditorrequest` (
+       `id` integer not null,
+        `version` integer not null,
+        `firm` varchar(255),
+        `responsibility` varchar(255),
+        `status` bit,
+        `authenticated_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `authenticated` (
        `id` integer not null,
         `version` integer not null,
@@ -96,7 +106,6 @@
     create table `forum` (
        `id` integer not null,
         `version` integer not null,
-        `title` varchar(255),
         `item_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -111,6 +120,7 @@
         `photo` varchar(255),
         `price_amount` double precision,
         `price_currency` varchar(255),
+        `status` integer,
         `ticker` varchar(255),
         `title` varchar(255),
         `supplier_id` integer not null,
@@ -180,7 +190,9 @@
        `id` integer not null,
         `version` integer not null,
         `creation_moment` datetime(6),
+        `justification` varchar(255),
         `notes` varchar(255),
+        `process` integer,
         `quantity` integer,
         `ticker` varchar(255),
         `buyer_id` integer not null,
@@ -257,11 +269,8 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
-    alter table `buyer` 
-       add constraint UK_su1kgh6nfis1ne524jy1vobm5 unique (`email`);
-
-    alter table `buyer` 
-       add constraint UK_r3ondcmf3r5ogjok74v1gq8hj unique (`phone`);
+    alter table `auditorrequest` 
+       add constraint UK_9sejnknunem58jlkxhyopcsy2 unique (`authenticated_id`);
 
     alter table `forum` 
        add constraint UK_c5hjl933amnwf8mq1v2lf45jo unique (`item_id`);
@@ -299,6 +308,11 @@
        add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `auditorrequest` 
+       add constraint `FKmj2lnje7xeeex43hlasdod3vj` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
 
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 

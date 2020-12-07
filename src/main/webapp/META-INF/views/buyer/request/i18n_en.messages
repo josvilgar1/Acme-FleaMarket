@@ -12,6 +12,7 @@ buyer.request.list.label.ticker = Ticker
 buyer.request.list.label.creationMoment = Creation Moment
 buyer.request.list.label.quantity = Quantity
 buyer.request.list.label.item-title = Item
+buyer.item.form.button.create.request = Create request
 
 authenticated.advertisement.show.label.ticker = Ticker
 authenticated.advertisement.show.label.creationMoment = Creation moment
@@ -19,6 +20,12 @@ authenticated.advertisement.show.label.quantity = Quantity
 authenticated.advertisement.show.label.notes = Notes
 authenticated.advertisement.show.label.buyer-email = Buyer
 authenticated.advertisement.show.label.item-title = Item
+authenticated.advertisement.show.label.justification = Justification
+authenticated.advertisement.show.label.process = Process
+
+buyer.request.form.errors.status.notPublished = The item is still in Draft mode
 
 buyer.request.show.button.return = Return
 buyer.request.list.button.return = Return
+
+buyer.item.form.button.create = Create

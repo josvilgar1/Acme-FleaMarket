@@ -38,6 +38,7 @@ master.menu.anonymous.advertisement.list = List Advertisements
 
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.auditorrequest = Auditor requests list
 master.menu.administrator.new.list = List News
 master.menu.administrator.toolsheet.list = List Tools
 master.menu.administrator.suggestion.list = List Suggestions
@@ -58,8 +59,9 @@ master.menu.supplier.request.list = My Requests
 # master.menu.auditor ########################################################
 
 master.menu.auditor = Auditor
-master.menu.auditor.list.have = List Items With AuditRecords
-master.menu.auditor.list.not.have = List Items Without AuditRecords
+master.menu.auditor.list.have = List Items With Audit Records
+master.menu.auditor.list.not.have = List Items Without Audit Records
+master.menu.auditor.list.auditRecord.mine = List my Audit Records
 
 # master.menu.authenticated ###################################################
 
@@ -92,10 +94,12 @@ master.menu.buyer.list.request = List Requests
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.supplier = Supplier data
+master.menu.user-account.become-supplier = Become a supplier
+master.menu.user-account.buyer = Buyer data
+master.menu.user-account.become-buyer = Become a buyer
+master.menu.user-account.auditor = Auditor data
+master.menu.user-account.become-auditor = Become a auditor
 
 # master.footer ###############################################################
 

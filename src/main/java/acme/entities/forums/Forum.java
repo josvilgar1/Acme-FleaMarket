@@ -4,7 +4,6 @@ package acme.entities.forums;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import acme.entities.items.Item;
@@ -18,9 +17,6 @@ import lombok.Setter;
 public class Forum extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
-
-	@NotBlank
-	private String				title;
 
 	@OneToOne(optional = false)
 	@Valid

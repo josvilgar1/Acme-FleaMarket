@@ -38,12 +38,8 @@ public class AuthenticatedSectionListService implements AbstractListService<Auth
 	public Collection<Section> findMany(Request<Section> request) {
 		assert request != null;
 
-		int itemId;
-
-		itemId = request.getModel().getInteger("itemId");
-
-		Collection<Section> result;
-		result = repository.findManyByItemId(itemId);
+		int itemId = request.getModel().getInteger("item.id");
+		Collection<Section> result = repository.findManyByItemId(itemId);
 
 		return result;
 	}

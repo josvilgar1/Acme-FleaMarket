@@ -21,13 +21,19 @@ supplier.item.form.label.description = Descripción
 supplier.item.form.label.price = Precio
 supplier.item.form.label.photo = Foto
 supplier.item.form.label.link = Enlace
+supplier.item.form.label.status = Estado
+supplier.item.form.label.status.draft = BORRADOR
+supplier.item.form.label.status.published = PUBLICADO
 
 supplier.item.show.button.return = Volver
 supplier.item.form.button.create = Crear
 supplier.item.form.button.update = Actualizar
 supplier.item.form.button.delete = Borrar
-supplier.item.form.button.return = Volver
 
 supplier.item.form.button.list.section = Secciones
+supplier.item.form.button.create.section = Crear sección
 supplier.item.form.button.list.message = Mensajes
 supplier.item.show.button.list.auditrecord = Auditorias
+
+supplier.item.form.errors.section.empty = La lista de secciones no puede estar vacia
+supplier.item.form.errors.have.request = No se puede eliminar un articulo con solicitudes

@@ -21,8 +21,10 @@ authenticated.message.form.label.tags = Etiquetas
 authenticated.message.form.label.authenticated = Autor
 authenticated.message.form.label.item = Artículo
 authenticated.message.form.label.body = Mensaje 
-
+authenticated.message.form.label.confirm = Confirmar
 authenticated.message.form.button.create = Crear
 authenticated.message.form.button.update = Actualizar
 authenticated.message.form.button.delete = Borrar
 authenticated.message.form.button.return = Volver
+
+forum.message.form.error.confirmation = Debes confirmar antes de publicar el mensaje

@@ -30,6 +30,7 @@
 		<!-- ADMINISTRATOR -->
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
+			<acme:menu-suboption code="master.menu.administrator.auditorrequest" action="/administrator/auditorrequest/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.new.list" action="/administrator/new/list"/>
 			<acme:menu-suboption code="master.menu.administrator.materialsheets" action="/administrator/material/list"/>
@@ -55,6 +56,7 @@
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
 			<acme:menu-suboption code="master.menu.auditor.list.have" action="/auditor/item/list-have"/>
 			<acme:menu-suboption code="master.menu.auditor.list.not.have" action="/auditor/item/list-not-have"/>
+			<acme:menu-suboption code="master.menu.auditor.list.auditRecord.mine" action="/auditor/auditrecord/list"/>
 		</acme:menu-option>
 			
 		<!-- BUYER -->
@@ -94,10 +96,15 @@
 
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>
-			<acme:menu-suboption code="master.menu.user-account.become-provider" action="/authenticated/provider/create" access="!hasRole('Provider')"/>
-			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update" access="hasRole('Provider')"/>
-			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRole('Consumer')"/>
-			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.user-account.become-supplier" action="/authenticated/supplier/create" access="!hasRole('Supplier')"/>
+			<acme:menu-suboption code="master.menu.user-account.supplier" action="/authenticated/supplier/update" access="hasRole('Supplier')"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.user-account.become-buyer" action="/authenticated/buyer/create" access="!hasRole('Buyer')"/>
+			<acme:menu-suboption code="master.menu.user-account.buyer" action="/authenticated/buyer/update" access="hasRole('Buyer')"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditorrequest/create" access="!hasRole('Auditor')"/>
+			<acme:menu-suboption code="master.menu.user-account.auditor" action="/authenticated/auditor/update" access="hasRole('Auditor')"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>

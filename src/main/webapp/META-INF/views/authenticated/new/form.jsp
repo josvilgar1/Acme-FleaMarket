@@ -22,7 +22,7 @@
 	<acme:form-moment code="anonymous.authenticated.form.label.creationMoment" path="creationMoment"/>
 	<acme:form-moment code="anonymous.authenticated.form.label.deadlineMoment" path="deadlineMoment"/>
 	<acme:form-textarea code="anonymous.authenticated.form.label.body" path="body"/>
-	<acme:form-textbox code="anonymous.authenticated.form.label.links" path="links"/>
+	<acme:form-url code="anonymous.authenticated.form.label.links" path="links"/>
 	
   	<acme:form-return code="anonymous.authenticated.form.button.return"/>
 </acme:form>

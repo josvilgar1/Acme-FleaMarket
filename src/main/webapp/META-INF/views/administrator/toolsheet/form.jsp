@@ -19,7 +19,7 @@
 	<acme:form-textbox code="administrator.toolsheet.form.label.title" path="title"/>
 	<acme:form-textbox code="administrator.toolsheet.form.label.providerName" path="providerName" />
 	<acme:form-textarea code="administrator.toolsheet.form.label.description" path="description"/>
-	<acme:form-textbox code="administrator.toolsheet.form.label.homePage" path="homePage"/>
+	<acme:form-url code="administrator.toolsheet.form.label.homePage" path="homePage"/>
 	<acme:form-integer code="administrator.toolsheet.form.label.stars" path="stars" placeholder="[0-5]"/>
 	
 	<acme:form-submit test="${command == 'show'}" 

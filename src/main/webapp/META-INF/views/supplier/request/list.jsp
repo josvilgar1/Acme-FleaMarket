@@ -17,8 +17,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list >
-	<acme:list-column code="supplier.request.list.label.ticker" path="ticker" width="25%"/>
-	<acme:list-column code="supplier.request.list.label.item" path="item.title" width="25%"/>
-	<acme:list-column code="supplier.request.list.label.buyer" path="buyer.email" width="25%"/>
-	<acme:list-column code="supplier.request.list.label.quantity" path="quantity" width="25%"/>
+	<acme:list-column code="supplier.request.list.label.ticker" path="ticker" width="20%"/>
+	<acme:list-column code="supplier.request.list.label.creationMoment" path="creationMoment" width="20%"/>
+	<acme:list-column code="supplier.request.list.label.item" path="item.title" width="20%" sortable="false"/>
+	<acme:list-column code="supplier.request.list.label.buyer" path="buyer.email" width="20%" sortable="false"/>
+	<acme:list-column code="supplier.request.list.label.item.isnew" path="item.isNew" width="20%" sortable="false"/>
 </acme:list>

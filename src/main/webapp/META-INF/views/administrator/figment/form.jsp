@@ -7,7 +7,7 @@
 	<acme:form-textbox code="administrator.form.figment.label.title" path="title"/>
 	<acme:form-textbox code="administrator.form.figment.label.inventor" path="inventor"/>
 	<jstl:if test="${command != 'create'}">
-		<acme:form-textbox code="authenticated.figment.show.label.moment" path="moment" readonly="true"/>
+		<acme:form-moment code="authenticated.figment.show.label.moment" path="moment" readonly="true"/>
 	</jstl:if>
 	<acme:form-money code="administrator.form.figment.label.rangeMin" path="rangeMin"/>
 	<acme:form-money code="administrator.form.figment.label.rangeMax" path="rangeMax"/>

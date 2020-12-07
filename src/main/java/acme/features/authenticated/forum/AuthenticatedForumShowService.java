@@ -31,7 +31,7 @@ public class AuthenticatedForumShowService implements AbstractShowService<Authen
 		assert model != null;
 
 		model.setAttribute("itemId", entity.getItem().getId());
-		request.unbind(entity, model, "title", "item.title");
+		request.unbind(entity, model, "item.title");
 	}
 
 	@Override

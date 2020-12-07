@@ -693,18 +693,20 @@
 		<property name="price" value="100€"/>
 		<property name="photo" value="http://www.photo01.com"/>
 		<property name="link" value="http://www.link01.com"/>
+		<property name="status" value="DRAFT"/>
 		<property name="supplier" ref="supplier01Supplier"/>
 	</bean>
 	
 	<bean id="item02" class="acme.entities.items.Item">
 		<property name="ticker" value="AAA-21-111112"/>
-		<property name="creationMoment" value="2020/10/02 00:00"/>
+		<property name="creationMoment" value="2020/12/05 00:00"/>
 		<property name="title" value="title02"/>
 		<property name="itemCategory" value="itemCategory02"/>
 		<property name="description" value="description02"/>
 		<property name="price" value="100€"/>
 		<property name="photo" value="http://www.photo02.com"/>
 		<property name="link" value="http://www.link02.com"/>
+		<property name="status" value="PUBLISHED"/>
 		<property name="supplier" ref="supplier02Supplier"/>
 	</bean>
 	
@@ -717,6 +719,7 @@
 		<property name="price" value="100€"/>
 		<property name="photo" value="http://www.photo03.com"/>
 		<property name="link" value="http://www.link03.com"/>
+		<property name="status" value="DRAFT"/>
 		<property name="supplier" ref="supplier03Supplier"/>
 	</bean>
 	
@@ -729,6 +732,7 @@
 		<property name="price" value="100€"/>
 		<property name="photo" value="http://www.photo04.com"/>
 		<property name="link" value="http://www.link04.com"/>
+		<property name="status" value="PUBLISHED"/>
 		<property name="supplier" ref="supplier04Supplier"/>
 	</bean>
 
@@ -741,6 +745,7 @@
 		<property name="price" value="100€"/>
 		<property name="photo" value="http://www.photo05.com"/>
 		<property name="link" value="http://www.link05.com"/>
+		<property name="status" value="DRAFT"/>
 		<property name="supplier" ref="supplier05Supplier"/>
 	</bean>	
 	
@@ -753,6 +758,7 @@
 		<property name="price" value="100€"/>
 		<property name="photo"><null/></property>
 		<property name="link" value="http://www.link06.com"/>
+		<property name="status" value="PUBLISHED"/>
 		<property name="supplier" ref="supplier05Supplier"/>
 	</bean>	
 	
@@ -813,15 +819,19 @@
 		<property name="creationMoment" value="2020/10/05 00:00"/>
 		<property name="quantity" value="01"/>
 		<property name="notes" value="notes01"/>
+		<property name="process" value="PENDING"/>
+		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer01Buyer"/>
 		<property name="item" ref="item01"/>
 	</bean>
 	
 	<bean id="request02" class="acme.entities.requests.Request">
 		<property name="ticker" value="AAA-21-111102"/>
-		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="creationMoment" value="2020/12/07 00:00"/>
 		<property name="quantity" value="02"/>
 		<property name="notes" value="notes02"/>
+		<property name="process" value="PENDING"/>
+		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer02Buyer"/>
 		<property name="item" ref="item02"/>
 	</bean>
@@ -831,6 +841,8 @@
 		<property name="creationMoment" value="2020/10/05 00:00"/>
 		<property name="quantity" value="03"/>
 		<property name="notes" value="notes03"/>
+		<property name="process" value="PENDING"/>
+		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer03Buyer"/>
 		<property name="item" ref="item03"/>
 	</bean>
@@ -840,6 +852,8 @@
 		<property name="creationMoment" value="2020/10/05 00:00"/>
 		<property name="quantity" value="04"/>
 		<property name="notes" value="notes04"/>
+		<property name="process" value="PENDING"/>
+		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer04Buyer"/>
 		<property name="item" ref="item04"/>
 	</bean>
@@ -849,6 +863,8 @@
 		<property name="creationMoment" value="2020/10/05 00:00"/>
 		<property name="quantity" value="05"/>
 		<property name="notes" value="notes05"/>
+		<property name="process" value="PENDING"/>
+		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer05Buyer"/>
 		<property name="item" ref="item05"/>
 	</bean>
@@ -866,7 +882,7 @@
 	
 	<bean id="auditRecord02" class="acme.entities.auditrecords.AuditRecord">
 		<property name="title" value="title02"/>
-		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="creationMoment" value="2020/12/05 00:00"/>
 		<property name="body" value="body02"/>
 		<property name="status" value="DRAFT"/>
 		<property name="item" ref="item02"/>
@@ -900,35 +916,38 @@
 		<property name="auditor" ref="auditor05Auditor"/>
 	</bean>
 	
+	<bean id="auditRecord06" class="acme.entities.auditrecords.AuditRecord">
+		<property name="title" value="title06"/>
+		<property name="creationMoment" value="2020/10/05 00:00"/>
+		<property name="body" value="body06"/>
+		<property name="status" value="PUBLISHED"/>
+		<property name="item" ref="item06"/>
+		<property name="auditor" ref="auditor05Auditor"/>
+	</bean>
+	
 	<!-- Forums -->
 	
 	<bean id="forum01" class="acme.entities.forums.Forum">
-		<property name="title" value="title01"/>
 		<property name="item" ref="item01"/>
 	</bean>
 	
 	<bean id="forum02" class="acme.entities.forums.Forum">
-		<property name="title" value="title02"/>
 		<property name="item" ref="item02"/>
 	</bean>
 	
 	<bean id="forum03" class="acme.entities.forums.Forum">
-		<property name="title" value="title03"/>
 		<property name="item" ref="item03"/>
 	</bean>
 	
 	<bean id="forum04" class="acme.entities.forums.Forum">
-		<property name="title" value="title04"/>
 		<property name="item" ref="item04"/>
 	</bean>
 	
 	<bean id="forum05" class="acme.entities.forums.Forum">
-		<property name="title" value="title05"/>
 		<property name="item" ref="item05"/>
 	</bean>
 	
 	<bean id="forum06" class="acme.entities.forums.Forum">
-		<property name="title" value="title06"/>
 		<property name="item" ref="item06"/>
 	</bean>
 	
@@ -979,4 +998,27 @@
 		<property name="forum" ref="forum05"/>
 	</bean>
 	
+	
+	<!-- Auditorrequest -->
+	
+	<bean id="auditorrequest01" class="acme.entities.auditorrequests.Auditorrequest">
+		<property name="firm" value="firm01"/>
+		<property name="responsibility" value="responsibility01"/>
+		<property name="status"><null/></property>
+		<property name="authenticated" ref="buyer02Authenticated"/>
+	</bean>
+	
+	<bean id="auditorrequest02" class="acme.entities.auditorrequests.Auditorrequest">
+		<property name="firm" value="firm02"/>
+		<property name="responsibility" value="responsibility02"/>
+		<property name="status"><null/></property>
+		<property name="authenticated" ref="supplier05Authenticated"/>
+	</bean>
+	
+	<bean id="auditorrequest03" class="acme.entities.auditorrequests.Auditorrequest">
+		<property name="firm" value="firm03"/>
+		<property name="responsibility" value="responsibility03"/>
+		<property name="status"><null/></property>
+		<property name="authenticated" ref="buyer05Authenticated"/>
+	</bean>
 </beans>

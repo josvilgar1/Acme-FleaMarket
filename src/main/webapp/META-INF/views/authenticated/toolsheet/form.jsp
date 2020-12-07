@@ -19,7 +19,7 @@
 	<acme:form-textbox code="authenticated.toolsheet.form.label.title" path="title"/>
 	<acme:form-textbox code="authenticated.toolsheet.form.label.providerName" path="providerName" />
 	<acme:form-textarea code="authenticated.toolsheet.form.label.description" path="description"/>
-	<acme:form-textbox code="authenticated.toolsheet.form.label.homePage" path="homePage"/>
+	<acme:form-url code="authenticated.toolsheet.form.label.homePage" path="homePage"/>
 	<acme:form-integer code="authenticated.toolsheet.form.label.stars" path="stars" placeholder="[0-5]"/>
 	
   	<acme:form-return code="authenticated.toolsheet.form.button.return"/>
