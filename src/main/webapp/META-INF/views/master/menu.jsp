@@ -55,6 +55,7 @@
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
 			<acme:menu-suboption code="master.menu.auditor.list.have" action="/auditor/item/list-have"/>
 			<acme:menu-suboption code="master.menu.auditor.list.not.have" action="/auditor/item/list-not-have"/>
+			<acme:menu-suboption code="master.menu.auditor.list.auditRecord.mine" action="/auditor/auditrecord/list"/>
 		</acme:menu-option>
 			
 		<!-- BUYER -->

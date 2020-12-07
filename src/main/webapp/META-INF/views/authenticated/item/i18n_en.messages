@@ -30,5 +30,5 @@ authenticated.item.form.button.return = Return
 authenticated.item.form.button.list.section = Sections
 authenticated.item.form.button.list.message = Messages
 authenticated.item.form.button.list.auditrecord = Audit records
-
+authenticated.item.form.button.list.message.create = New Message
 authenticated.item.form.button.create.request = Create request

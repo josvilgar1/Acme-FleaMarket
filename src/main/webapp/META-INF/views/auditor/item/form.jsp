@@ -19,6 +19,8 @@
 	
 	<acme:form-submit method="get" code="auditor.item.form.button.list.section" action="/authenticated/section/list?itemId=${id}" />
 	<acme:form-submit method="get" code="auditor.item.form.button.list.message" action="/authenticated/message/list?itemId=${id}" />
-	<acme:form-submit method="get" code="auditor.item.form.button.list.auditrecord" action="/authenticated/auditrecord/list?id=${id}"/>
+	<acme:form-submit method="get" code="auditor.item.form.button.list.auditrecord" action="/auditor/auditrecord/list?id=${id}"/>
+	<acme:form-submit method="get" code="auditor.item.form.button.auditrecord.create" action="/auditor/auditrecord/create?itemId=${id}" />
+	
 	<acme:form-return code="auditor.item.show.button.return"/>
 </acme:form>

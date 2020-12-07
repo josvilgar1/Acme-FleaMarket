@@ -58,8 +58,9 @@ master.menu.supplier.request.list = My Requests
 # master.menu.auditor ########################################################
 
 master.menu.auditor = Auditor
-master.menu.auditor.list.have = List Items With AuditRecords
-master.menu.auditor.list.not.have = List Items Without AuditRecords
+master.menu.auditor.list.have = List Items With Audit Records
+master.menu.auditor.list.not.have = List Items Without Audit Records
+master.menu.auditor.list.auditRecord.mine = List my Audit Records
 
 # master.menu.authenticated ###################################################
 

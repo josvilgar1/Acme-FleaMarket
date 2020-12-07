@@ -32,5 +32,6 @@ authenticated.item.form.button.return = Volver
 authenticated.item.form.button.list.section = Secciones
 authenticated.item.form.button.list.message = Mensajes
 authenticated.item.form.button.list.auditrecord = Auditorias
+authenticated.item.form.button.list.message.create = Nuevo Mensaje
 
 authenticated.item.form.button.create.request = Crear petición

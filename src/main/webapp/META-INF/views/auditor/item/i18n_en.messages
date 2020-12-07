@@ -29,4 +29,5 @@ auditor.item.form.button.return = Volver
 
 auditor.item.form.button.list.section = Sections
 auditor.item.form.button.list.message = Messages
-auditor.item.form.button.list.auditrecord = AuditRecords
+auditor.item.form.button.list.auditrecord = Audit Records
+auditor.item.form.button.auditrecord.create = New Audit Record

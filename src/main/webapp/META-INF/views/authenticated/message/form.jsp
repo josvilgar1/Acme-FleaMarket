@@ -33,5 +33,5 @@
 		<acme:form-checkbox code="authenticated.message.form.label.confirm" path="confirm"/>
 	</jstl:if>
 	<acme:form-return code="authenticated.message.show.button.return"/>
-	<acme:form-submit test="${command == 'create'}" code="authenticated.message.form.message.create" action="/authenticated/message/create"/>
+	<acme:form-submit test="${command == 'create'}" code="authenticated.message.form.button.create" action="/authenticated/message/create"/>
 </acme:form>
