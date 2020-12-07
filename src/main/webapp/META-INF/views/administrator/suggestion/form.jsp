@@ -24,7 +24,6 @@
 	</jstl:if>
 	<acme:form-textarea code="administrator.suggestion.form.label.text" path="text"/>
 	<acme:form-textbox code="administrator.suggestion.form.label.email" path="email"/>
-	
 	<acme:form-submit test="${command == 'show'}" 
 		code="administrator.suggestion.form.button.update" 
 		action="/administrator/suggestion/update"/>

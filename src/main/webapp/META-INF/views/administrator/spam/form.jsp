@@ -16,7 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="administrator.spam.form.label.threshold" path="threshold"/>
+	<acme:form-double code="administrator.spam.form.label.threshold" path="threshold"/>
 	<acme:form-textarea code="administrator.spam.form.label.word" path="words"/>
 	
 	<acme:form-submit test="${command == 'show'}" code="administrator.spam.form.button.update" 

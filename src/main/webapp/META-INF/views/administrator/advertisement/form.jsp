@@ -7,12 +7,12 @@
 <br/>
 <acme:form readonly="false">
 	<acme:form-textbox code="administrator.form.advertisement.label.title" path="title"/>
-	<acme:form-textbox code="administrator.form.advertisement.label.picture" path="picture"/>
+	<acme:form-url code="administrator.form.advertisement.label.picture" path="picture"/>
 	<jstl:if test="${command != 'create'}">
-		<acme:form-textbox code="administrator.form.advertisement.label.moment" path="moment" readonly="true"/>
+		<acme:form-moment code="administrator.form.advertisement.label.moment" path="moment" readonly="true"/>
 	</jstl:if>
-	<acme:form-textbox code="administrator.form.advertisement.label.inicialDate" path="inicialDate"/>
-	<acme:form-textbox code="administrator.form.advertisement.label.finalDate" path="finalDate"/>
+	<acme:form-moment code="administrator.form.advertisement.label.inicialDate" path="inicialDate"/>
+	<acme:form-moment code="administrator.form.advertisement.label.finalDate" path="finalDate"/>
 	<acme:form-textarea code="administrator.form.advertisement.label.text" path="text"/>
 	<acme:form-textbox code="administrator.form.advertisement.label.volumeDiscounts" path="volumeDiscounts"/>
 
