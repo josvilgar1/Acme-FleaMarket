@@ -18,8 +18,8 @@
 <acme:form readonly="true">
 	<acme:form-textbox code="anonymous.suggestion.form.label.title" path="title"/>
 	<acme:form-moment code="anonymous.suggestion.form.label.creationMoment" path="creationMoment"/>
-	<acme:form-textarea code="anonymous.suggestion.form.label.text" path="text"/>
 	<acme:form-textbox code="anonymous.suggestion.form.label.email" path="email"/>
+	<acme:form-textarea code="anonymous.suggestion.form.label.text" path="text"/>
 	
   	<acme:form-return code="anonymous.suggestion.form.button.return"/>
 </acme:form>

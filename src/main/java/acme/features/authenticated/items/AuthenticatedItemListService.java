@@ -39,7 +39,7 @@ public class AuthenticatedItemListService implements AbstractListService<Authent
 		assert request != null;
 
 		Collection<Item> result;
-		result = repository.findManyAll();
+		result = repository.findManyPublishedItems();
 
 		return result;
 	}

@@ -29,7 +29,7 @@
 			<acme:form-option code="supplier.request.form.label.process.accepted" value="ACCEPTED" selected="${process == 'ACCEPTED'}"/>
 			<acme:form-option code="supplier.request.form.label.process.rejected" value="REJECTED" selected="${process == 'REJECTED'}"/>
 		</acme:form-select>
-	<acme:form-textbox code="supplier.request.form.label.item.justification" path="justification"/>
+	<acme:form-textarea code="supplier.request.form.label.item.justification" path="justification"/>
 	
 	<acme:form-submit test="${command != 'create' and process == 'PENDING'}" code="supplier.request.form.button.update" action="/supplier/request/update"/>
 	

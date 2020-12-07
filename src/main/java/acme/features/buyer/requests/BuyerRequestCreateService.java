@@ -5,12 +5,15 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.SpamUtils;
 import acme.entities.items.Item;
 import acme.entities.requests.Request;
 import acme.entities.roles.Buyer;
+import acme.enumeration.Status;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.services.AbstractCreateService;
+import acme.enumeration.Process;
 
 @Service
 public class BuyerRequestCreateService implements AbstractCreateService<Buyer ,Request>{
@@ -18,9 +21,13 @@ public class BuyerRequestCreateService implements AbstractCreateService<Buyer ,R
 	@Autowired
 	BuyerRequestRepository	repository;
 	
+	@Autowired
+	SpamUtils	spamUtils;
+	
 	@Override
 	public boolean authorise(acme.framework.components.Request<Request> request) {
-		//TODO: must be buyer
+		assert request!=null;
+		
 		return true;
 	}
 
@@ -39,7 +46,7 @@ public class BuyerRequestCreateService implements AbstractCreateService<Buyer ,R
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "quantity", "notes", "buyer", "item.id", "item.title");
+		request.unbind(entity, model, "quantity", "notes", "buyer", "justification","process", "item.id", "item.title");
 	}
 
 	@Override
@@ -55,8 +62,10 @@ public class BuyerRequestCreateService implements AbstractCreateService<Buyer ,R
 		
 		Item item = repository.findItemById(itemId);
 		
+		
 		result.setBuyer(buyer);
 		result.setItem(item);
+		result.setProcess(Process.PENDING);
 		
 		return result;
 	}
@@ -66,16 +75,15 @@ public class BuyerRequestCreateService implements AbstractCreateService<Buyer ,R
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		Integer itemId;
-		
-		itemId = request.getModel().getInteger("id");
-		
-		Item item = repository.findItemById(itemId);
-		//TODO: preguntar Enum. cómo.
-//		errors.state(request, item.getStatus()==, 
-//				"referenceNumber", 
-//				"worker.application.form.errors.referenceNumber.alreadyExists");
+
+		//Check Spam
+		errors.state(request, !spamUtils.checkSpam(entity.getNotes()), "title", "acme.validation.spam",
+				spamUtils.getThreshold(), spamUtils.getSpamWords());
+
+		//Check Item is in FinalMode
+		errors.state(request, entity.getItem().getStatus()==Status.DRAFT, 
+				"haveErrors", 
+				"buyer.request.form.errors.status.notPublished");
 	}
 
 	@Override
@@ -103,8 +111,9 @@ public class BuyerRequestCreateService implements AbstractCreateService<Buyer ,R
 		}
 		//-----------------------------------------------------------
 		
-		
 		entity.setTicker(ticker);
+		
+		entity.setProcess(Process.PENDING);
 		
 		repository.save(entity);
 	}

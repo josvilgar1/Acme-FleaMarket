@@ -21,9 +21,9 @@
 	<acme:form-textbox code="authenticated.buyer.form.label.address" path="address"/>
 	<acme:form-textbox code="authenticated.buyer.form.label.creditCardNumber" path="creditCardNumber"/>
 	<acme:form-textbox code="authenticated.buyer.form.label.creditCardName" path="creditCardName"/>
-	<acme:form-textbox code="authenticated.buyer.form.label.creditCardMonth" path="creditCardMonth"/>
-	<acme:form-textbox code="authenticated.buyer.form.label.creditCardYear" path="creditCardYear"/>
-	<acme:form-textbox code="authenticated.buyer.form.label.creditCardCVV" path="creditCardCVV"/>
+	<acme:form-integer code="authenticated.buyer.form.label.creditCardMonth" path="creditCardMonth"/>
+	<acme:form-integer code="authenticated.buyer.form.label.creditCardYear" path="creditCardYear"/>
+	<acme:form-integer code="authenticated.buyer.form.label.creditCardCVV" path="creditCardCVV"/>
 	<acme:form-textbox code="authenticated.buyer.form.label.creditCardType" path="creditCardType"/>
 	
 	<acme:form-submit test="${command == 'create'}" code="authenticated.buyer.form.button.create" action="/authenticated/buyer/create"/>
