@@ -48,6 +48,7 @@ master.menu.administrator.itemCategory = Listar Categorías de Elementos
 master.menu.administrator.materialsheets = Listar Materiales
 master.menu.administrator.figments = Listar Productos
 master.menu.administrator.advertisements =  Listar Anuncios
+master.menu.administrator.dashboard = Panel de control
 master.menu.administrator.shutdown = Parar el sistema
 
 # master.menu.supplier ########################################################

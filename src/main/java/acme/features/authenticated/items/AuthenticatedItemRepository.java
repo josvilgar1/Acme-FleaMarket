@@ -18,6 +18,6 @@ public interface AuthenticatedItemRepository extends AbstractRepository {
 	@Query("select i from Item i")
 	Collection<Item> findManyAll();
 
-	@Query("select i from Item i where i.status = 'PUBLISHED'")
+	@Query("select i from Item i where i.status = acme.enumeration.Status.PUBLISHED")
 	Collection<Item> findManyPublishedItems();
 }

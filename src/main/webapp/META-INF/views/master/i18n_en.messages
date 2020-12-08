@@ -48,6 +48,7 @@ master.menu.administrator.itemCategory = List Item Categories
 master.menu.administrator.materialsheets = List Materials
 master.menu.administrator.figments = List Figments
 master.menu.administrator.advertisements =  List Advertisements
+master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.shutdown = Shut down
 
 # master.menu.supplier ########################################################

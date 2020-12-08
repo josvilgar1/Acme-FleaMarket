@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.items.Item;
+import acme.enumeration.Status;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
@@ -20,8 +21,17 @@ public class AuthenticatedItemShowService implements AbstractShowService<Authent
 	@Override
 	public boolean authorise(Request<Item> request) {
 		assert request != null;
-
-		return true;
+		
+		boolean res = true;
+		Item item;
+		
+		item = repository.findOneById(request.getModel().getInteger("id"));
+		
+		if(item.getStatus()==Status.DRAFT) {
+			res = false;
+		}
+		
+		return res;
 	}
 
 	@Override
