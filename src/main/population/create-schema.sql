@@ -189,9 +189,12 @@
         `creation_moment` datetime(6),
         `justification` varchar(255),
         `notes` varchar(255),
+        `password` varchar(255),
         `process` integer,
         `quantity` integer,
         `ticker` varchar(255),
+        `xxx_link` varchar(255),
+        `xxx_response` varchar(255),
         `buyer_id` integer not null,
         `item_id` integer not null,
         primary key (`id`)
@@ -260,6 +263,19 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `xxx` (
+       `id` integer not null,
+        `version` integer not null,
+        `code` varchar(255),
+        `price_max_amount` double precision,
+        `price_max_currency` varchar(255),
+        `price_min_amount` double precision,
+        `price_min_currency` varchar(255),
+        `text` varchar(255),
+        `item_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `hibernate_sequence` (
        `next_val` bigint
     ) engine=InnoDB;
@@ -286,6 +302,9 @@ create index IDX9aghglfhyij49iwyr26qi6bt3 on `section` (`item_id`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
+
+    alter table `xxx` 
+       add constraint UK_b2kmosp66od78rp2hmfch4iks unique (`item_id`);
 
     alter table `administrator` 
        add constraint FK_2a5vcjo3stlfcwadosjfq49l1 
@@ -366,3 +385,8 @@ create index IDX9aghglfhyij49iwyr26qi6bt3 on `section` (`item_id`);
        add constraint FK_1h83guf8tf3di74bk4uhuo1ia 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `xxx` 
+       add constraint `FK30ajub76kt8s3rbal9er4tifh` 
+       foreign key (`item_id`) 
+       references `item` (`id`);

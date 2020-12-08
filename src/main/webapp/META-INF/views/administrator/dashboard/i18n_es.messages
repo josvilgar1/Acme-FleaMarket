@@ -1,0 +1,44 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.lable.sectorspercompany = Número de compañías por cada sector
+administrator.dashboard.form.lable.sectorsperinvestor = Número de inversores por cada sector
+administrator.dashboard.form.lable.countAnnouncement = Numero total de anuncios
+administrator.dashboard.form.lable.countCompanyRecord = Numero total de compañías
+administrator.dashboard.form.lable.countInvestorRecord = Numero total de inversores
+administrator.dashboard.form.lable.minActiveRequest = Recompensa mínima de las solicitudes activas
+administrator.dashboard.form.lable.maxActiveRequest = Recompensa máxima de las solicitudes activas
+administrator.dashboard.form.lable.avgActiveRequest = Recompensa media de las solicitudes activas
+administrator.dashboard.form.lable.stDerivationActiveRequest = Desviación estándar de las recompensas de las solicitudes activas
+administrator.dashboard.form.lable.minRangeMinActiveOffer = Mínima recompensa mínima de las ofertas activas
+administrator.dashboard.form.lable.maxRangeMinActiveOffer = Máxima recompensa mínima de las ofertas activas
+administrator.dashboard.form.lable.avgRangeMinActiveOffer = Media de las recompensas mínimas de las ofertas activas
+administrator.dashboard.form.lable.stDerivationRangeMinActiveOffer = Desviación Estándar de las recompensas mínimas de las ofertas activas
+administrator.dashboard.form.lable.minRangeMaxActiveOffer = Mínima recompensa máxima de las ofertas activas
+administrator.dashboard.form.lable.maxRangeMaxActiveOffer = Máxima recompensa máxima de las ofertas activas
+administrator.dashboard.form.lable.avgRangeMaxActiveOffer = Media de las recompensas máximas de las ofertas activas
+administrator.dashboard.form.lable.stDerivationRangeMaxActiveOffer = Desviación Estándar de las recompensas máximas de las ofertas activas
+
+administrator.dashboard.form.lable.ratiojobsgroupedstatus = Ratio Trabajos agrupado por estado
+administrator.dashboard.form.lable.ratiojobsgroupedstatus.published = Publicado
+administrator.dashboard.form.lable.ratiojobsgroupedstatus.draft = Borrador
+administrator.dashboard.form.lable.ratioapplicationsgroupedstatus = Ratios Aplicaciones agrupados por estado
+administrator.dashboard.form.lable.ratioapplicationsgroupedstatus.pending = Pendiente
+administrator.dashboard.form.lable.ratioapplicationsgroupedstatus.accepted = Aceptado
+administrator.dashboard.form.lable.ratioapplicationsgroupedstatus.rejected = Rechazado
+
+administrator.dashboard.form.lable.avgJobPerEmployer = Número promedio de trabajos por empleador
+administrator.dashboard.form.lable.avgApplicationPerEmployer = Número promedio de solicitudes por empleador
+administrator.dashboard.form.lable.avgApplicationPerWorker = Número promedio de solicitudes por trabajador
+
+administrator.dashboard.form.lable.daysApplicationsStatusPendingByDay = Numero de aplicaciones pendientes
+administrator.dashboard.form.lable.daysApplicationsStatusAcceptedByDay = Numero de aplicaciones aceptadas
+administrator.dashboard.form.lable.daysApplicationsStatusRejectedByDay = Numero de aplicaciones rechazadas
+administrator.dashboard.form.button.return = Volver

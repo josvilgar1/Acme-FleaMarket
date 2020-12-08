@@ -20,6 +20,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.URL;
+
 import acme.entities.items.Item;
 import acme.entities.roles.Buyer;
 import acme.enumeration.Process;
@@ -56,6 +58,14 @@ public class Request extends DomainEntity {
 	private Process				process;
 
 	private String				justification;
+
+	private String				xxxResponse;
+
+	@URL
+	private String				xxxLink;
+
+	//	@Pattern(regexp = "^[A-Z]{3}-\\d{2}-\\d{1,6}$")
+	private String				password;
 
 	@ManyToOne(optional = false)
 	@Valid
