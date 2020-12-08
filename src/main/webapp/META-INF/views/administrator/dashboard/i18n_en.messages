@@ -8,8 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.dashboard.form.lable.ratioItemWithXxx=
-administrator.dashboard.form.lable.ratioXxxWithLink=
-administrator.dashboard.form.lable.ratioRequestsWithLinkAndPass=
+administrator.dashboard.form.lable.ratioItemWithXxx=Ratio Items with Xxx
+administrator.dashboard.form.lable.ratioRequestsWithLink=Ratio Request with Links
+administrator.dashboard.form.lable.ratioRequestsWithLinkAndPass=Ratio Requests with Password
 
 administrator.dashboard.form.button.return = Return

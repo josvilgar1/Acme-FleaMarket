@@ -17,9 +17,9 @@
 					
 <acme:form readonly="true">
 	<!-- //TODO: Cambiar -->
-	<acme:form-textbox code="administrator.dashboard.form.lable.ratioJobWithXxx" path="ratioItemWithXxx" />
-	<acme:form-textbox code="administrator.dashboard.form.lable.ratioXxxWithTicker" path="ratioRequestsWithLink" />
-	<acme:form-textbox code="administrator.dashboard.form.lable.ratioRequestsWithTickerAndPass" path="ratioRequestsWithLinkAndPass" />
+	<acme:form-textbox code="administrator.dashboard.form.lable.ratioItemWithXxx" path="ratioItemWithXxx" />
+	<acme:form-textbox code="administrator.dashboard.form.lable.ratioRequestsWithLink" path="ratioRequestsWithLink" />
+	<acme:form-textbox code="administrator.dashboard.form.lable.ratioRequestsWithLinkAndPass" path="ratioRequestsWithLinkAndPass" />
 	
 
 	<acme:form-return code="administrator.dashboard.form.button.return" />
