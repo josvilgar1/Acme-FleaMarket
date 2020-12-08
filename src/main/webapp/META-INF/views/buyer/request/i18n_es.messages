@@ -24,9 +24,14 @@ authenticated.advertisement.show.label.item-title = Artículo
 authenticated.advertisement.show.label.justification = Justificación
 authenticated.advertisement.show.label.process = Proceso
 
+authenticated.advertisement.show.label.xxxResponse = XxxResponse
+authenticated.advertisement.show.label.xxxLink = XxxLink
+authenticated.advertisement.show.label.password = Password
+
 buyer.request.show.button.return = Volver
 buyer.request.list.button.return = Volver
 
 buyer.request.form.errors.status.notPublished = El Artículo aún se encuentra en borrador
+buyer.request.form.errors.password = Debe establecer un enlace para rellenar la contraseña
 
 buyer.item.form.button.create = Crear

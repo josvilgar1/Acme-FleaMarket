@@ -1,0 +1,45 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.lable.sectorspercompany = Number of companies per sector
+administrator.dashboard.form.lable.sectorsperinvestor = Number of investors per sector
+administrator.dashboard.form.lable.countAnnouncement = Total number of Announcements
+administrator.dashboard.form.lable.countCompanyRecord = Total number of Company Records
+administrator.dashboard.form.lable.countInvestorRecord = Total number of Investor Records
+administrator.dashboard.form.lable.minActiveRequest = Minimum reward of the active requests
+administrator.dashboard.form.lable.maxActiveRequest = Maximum reward of the active requests
+administrator.dashboard.form.lable.avgActiveRequest = Average reward of the active requests
+administrator.dashboard.form.lable.stDerivationActiveRequest = Standard deviation reward of the active requests
+administrator.dashboard.form.lable.minRangeMinActiveOffer = Minimum minimum reward of the active offers
+administrator.dashboard.form.lable.maxRangeMinActiveOffer = Maximum minimum reward of the active offers
+administrator.dashboard.form.lable.avgRangeMinActiveOffer = Average of the minimum rewards of the active offers
+administrator.dashboard.form.lable.stDerivationRangeMinActiveOffer = Standard deviation of the minimum rewards of the active offers
+administrator.dashboard.form.lable.minRangeMaxActiveOffer = Minimum maximum reward of the active offers
+administrator.dashboard.form.lable.maxRangeMaxActiveOffer = Maximum maximum reward of the active offers
+administrator.dashboard.form.lable.avgRangeMaxActiveOffer = Average of the maximum rewards of the active offers
+administrator.dashboard.form.lable.stDerivationRangeMaxActiveOffer = Standard deviation of the minimum rewards of the active offers
+
+administrator.dashboard.form.lable.ratiojobsgroupedstatus = Ratios Jobs grouped by status
+administrator.dashboard.form.lable.ratiojobsgroupedstatus.published = Published
+administrator.dashboard.form.lable.ratiojobsgroupedstatus.draft = Draft
+administrator.dashboard.form.lable.ratioapplicationsgroupedstatus = Ratios Applications grouped by status
+administrator.dashboard.form.lable.ratioapplicationsgroupedstatus.pending = Pending
+administrator.dashboard.form.lable.ratioapplicationsgroupedstatus.accepted = Accepted
+administrator.dashboard.form.lable.ratioapplicationsgroupedstatus.rejected = Rejected
+
+administrator.dashboard.form.lable.avgJobPerEmployer = Average number of jobs per employer
+administrator.dashboard.form.lable.avgApplicationPerEmployer = Average number of applications per employer
+administrator.dashboard.form.lable.avgApplicationPerWorker = Average number of applications per worker
+
+administrator.dashboard.form.lable.daysApplicationsStatusPendingByDay = Numbers of Applications Pending
+administrator.dashboard.form.lable.daysApplicationsStatusAcceptedByDay = Numbers of Applications Accepted
+administrator.dashboard.form.lable.daysApplicationsStatusRejectedByDay = Numbers of Applications Rejected
+
+administrator.dashboard.form.button.return = Return

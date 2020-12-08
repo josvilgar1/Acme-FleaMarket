@@ -63,6 +63,10 @@
        drop 
        foreign key FK_1h83guf8tf3di74bk4uhuo1ia;
 
+    alter table `xxx` 
+       drop 
+       foreign key `FK30ajub76kt8s3rbal9er4tifh`;
+
     drop table if exists `administrator`;
 
     drop table if exists `advertisement`;
@@ -110,5 +114,7 @@
     drop table if exists `toolsheet`;
 
     drop table if exists `user_account`;
+
+    drop table if exists `xxx`;
 
     drop table if exists `hibernate_sequence`;

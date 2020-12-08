@@ -34,6 +34,8 @@ supplier.item.form.button.list.section = Secciones
 supplier.item.form.button.create.section = Crear sección
 supplier.item.form.button.list.message = Mensajes
 supplier.item.show.button.list.auditrecord = Auditorias
+supplier.item.show.button.show.xxx = Xxx
+supplier.item.show.button.create.xxx = Crear xxx
 
 supplier.item.form.errors.section.empty = La lista de secciones no puede estar vacia
 supplier.item.form.errors.have.request = No se puede eliminar un articulo con solicitudes

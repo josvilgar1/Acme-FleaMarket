@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import acme.entities.items.Item;
 import acme.entities.requests.Request;
 import acme.entities.sections.Section;
+import acme.entities.xxx.Xxx;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -45,4 +46,11 @@ public interface SupplierItemRepository extends AbstractRepository {
 	@Modifying
 	@Query("delete from Forum f where f.item.id = ?1")
 	void deleteForumByItem(int itemId);
+
+	@Query("select x from Xxx x where x.item.id = ?1")
+	Collection<Xxx> findXxxByItemId(int itemId);
+
+	@Modifying
+	@Query("delete from Xxx x where x.item.id = ?1")
+	void deleteXxxByItem(int itemId);
 }

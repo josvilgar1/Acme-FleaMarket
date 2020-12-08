@@ -823,6 +823,9 @@
 		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer01Buyer"/>
 		<property name="item" ref="item01"/>
+		<property name="xxxResponse" value="respuesta al xxx01"/>
+		<property name="xxxLink" value="http://pepito.com"/>
+		<property name="password" value="pattern"/>
 	</bean>
 	
 	<bean id="request02" class="acme.entities.requests.Request">
@@ -834,6 +837,9 @@
 		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer02Buyer"/>
 		<property name="item" ref="item02"/>
+		<property name="xxxResponse" value="respuesta al xxx02"/>
+		<property name="xxxLink" value="http://pepito.com"/>
+		<property name="password" value="pattern"/>
 	</bean>
 	
 	<bean id="request03" class="acme.entities.requests.Request">
@@ -845,6 +851,9 @@
 		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer03Buyer"/>
 		<property name="item" ref="item03"/>
+		<property name="xxxResponse" value="respuesta al xxx03"/>
+		<property name="xxxLink" value="http://pepito.com"/>
+		<property name="password" value="pattern"/>
 	</bean>
 	
 	<bean id="request04" class="acme.entities.requests.Request">
@@ -856,6 +865,9 @@
 		<property name="justification"><null/></property>
 		<property name="buyer" ref="buyer04Buyer"/>
 		<property name="item" ref="item04"/>
+		<property name="xxxResponse" value="respuesta al xxx04"/>
+		<property name="xxxLink" value="http://pepito.com"/>
+		<property name="password" value="pattern"/>
 	</bean>
 	
 	<bean id="request05" class="acme.entities.requests.Request">
@@ -1082,6 +1094,41 @@
 		<property name="creditCardYear" value="2023"/>
 		<property name="creditCardType" value="Visa"/>
 		<property name="creditCardCVV" value="330"/>
+	</bean>
+	
+	
+	<!-- EXAM -->
+	
+	<bean id="xxx01" class="acme.entities.xxx.Xxx">
+		<property name="text" value="Text of xxx01"/>
+		<property name="priceMin" value="25€"/>
+		<property name="priceMax" value="50€"/>
+		<property name="code" value="pattern"/>
+		<property name="item" ref="item01"/>
+	</bean>
+	
+	<bean id="xxx02" class="acme.entities.xxx.Xxx">
+		<property name="text" value="Text of xxx02"/>
+		<property name="priceMin" value="25€"/>
+		<property name="priceMax" value="50€"/>
+		<property name="code" value="pattern"/>
+		<property name="item" ref="item02"/>
+	</bean>
+	
+	<bean id="xxx03" class="acme.entities.xxx.Xxx">
+		<property name="text" value="Text of xxx03"/>
+		<property name="priceMin" value="25€"/>
+		<property name="priceMax" value="50€"/>
+		<property name="code" value="pattern"/>
+		<property name="item" ref="item03"/>
+	</bean>
+	
+	<bean id="xxx04" class="acme.entities.xxx.Xxx">
+		<property name="text" value="Text of xxx04"/>
+		<property name="priceMin" value="25€"/>
+		<property name="priceMax" value="50€"/>
+		<property name="code" value="pattern"/>
+		<property name="item" ref="item04"/>
 	</bean>
 	
 </beans>

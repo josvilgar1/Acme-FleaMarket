@@ -33,6 +33,8 @@ supplier.item.form.button.list.section = Sections
 supplier.item.form.button.create.section = Create section
 supplier.item.form.button.list.message = Messages
 supplier.item.show.button.list.auditrecord = AuditRecords
+supplier.item.show.button.show.xxx = Xxx
+supplier.item.show.button.create.xxx = Create xxx
 
 supplier.item.form.errors.section.empty = The list of sections cannot be empty
 supplier.item.form.errors.have.request = Cannot delete an item with requests

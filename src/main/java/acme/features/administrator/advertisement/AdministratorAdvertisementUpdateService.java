@@ -69,15 +69,20 @@ public class AdministratorAdvertisementUpdateService implements AbstractUpdateSe
 		Calendar calendar;
 		Boolean isInDisplayPeriod;
 
-		if (!errors.hasErrors("finalDate") && !errors.hasErrors("inicialDate")) {
-			calendar = new GregorianCalendar();
-			Date calendarDate = calendar.getTime();
-			isInDisplayPeriod = entity.getInicialDate().before(calendarDate)
-				&& entity.getFinalDate().after(calendarDate);
+		Advertisement advertisement = repository.findOneAdvertisementById(entity.getId());
 
-			errors.state(request, isInDisplayPeriod, "outOfPeriod",
-				"administrator.form.advertisement.error.outOfPeriod");
+		calendar = new GregorianCalendar();
+		Date calendarDate = calendar.getTime();
+		isInDisplayPeriod = advertisement.getInicialDate().before(calendarDate)
+			&& advertisement.getFinalDate().after(calendarDate);
+
+		errors.state(request, isInDisplayPeriod, "outOfPeriod", "administrator.form.advertisement.error.outOfPeriod");
+
+		if (errors.hasErrors()) {
+			request.getModel().setAttribute("inicialDate", advertisement.getInicialDate());
+			request.getModel().setAttribute("finalDate", advertisement.getFinalDate());
 		}
+
 	}
 
 	@Override

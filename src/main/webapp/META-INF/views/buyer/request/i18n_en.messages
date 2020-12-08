@@ -23,7 +23,12 @@ authenticated.advertisement.show.label.item-title = Item
 authenticated.advertisement.show.label.justification = Justification
 authenticated.advertisement.show.label.process = Process
 
+authenticated.advertisement.show.label.xxxResponse = XxxResponse
+authenticated.advertisement.show.label.xxxLink = XxxLink
+authenticated.advertisement.show.label.password = Password
+
 buyer.request.form.errors.status.notPublished = The item is still in Draft mode
+buyer.request.form.errors.password = You must establish a link to fill in the password
 
 buyer.request.show.button.return = Return
 buyer.request.list.button.return = Return

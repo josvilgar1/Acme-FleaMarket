@@ -1,0 +1,23 @@
+# i18n_en.xxxs
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+supplier.xxx.form.label.item = Item
+supplier.xxx.form.label.text = Text
+supplier.xxx.form.label.pricemin = Price min
+supplier.xxx.form.label.pricemax = Price max
+supplier.xxx.form.label.code = Code
+
+supplier.xxx.show.button.return = Return
+supplier.xxx.form.button.create = Create
+supplier.xxx.form.button.update = Update
+supplier.xxx.form.button.delete = Delete
+
+supplier.xxx.form.errors.pricemax = The maximum price should not beat the price of the item {0}
+supplier.xxx.form.errors.pricemin = The minimum price must not exceed the maximum price
