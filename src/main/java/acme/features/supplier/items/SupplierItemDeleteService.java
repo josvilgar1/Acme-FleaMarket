@@ -74,6 +74,7 @@ public class SupplierItemDeleteService implements AbstractDeleteService<Supplier
 		if (errors.hasErrors("haveErrors")) {
 			Hashtable<String, Object> properties = new Hashtable<>();
 			properties.put("haveSections", !containsRequest);
+			properties.put("haveXxx", !repository.findXxxByItemId(entity.getId()).isEmpty());
 			toMapAttributes(request, entity, properties);
 		}
 	}
@@ -91,6 +92,8 @@ public class SupplierItemDeleteService implements AbstractDeleteService<Supplier
 		repository.deleteSectionsByItem(entity.getId());
 		// eliminamos los registros de auditoria del item
 		repository.deleteAuditrecordByItem(entity.getId());
+		// eliminamos la entidad nueva
+		repository.deleteXxxByItem(entity.getId());
 		repository.delete(entity);
 	}
 

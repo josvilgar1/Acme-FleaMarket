@@ -1,0 +1,23 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+supplier.xxx.form.label.item = Artículo
+supplier.xxx.form.label.text = Texto
+supplier.xxx.form.label.pricemin = Precio mínimo
+supplier.xxx.form.label.pricemax = Precio máximmo
+supplier.xxx.form.label.code = Código
+
+supplier.xxx.show.button.return = Volver
+supplier.xxx.form.button.create = Crear
+supplier.xxx.form.button.update = Actualizar
+supplier.xxx.form.button.delete = Borrar
+
+supplier.xxx.form.errors.pricemax = El precio máximo no debe superar al precio del artículo {0}
+supplier.xxx.form.errors.pricemin = El precio mínimo no debe superar al precio máximo

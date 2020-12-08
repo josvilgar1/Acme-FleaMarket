@@ -73,6 +73,13 @@ public class SupplierXxxUpdateService implements AbstractUpdateService<Supplier,
 		// comprobamos palabras spam en el texto
 		errors.state(request, !spamUtils.checkSpam(entity.getText()), "text", "acme.validation.spam",
 			spamUtils.getThreshold(), spamUtils.getSpamWords());
+
+		if (!errors.hasErrors("priceMin"))
+			errors.state(request, entity.getPriceMin().getAmount() < entity.getPriceMax().getAmount(), "priceMin",
+				"supplier.xxx.form.errors.pricemin", entity.getItem().getPrice());
+		if (!errors.hasErrors("priceMax"))
+			errors.state(request, entity.getPriceMax().getAmount() < entity.getItem().getPrice().getAmount(),
+				"priceMax", "supplier.xxx.form.errors.pricemax", entity.getItem().getPrice());
 	}
 
 	@Override

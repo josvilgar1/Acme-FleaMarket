@@ -22,7 +22,7 @@ public class SupplierXxxShowService implements AbstractShowService<Supplier, Xxx
 		assert request != null;
 
 		int supplierPrincipalId = request.getPrincipal().getActiveRoleId();
-		Xxx xxx = repository.findOneById(request.getModel().getInteger("id"));
+		Xxx xxx = repository.findOneByItemId(request.getModel().getInteger("item.id"));
 
 		if (xxx.getItem().getSupplier().getId() != supplierPrincipalId)
 			return false;
@@ -45,8 +45,8 @@ public class SupplierXxxShowService implements AbstractShowService<Supplier, Xxx
 
 		Xxx result;
 
-		int id = request.getModel().getInteger("id");
-		result = repository.findOneById(id);
+		int id = request.getModel().getInteger("item.id");
+		result = repository.findOneByItemId(id);
 
 		return result;
 	}

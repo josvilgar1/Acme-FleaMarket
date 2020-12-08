@@ -82,8 +82,12 @@ public class SupplierItemUpdateService implements AbstractUpdateService<Supplier
 		errors.state(request, !spamUtils.checkSpam(entity.getDescription()), "description", "acme.validation.spam",
 			spamUtils.getThreshold(), spamUtils.getSpamWords());
 
-		if (errors.hasErrors())
+		if (errors.hasErrors()) {
+			request.getModel().setAttribute("haveSections",
+				!repository.findAllSectionByItemId(entity.getId()).isEmpty());
+			request.getModel().setAttribute("haveXxx", !repository.findXxxByItemId(entity.getId()).isEmpty());
 			request.getModel().setAttribute("status", Status.DRAFT);
+		}
 	}
 
 	@Override

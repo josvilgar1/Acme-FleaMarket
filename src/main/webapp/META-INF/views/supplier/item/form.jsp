@@ -51,6 +51,14 @@
 		</jstl:choose>
 		<acme:form-submit method="get" code="supplier.item.form.button.list.message" action="/authenticated/message/list?item.id=${id}" />
 		<acme:form-submit method="get" code="supplier.item.show.button.list.auditrecord" action="/authenticated/auditrecord/list?id=${id}"/>
+		<jstl:choose>
+			<jstl:when test="${haveXxx}">
+				<acme:form-submit method="get" code="supplier.item.show.button.show.xxx" action="/supplier/xxx/show?item.id=${id}"/>
+			</jstl:when>
+			<jstl:otherwise>
+				<acme:form-submit method="get" code="supplier.item.show.button.create.xxx" action="/supplier/xxx/create?item.id=${id}"/>
+			</jstl:otherwise>
+		</jstl:choose>
 	</jstl:if>
 
 	<acme:form-return code="supplier.item.show.button.return"/>
