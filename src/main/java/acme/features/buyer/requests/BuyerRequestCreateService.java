@@ -90,8 +90,12 @@ public class BuyerRequestCreateService implements AbstractCreateService<Buyer, R
 			"buyer.request.form.errors.status.notPublished");
 
 		if (!errors.hasErrors("password"))
-			errors.state(request, !entity.getXxxLink().isEmpty() && entity.getPassword().isEmpty(), "password",
+			errors.state(request, !(entity.getXxxLink().isEmpty() && !entity.getPassword().isEmpty()), "password",
 				"buyer.request.form.errors.password");
+
+		if (errors.hasErrors())
+			request.getModel().setAttribute("itemHasXxx",
+				!repository.findXxxByItemId(entity.getItem().getId()).isEmpty());
 	}
 
 	@Override
