@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import acme.entities.items.Item;
 import acme.entities.requests.Request;
 import acme.entities.roles.Buyer;
+import acme.entities.xxx.Xxx;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -28,7 +29,11 @@ public interface BuyerRequestRepository extends AbstractRepository {
 
 	@Query("select b from Buyer b where b.userAccount.id = ?1")
 	Buyer findBuyerByUserAccount(int userAccountId);
-	
+
 	@Query("select r from Request r where r.ticker = ?1")
 	Request findItemByTicker(String ticker);
+
+	@Query("select x from Xxx x where x.item.id = ?1")
+	Collection<Xxx> findXxxByItemId(int itemId);
+
 }

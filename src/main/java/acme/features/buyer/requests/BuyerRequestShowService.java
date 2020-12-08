@@ -45,7 +45,9 @@ public class BuyerRequestShowService implements AbstractShowService<Buyer, Reque
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "creationMoment", "justification", "process", "quantity", "notes", "buyer.email", "item.title");
+		model.setAttribute("itemHasXxx", !repository.findXxxByItemId(entity.getItem().getId()).isEmpty());
+		request.unbind(entity, model, "ticker", "creationMoment", "justification", "process", "quantity", "notes",
+			"buyer.email", "item.title", "xxxResponse", "xxxLink", "password");
 	}
 
 	@Override
